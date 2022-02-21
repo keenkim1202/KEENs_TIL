@@ -22,3 +22,11 @@
 
 
 ## [iOS](iOS)
+
+## [Algorithm](CS/Algorithm)
+
+## [Design Pattern](CS/DesignPattern)
+
+## [OS](OS)
+- [Thread & Process](CS/OS/Thread&Process.md)
+## [Network](CS/Network)
