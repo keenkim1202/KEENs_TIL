@@ -23,10 +23,10 @@
 
 ## [iOS](iOS)
 
-## [Algorithm](CS/Algorithm)
+## [Algorithm](CS/알고리즘)
 
-## [Design Pattern](CS/DesignPattern)
+## [Design Pattern](CS/디자인패턴)
 
-## [OS](OS)
-- [Thread & Process](CS/OS/Thread&Process.md)
-## [Network](CS/Network)
+## [OS](CS/운영체제)
+- [Thread & Process](CS/운영체제/Thread&Process.md)
+## [Network](CS/네트워크)
