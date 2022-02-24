@@ -1,15 +1,15 @@
 # KEENs_TIL
 
 > Write what i've learned today. At least one thing a day!
-- ÇÏ·ç¿¡ ÃÖ¼Ò ÇÏ³ª ÀÌ»óÀÇ ³»¿ëÀ» ÀÛ¼º/¼öÁ¤ ÇÕ´Ï´Ù.
-- ÁÖÁ¦´Â iOS/Swift/CS/ETC µî °³¹ßÀÇ Àü¹İÀûÀÎ ¿µ¿ª¿¡ ´ëÇÑ ³»¿ëÀ» ÀÛ¼ºÇÕ´Ï´Ù. (¸ŞÀÎÀº iOS/Swift ÀÌ¹Ç·Î ±×¿Í °ü·ÃµÈ ³»¿ëÀÌ ÁÖ·Î ÀÛ¼ºµÉ ¿¹Á¤)
+- í•˜ë£¨ì— ìµœì†Œ í•˜ë‚˜ ì´ìƒì˜ ë‚´ìš©ì„ ì‘ì„±/ìˆ˜ì • í•©ë‹ˆë‹¤.
+- ì£¼ì œëŠ” iOS/Swift/CS/ETC ë“± ê°œë°œì˜ ì „ë°˜ì ì¸ ì˜ì—­ì— ëŒ€í•œ ë‚´ìš©ì„ ì‘ì„±í•©ë‹ˆë‹¤. (ë©”ì¸ì€ iOS/Swift ì´ë¯€ë¡œ ê·¸ì™€ ê´€ë ¨ëœ ë‚´ìš©ì´ ì£¼ë¡œ ì‘ì„±ë  ì˜ˆì •)
 
 # INDEX
 ## [swift](Swift)
 - [Optional](Swift/Optional.md)
 - [Collection Type](Swift/Collection_Type.md)
 - Class & Struct
-- Å¸ÀÔ°ú ÀÚ·áÇü
+- íƒ€ì…ê³¼ ìë£Œí˜•
 - Generic
 - Enumeration
 - Function
@@ -23,10 +23,12 @@
 
 ## [iOS](iOS)
 
-## [Algorithm](CS/¾Ë°í¸®Áò)
+## [Algorithm](CS/ì•Œê³ ë¦¬ì¦˜)
+- [ì™„ì „íƒìƒ‰(BruteForce)](CS/ì•Œê³ ë¦¬ì¦˜/ì™„ì „íƒìƒ‰.md)
+- [íƒìš•ë²•(Greedy)](CS/ì•Œê³ ë¦¬ì¦˜/íƒìš•ë²•(Greedy).md)
 
-## [Design Pattern](CS/µğÀÚÀÎÆĞÅÏ)
+## [Design Pattern](CS/ë””ìì¸íŒ¨í„´)
 
-## [OS](CS/¿î¿µÃ¼Á¦)
-- [Thread & Process](CS/¿î¿µÃ¼Á¦/Thread&Process.md)
-## [Network](CS/³×Æ®¿öÅ©)
+## [OS](CS/ìš´ì˜ì²´ì œ)
+- [Thread & Process](CS/ìš´ì˜ì²´ì œ/Thread&Process.md)
+## [Network](CS/ë„¤íŠ¸ì›Œí¬)
