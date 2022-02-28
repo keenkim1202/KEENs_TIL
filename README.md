@@ -23,12 +23,21 @@
 
 ## [iOS](iOS)
 
+
 ## [Algorithm](CS/알고리즘)
 - [완전탐색(BruteForce)](CS/알고리즘/완전탐색.md)
 - [탐욕법(Greedy)](CS/알고리즘/탐욕법(Greedy).md)
 - [BFS  & DFS](CS/알고리즘/DFS&BFS.swift)
+  - BFS (Breath First Search)
+  - DFS (Depth First Search)
+
 
 ## [Design Pattern](CS/디자인패턴)
+- MVC
+- MVVM
+- MVP
+- MVVM-C
+
 
 ## [OS](CS/운영체제)
 - [Thread & Process](CS/운영체제/Thread&Process.md)
