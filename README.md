@@ -22,7 +22,7 @@
 
 
 ## [iOS](iOS)
-
+- App Life-Cycle
 
 ## [Algorithm](CS/알고리즘)
 - [완전탐색(BruteForce)](CS/알고리즘/완전탐색.md)
