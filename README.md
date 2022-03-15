@@ -27,7 +27,7 @@
 
 ## [iOS](iOS)
 - [App Life-Cycle](iOS/appLifeCycle.md)
-- [ARC & GC](iOS/ARC & GC.md)
+- [ARC & GC](iOS/ARC_vs_GC.md)
 - [Storage Modifier](iOS/Storage_Modifier.md)
 
 ## [Algorithm](CS/알고리즘)
