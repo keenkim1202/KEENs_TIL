@@ -27,6 +27,8 @@
 
 ## [iOS](iOS)
 - [App Life-Cycle](iOS/appLifeCycle.md)
+- [ARC & GC](iOS/ARC & GC.md)
+- [Storage Modifier](iOS/Storage_Modifier.md)
 
 ## [Algorithm](CS/알고리즘)
 - [완전탐색(BruteForce)](CS/알고리즘/완전탐색.md)
@@ -37,8 +39,8 @@
 
 
 ## [Design Pattern](CS/디자인패턴)
-- MVC
-- MVVM
+- [MVC](CS/디자인패턴/MVC.md)
+- [MVVM](CS/디자인패턴/MVVM.md)
 - MVP
 - MVVM-C
 
