@@ -8,6 +8,7 @@
 # INDEX
 ## [Daily To-Do](Todo)
 
+
 ## [swift](Swift)
 - [Optional](Swift/Optional.md)
 - [Collection Type](Swift/Collection_Type.md)
@@ -30,6 +31,7 @@
 - [ARC & GC](iOS/ARC_vs_GC.md)
 - [Storage Modifier](iOS/Storage_Modifier.md)
 
+
 ## [Algorithm](CS/알고리즘)
 - [완전탐색(BruteForce)](CS/알고리즘/완전탐색.md)
 - [탐욕법(Greedy)](CS/알고리즘/탐욕법(Greedy).md)
@@ -48,4 +50,6 @@
 
 ## [OS](CS/운영체제)
 - [Thread & Process](CS/운영체제/Thread&Process.md)
+
+
 ## [Network](CS/네트워크)
