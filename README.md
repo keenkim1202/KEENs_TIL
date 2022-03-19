@@ -7,6 +7,7 @@
 
 # INDEX
 ## [Daily To-Do](Todo)
+## [취업 TIP](Tip)
 
 
 ## [swift](Swift)
