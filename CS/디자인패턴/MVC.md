@@ -1,32 +1,34 @@
 # MVC
 
+<img src="https://user-images.githubusercontent.com/59866819/159966596-530bdde7-61aa-4fe5-9cfc-bb3357fe5179.png">
+
 : Model + View + Controller
-- `View`¿Í `Model` »çÀÌ¿¡¼­ `Controller`°¡ ¾çÂÊÀ» ¸ðµÎ ¾÷µ¥ÀÌÆ® ÇÑ´Ù.
-- `View`´Â ±×Àú È­¸é¿¡ ¿ä¼Ò¸¦ ³ªÅ¸³»±â¸¸ ÇÑ´Ù.
-- `Model`Àº ¾Û¿¡¼­ »ç¿ëµÇ´Â µ¥ÀÌÅÍ¸¦ ÀÐ°í ¾²´Â ¿ªÇÒ¸¸ ÇÑ´Ù.
+- `View`ì™€ `Model` ì‚¬ì´ì—ì„œ `Controller`ê°€ ì–‘ìª½ì„ ëª¨ë‘ ì—…ë°ì´íŠ¸ í•œë‹¤.
+- `View`ëŠ” ê·¸ì € í™”ë©´ì— ìš”ì†Œë¥¼ ë‚˜íƒ€ë‚´ê¸°ë§Œ í•œë‹¤.
+- `Model`ì€ ì•±ì—ì„œ ì‚¬ìš©ë˜ëŠ” ë°ì´í„°ë¥¼ ì½ê³  ì“°ëŠ” ì—­í• ë§Œ í•œë‹¤.
 ```
-¿¹¸¦ µé¾î,  
-- ¼­¹ö¿¡¼­ ¹Þ¾Æ¿Â json µ¥ÀÌÅÍ¸¦ ÆÄ½ÌÇÏ°í, ¿øÇÏ´Â ÇüÅÂ·Î º¯ÇüÇÏ¿© View¿¡ ¶ç¿ì´Â °úÁ¤  
-- »ç¿ëÀÚ¿ÍÀÇ interactionÀ» ÅëÇØ µé¾î¿Â Á¤º¸ È¤Àº º¯°æµÈ Á¤º¸¸¦ model¿¡ ¹Ý¿µÇÏ´Â °úÁ¤  
-µî È­¸é¿¡ º¸ÀÌ´Â °Í°ú µ¥ÀÌÅÍ ÀÌ¿ÜÀÇ °ÍÀº ¸ðµÎ ViewController¿¡¼­ ´ã´çÇÏ´Ùº¸´Ï,   
+ì˜ˆë¥¼ ë“¤ì–´,  
+- ì„œë²„ì—ì„œ ë°›ì•„ì˜¨ json ë°ì´í„°ë¥¼ íŒŒì‹±í•˜ê³ , ì›í•˜ëŠ” í˜•íƒœë¡œ ë³€í˜•í•˜ì—¬ Viewì— ë„ìš°ëŠ” ê³¼ì •  
+- ì‚¬ìš©ìžì™€ì˜ interactionì„ í†µí•´ ë“¤ì–´ì˜¨ ì •ë³´ í˜¹ì€ ë³€ê²½ëœ ì •ë³´ë¥¼ modelì— ë°˜ì˜í•˜ëŠ” ê³¼ì •  
+ë“± í™”ë©´ì— ë³´ì´ëŠ” ê²ƒê³¼ ë°ì´í„° ì´ì™¸ì˜ ê²ƒì€ ëª¨ë‘ ViewControllerì—ì„œ ë‹´ë‹¹í•˜ë‹¤ë³´ë‹ˆ,   
 
-¿ì½º°Ù ¼Ò¸®·Î MVC¸¦ Massive View Controller ¶ó°í ºÎ¸£±âµµ ÇÑ´Ù.
+ìš°ìŠ¤ê²Ÿ ì†Œë¦¬ë¡œ MVCë¥¼ Massive View Controller ë¼ê³  ë¶€ë¥´ê¸°ë„ í•œë‹¤.
 ```
-- `controller`°¡ ºñ´ëÇØÁø ´Ù´Â °ÍÀº Å×½ºÆ® ÇÏ±â¿¡µµ ¾î·Æ´Ù´Â ´ÜÁ¡ÀÌ ÀÖ´Ù.
+- `controller`ê°€ ë¹„ëŒ€í•´ì§„ ë‹¤ëŠ” ê²ƒì€ í…ŒìŠ¤íŠ¸ í•˜ê¸°ì—ë„ ì–´ë µë‹¤ëŠ” ë‹¨ì ì´ ìžˆë‹¤.
 
-## ¿ä¼Ò
-- `Model` : Business logic, Data¸¦ ´ã´çÇÏ´Â ºÎºÐ
-- `View` : »ç¿ëÀÚÀÇ ÀÔÀå¿¡¼­ È­¸é¿¡ º¸¿©Áö´Â ºÎºÐ (presentation)
-- `Controller` : `Model`°ú `View`ÀÇ Áß°£ ´Ù¸®. 
-    - `Model`ÀÇ º¯È­¸¦ `View`¿¡ °»½Å
-    - `View`ÀÇ ÀÔ·ÂÀ» ¹Þ¾Æ `Model`¿¡ ¹Ý¿µ
+## ìš”ì†Œ
+- `Model` : Business logic, Dataë¥¼ ë‹´ë‹¹í•˜ëŠ” ë¶€ë¶„
+- `View` : ì‚¬ìš©ìžì˜ ìž…ìž¥ì—ì„œ í™”ë©´ì— ë³´ì—¬ì§€ëŠ” ë¶€ë¶„ (presentation)
+- `Controller` : `Model`ê³¼ `View`ì˜ ì¤‘ê°„ ë‹¤ë¦¬. 
+    - `Model`ì˜ ë³€í™”ë¥¼ `View`ì— ê°±ì‹ 
+    - `View`ì˜ ìž…ë ¥ì„ ë°›ì•„ `Model`ì— ë°˜ì˜
 
 </br>
 
 
 <details>
-<summary> Âü°í ¸µÅ© </summary>
+<summary> ì°¸ê³  ë§í¬ </summary>
  
-- [iOS¿¡¼­ÀÇ MVC¿Í MVVM](https://velog.io/@nnnyeong/iOS-MVC-MVVM-Architecture-Pattern)
+- [iOSì—ì„œì˜ MVCì™€ MVVM](https://velog.io/@nnnyeong/iOS-MVC-MVVM-Architecture-Pattern)
 
 </details>
