@@ -6,8 +6,10 @@
  (메인은 iOS/Swift 이므로 그와 관련된 내용이 주로 작성될 예정)
 
 # INDEX
-## [Daily To-Do](Todo)
-## [취업 TIP](Tip)
+## ETC
+- [Daily To-Do](Todo)
+- [취업 TIP](Tip)
+- [Rx](https://github.com/keenkim1202/RxSwift_Practice)
 
 
 ## [swift](Swift)
