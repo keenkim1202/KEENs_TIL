@@ -58,4 +58,7 @@
 
 ## [Network](CS/네트워크)
 - [TCP & UDP](CS/네트워크/TCP&UDP.md)
+- [HTTP](CS/네트워크/HTTP.md)
+- [OSI 7 Layer](CS/네트워크/OSI_7_Layer.md)
+- [캡슐화](CS/네트워크/캡슐화&역캡슐화.md)
 
