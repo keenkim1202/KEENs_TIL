@@ -74,19 +74,21 @@
  - view의 상단 제약조건의 contentOffset을 빼주어 구현함. (함께 있는 뷰가 UIScrollView를 상속받고 있다면 아래의 방법으로 적용 가능)
  
   ```swift
-  // 변수 선언
-  var topConstraint: Constraint? = nil
-  ...
+ class SomeView: UIView {
+    // 변수 선언
+    var topConstraint: Constraint? = nil
+    ...
 
-  // 제약조건 설정
+    // 제약조건 설정
 
-  func setConstraints() {
-     infoView.snp.makeConstraints {
-       $0.leading.trailing.top.equalTo(safeArea)
-       $0.height.equalTo(110)
-       self.topConstraint = $0.top.equalTo(safeArea).constraint
-     }
-  }
+    func setConstraints() {
+      infoView.snp.makeConstraints {
+        $0.leading.trailing.top.equalTo(safeArea)
+        $0.height.equalTo(110)
+        self.topConstraint = $0.top.equalTo(safeArea).constraint
+      }
+    }
+ }
 
   // 스크롤 될 때 뷰 올라가게 하기
   extension SomeView: UIScrollViewDelegate {
