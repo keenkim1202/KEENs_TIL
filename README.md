@@ -42,7 +42,11 @@
   - DFS (Depth First Search)
 
 
-## [Design Pattern](CS/디자인패턴)
+## Design Pattern
+- Delegate
+- Observer
+
+## [Architecture Pattern](CS/디자인패턴)
 - [MVC](CS/디자인패턴/MVC.md)
 - [MVVM](CS/디자인패턴/MVVM.md)
 - MVP
