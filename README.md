@@ -46,9 +46,9 @@
 - Delegate
 - Observer
 
-## [Architecture Pattern](CS/디자인패턴)
-- [MVC](CS/디자인패턴/MVC.md)
-- [MVVM](CS/디자인패턴/MVVM.md)
+## [Architecture Pattern](CS/아키택처패턴)
+- [MVC](CS/아키택처패턴/MVC.md)
+- [MVVM](CS/아키택처패턴/MVVM.md)
 - MVP
 - MVVM-C
 - VIPER
