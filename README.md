@@ -65,3 +65,45 @@
 - [OSI 7 Layer](CS/네트워크/OSI_7_Layer.md)
 - [캡슐화](CS/네트워크/캡슐화&역캡슐화.md)
 
+## ISSUE 해결
+<details>
+ <summary> 스크롤 시 사라지는 뷰 만드는 방법 </summary>
+ 
+ - 상단의 작은 뷰와 웹뷰로 화면이 구성되어있음
+ - 아래로 스크롤을 하면 안보이고, 다시 위로 스크롤하면 보이는 뷰를 넣고 싶었음
+ - view의 상단 제약조건의 contentOffset을 빼주어 구현함. (함께 있는 뷰가 UIScrollView를 상속받고 있다면 아래의 방법으로 적용 가능)
+ 
+  ```swift
+  // 변수 선언
+  var topConstraint: Constraint? = nil
+  ...
+
+  // 제약조건 설정
+
+  func setConstraints() {
+     infoView.snp.makeConstraints {
+       $0.leading.trailing.top.equalTo(safeArea)
+       $0.height.equalTo(110)
+       self.topConstraint = $0.top.equalTo(safeArea).constraint
+     }
+  }
+
+  // 스크롤 될 때 뷰 올라가게 하기
+  extension SomeView: UIScrollViewDelegate {
+   func scrollViewDidScroll(_ scrollView: UIScrollView) {
+     guard let topConstraint = topConstraint else { return }
+
+     if scrollView.contentOffset.y > 0 {
+       if scrollView.contentOffset.y < 110 {
+         topConstraint.update(offset: -scrollView.contentOffset.y)
+       } else {
+         topConstraint.update(offset: -110)
+       }
+     } else {
+       topConstraint.update(offset: 0)
+     }
+   }
+ }
+  ```
+
+</details>
