@@ -21,7 +21,7 @@
 - Function
 - Control Flow
 - Protocol
-- ARC
+- Codable & Encodable
 - Concurrency
   - GCD
   - Operation
@@ -45,6 +45,7 @@
 ## Design Pattern
 - Delegate
 - Observer
+- Protocol
 
 ## [Architecture Pattern](CS/아키택처패턴)
 - [MVC](CS/아키택처패턴/MVC.md)
