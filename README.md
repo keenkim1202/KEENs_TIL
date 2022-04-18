@@ -43,10 +43,13 @@
 - [BFS  & DFS](CS/알고리즘/DFS&BFS.swift)
   - BFS (Breath First Search)
   - DFS (Depth First Search)
+- 이진탐색(Linear Search)
+- 그래프
+- 트리
 
 
 ## Design Pattern
-- Delegate
+- [Delegate](https://github.com/keenkim1202/DelegateEx)
 - Observer
 - Protocol
 - Singleton
