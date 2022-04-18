@@ -23,15 +23,18 @@
 - Protocol
 - Codable & Encodable
 - Concurrency
-  - GCD
-  - Operation
+  - [GCD](iOS/GCD&Operation.md)
+  - [Operation](iOS/GCD&Operation.md)
   - Async/Await
 - [final](Swift/final.md)
+- Closure
+  - [Escaping Closure](Swift/EscapingClosure.md) 
 
 ## [iOS](iOS)
 - [App Life-Cycle](iOS/appLifeCycle.md)
 - [ARC & GC](iOS/ARC_vs_GC.md)
 - [Storage Modifier](iOS/Storage_Modifier.md)
+- [SceneDelegate란?](iOS/SceneDelegate.md)
 
 
 ## [Algorithm](CS/알고리즘)
@@ -62,12 +65,15 @@
 
 ## [Network](CS/네트워크)
 - [TCP & UDP](CS/네트워크/TCP&UDP.md)
-- [HTTP](CS/네트워크/HTTP.md)
+- [HTTP/HTTPS](CS/네트워크/HTTP와HTTPS.md)
+  - [HTTP와 Socket](CS/네트워크/HTTP와Socket.md)
+  - [HTTP Method](CS/네트워크/HTTPMethod.md)
 - [OSI 7 Layer](CS/네트워크/OSI_7_Layer.md)
 - [캡슐화](CS/네트워크/캡슐화&역캡슐화.md)
 
 ## [ETC](CS/ETC)
-- [Framework와 Library](CS/ETC/Framework&Library.md)
+- [Framework와 Library란?](CS/ETC/Framework&Library.md)
+- 아키택처패턴과 디자인패턴이란?
 
 ## ISSUE 해결
 <details>
