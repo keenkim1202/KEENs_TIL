@@ -66,6 +66,9 @@
 - [OSI 7 Layer](CS/네트워크/OSI_7_Layer.md)
 - [캡슐화](CS/네트워크/캡슐화&역캡슐화.md)
 
+## [ETC](CS/ETC)
+- [Framework와 Library](CS/ETC/Framework&Library.md)
+
 ## ISSUE 해결
 <details>
  <summary> 스크롤 시 사라지는 뷰 만드는 방법 </summary>
