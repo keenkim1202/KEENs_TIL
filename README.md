@@ -76,7 +76,7 @@
 
 ## [ETC](CS/ETC)
 - [Framework와 Library란?](CS/ETC/Framework&Library.md)
-- 아키택처패턴과 디자인패턴이란?
+- [아키택처패턴과 디자인패턴이란?](CS/ETC/아키택처패턴과_디자인패턴이란?.md)
 
 ## ISSUE 해결
 <details>
