@@ -46,6 +46,7 @@
 - Delegate
 - Observer
 - Protocol
+- Singleton
 
 ## [Architecture Pattern](CS/아키택처패턴)
 - [MVC](CS/아키택처패턴/MVC.md)
