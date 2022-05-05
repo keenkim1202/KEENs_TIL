@@ -7,6 +7,8 @@
   ```
   스토리보드를 사용하는 경우, 스토리보드에 있는 뷰를 가져와 사용할 테니 굳이 사용할 필요가 없다.)
   ```
+  
+  </br>
 
   > viewDidLoad()
 
@@ -18,3 +20,11 @@
   간단하게 말하면,
   loadView()는 뷰가 로드되기 시작할 때 불려지고, viewDidLoad()는 뷰 로드가 완료된 후 불려진다.
   ```
+
+</br>
+
+  > 공식문서
+
+  [loadView()란?](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621454-loadview)
+
+  [viewDidLoad()란?](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621495-viewdidload)
