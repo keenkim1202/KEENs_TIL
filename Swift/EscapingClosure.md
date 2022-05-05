@@ -1,7 +1,7 @@
 # Escaping Closure
 
-### Escaping Closure ¶õ?
-- Å¬·ÎÀú°¡ ÇÔ¼öÀÇ ÀÎÀÚ·Î Àü´Þ‰çÀ» ¶§, ÇÔ¼öÀÇ ½ÇÇàÀÌ Á¾·áµÈ ÈÄ ½ÇÇàµÇ´Â Å¬·ÎÀúÀÌ´Ù.
+### Escaping Closure ëž€?
+- í´ë¡œì €ê°€ í•¨ìˆ˜ì˜ ì¸ìžë¡œ ì „ë‹¬ë˜ì—ˆì„ ë•Œ, í•¨ìˆ˜ì˜ ì‹¤í–‰ì´ ì¢…ë£Œëœ í›„ ì‹¤í–‰ë˜ëŠ” í´ë¡œì €ì´ë‹¤.
 ```swift
 class ViewModel {
     var completionHandler: (() -> Void)? = nil
@@ -11,32 +11,32 @@ class ViewModel {
     }
 }
 ```
-> ½ÇÇà¼ø¼­
-1. Å¬·ÎÀú°¡ fetchData() ÇÔ¼öÀÇ completion ÀÎÀÚ·Î Àü´ÞµÈ´Ù.
-2. Å¬·ÎÀú completionÀÌ conpletionHandler º¯¼ö¿¡ ÀúÀåµÈ´Ù.
-3. fetchData() ÇÔ¼ö°¡ °ªÀ» ¹ÝÈ¯ÇÏ°í Á¾·áµÈ´Ù.
-4. Å¬·ÎÀú completionÀº ¾ÆÁ÷ ½ÇÇàµÇÁö ¾Ê¾Ò´Ù.
-(completionÀº ÇÔ¼öÀÇ ½ÇÇàÀÌ Á¾·áµÇ±â Àü¿¡ ½ÇÇàµÇÁö ¾Ê±â ¶§¹®¿¡  
-ÇÔ¼ö ¹Û¿¡¼­ ½ÇÇàµÇ´Â Å¬·ÎÀúÀÌ´Ù.)
+> ì‹¤í–‰ìˆœì„œ
+1. í´ë¡œì €ê°€ fetchData() í•¨ìˆ˜ì˜ completion ì¸ìžë¡œ ì „ë‹¬ëœë‹¤.
+2. í´ë¡œì € completionì´ conpletionHandler ë³€ìˆ˜ì— ì €ìž¥ëœë‹¤.
+3. fetchData() í•¨ìˆ˜ê°€ ê°’ì„ ë°˜í™˜í•˜ê³  ì¢…ë£Œëœë‹¤.
+4. í´ë¡œì € completionì€ ì•„ì§ ì‹¤í–‰ë˜ì§€ ì•Šì•˜ë‹¤.
+(completionì€ í•¨ìˆ˜ì˜ ì‹¤í–‰ì´ ì¢…ë£Œë˜ê¸° ì „ì— ì‹¤í–‰ë˜ì§€ ì•Šê¸° ë•Œë¬¸ì—  
+í•¨ìˆ˜ ë°–ì—ì„œ ì‹¤í–‰ë˜ëŠ” í´ë¡œì €ì´ë‹¤.)
 
 
-### Non-Escaping Closure ¶õ?
-- ¹Ý´ë·Î ÇÔ¼öÀÇ ½ÇÇàÀÌ Á¾·áµÇ±â Àü¿¡ ½ÇÇàµÇ´Â Å¬·ÎÀúÀÌ´Ù.
+### Non-Escaping Closure ëž€?
+- ë°˜ëŒ€ë¡œ í•¨ìˆ˜ì˜ ì‹¤í–‰ì´ ì¢…ë£Œë˜ê¸° ì „ì— ì‹¤í–‰ë˜ëŠ” í´ë¡œì €ì´ë‹¤.
 
 ```swift
 func runClosure(closure: () -> Void) {
     closure()
 }
 ```
-> ½ÇÇà¼ø¼­
-1. Å¬·ÎÀú°¡ `runClosure()` ÇÔ¼öÀÇ `closure` ÀÎÀÚ·Î Àü´ÞµÈ´Ù.
-2. ÇÔ¼ö ¾ÈÀÇ `closure()` °¡ ½ÇÇàµÈ´Ù.
-3.  `runClosure()` ÇÔ¼ö°¡ °ªÀ» ¹ÝÈ¯ÇÏ°í Á¾·áÇÑ´Ù.
+> ì‹¤í–‰ìˆœì„œ
+1. í´ë¡œì €ê°€ `runClosure()` í•¨ìˆ˜ì˜ `closure` ì¸ìžë¡œ ì „ë‹¬ëœë‹¤.
+2. í•¨ìˆ˜ ì•ˆì˜ `closure()` ê°€ ì‹¤í–‰ëœë‹¤.
+3.  `runClosure()` í•¨ìˆ˜ê°€ ê°’ì„ ë°˜í™˜í•˜ê³  ì¢…ë£Œí•œë‹¤.
 
 </br>
 
-## ¿¹½Ã
-escaping closureÀÇ ¿¹·Î´Â ºñµ¿±â·Î ½ÇÇàµÇ´Â `HTTP ¿äÃ» CompletionHandler` °¡ ÀÖ´Ù.
+## ì˜ˆì‹œ
+escaping closureì˜ ì˜ˆë¡œëŠ” ë¹„ë™ê¸°ë¡œ ì‹¤í–‰ë˜ëŠ” `HTTP ìš”ì²­ CompletionHandler` ê°€ ìžˆë‹¤.
 ``` swift
 func makeRequest(_ completion: @escaping (Result<(Data, URLResponse), Error>) -> Void) {
   URLSession.shared.dataTask(with: URL(string: "http://somesite.com")!) { data, response, error in
@@ -48,39 +48,39 @@ func makeRequest(_ completion: @escaping (Result<(Data, URLResponse), Error>) ->
   }
 }
 ```
-- `makeRequest()` ÇÔ¼ö¿¡¼­ ½ÇÇàµÇ´Â `completion` Å¬·ÎÀú´Â ÇÔ¼ö ½ÇÇà Áß¿¡ Áï½Ã ½ÇÇàµÇÁö ¾Ê°í, URL ¿äÃ»ÀÌ ³¡³­ ÈÄ ºñµ¿±â·Î ½ÇÇàÀÌ µÈ´Ù.
-- Å¬·ÎÀú·ÎµÈ ÀÎÀÚÀÎ `completion`ÀÇ Å¸ÀÔ¿¡ `@escaping` À» ºÙ¿©¼­ `escaping closure` ¶ó´Â °ÍÀ» ¸í½ÃÇØÁÖ¾î¾ß ÇÑ´Ù.
+- `makeRequest()` í•¨ìˆ˜ì—ì„œ ì‹¤í–‰ë˜ëŠ” `completion` í´ë¡œì €ëŠ” í•¨ìˆ˜ ì‹¤í–‰ ì¤‘ì— ì¦‰ì‹œ ì‹¤í–‰ë˜ì§€ ì•Šê³ , URL ìš”ì²­ì´ ëë‚œ í›„ ë¹„ë™ê¸°ë¡œ ì‹¤í–‰ì´ ëœë‹¤.
+- í´ë¡œì €ë¡œëœ ì¸ìžì¸ `completion`ì˜ íƒ€ìž…ì— `@escaping` ì„ ë¶™ì—¬ì„œ `escaping closure` ë¼ëŠ” ê²ƒì„ ëª…ì‹œí•´ì£¼ì–´ì•¼ í•œë‹¤.
 
 </br>
 
-## Q. `@escaping` Å°¿öµå°¡ ºÙÀ¸¸é ¹«Á¶°Ç escapingÀ¸·Î¸¸ »ç¿ëÇØ¾ß ÇÒ±î?
+## Q. `@escaping` í‚¤ì›Œë“œê°€ ë¶™ìœ¼ë©´ ë¬´ì¡°ê±´ escapingìœ¼ë¡œë§Œ ì‚¬ìš©í•´ì•¼ í• ê¹Œ?
 ### NO!
-- `@escaping` ÀÌ ºÙ¾îÀÖ¾îµµ `non-escaping closure`¸¦ ÀÎÀÚ·Î ³ÖÀ» ¼ö ÀÖ´Ù.
+- `@escaping` ì´ ë¶™ì–´ìžˆì–´ë„ `non-escaping closure`ë¥¼ ì¸ìžë¡œ ë„£ì„ ìˆ˜ ìžˆë‹¤.
 ```swift
 func runClosure(closure: @escaping () -> Void) {
-    closure() // closure´Â non-escaping ÀÌÁö¸¸ @escaping »ç¿ëÀÌ °¡´É
+    closure() // closureëŠ” non-escaping ì´ì§€ë§Œ @escaping ì‚¬ìš©ì´ ê°€ëŠ¥
 }
 ```
 
 </br>
 
-- ÇÏÁö¸¸ ¹Ý´ë·Î `escaping closure` ¸¦ `@escaping` Å°¿öµå ¾øÀÌ »ç¿ëÀº ºÒ°¡
+- í•˜ì§€ë§Œ ë°˜ëŒ€ë¡œ `escaping closure` ë¥¼ `@escaping` í‚¤ì›Œë“œ ì—†ì´ ì‚¬ìš©ì€ ë¶ˆê°€
 ``` swift
 class ViewModel {
     var completionhandler: (() -> Void)? = nil
     
-    func fetchData(completion: () -> Void) { // @escaping ´©¶ôÀ¸·Î ÄÄÆÄÀÏ ¿¡·¯ ¹ß»ý
+    func fetchData(completion: () -> Void) { // @escaping ëˆ„ë½ìœ¼ë¡œ ì»´íŒŒì¼ ì—ëŸ¬ ë°œìƒ
         completionhandler = completion
     }
 }
 ```
 
-## Q. `@escaping`¸¦ »ç¿ëÇÏ¸é escaping°ú non-escapingÀ» ¸ðµÎ »ç¿ëÇÒ ¼ö ÀÖ´Ù¸é ¿Ö ³ª´©¾î »ç¿ëÇÏ´Â°¡?
-- ÄÄÆÄÀÏ·¯ÀÇ ÆÛÆ÷¸Õ½º¿Í ÃÖÀûÈ­ ¶§¹®ÀÌ´Ù.
-- non-escapingÀº 
-    - ÄÄÆÄÀÏ·¯°¡ Å¬·ÎÀúÀÇ ½ÇÇàÀÌ ¾ðÁ¦ Á¾·áµÇ´ÂÁö ¾Ë°í ÀÖ´Ù.
-    ¤§- µû¶ó¼­ Å¬·ÎÀú¿¡¼­ »ç¿ëÇÏ´Â Æ¯Á¤ °´Ã¼¿¡ ´ëÇÑ `retain, release` µîÀÇ Ã³¸®¸¦ »ý·«ÇØ °´Ã¼ÀÇ `life-cycle`À» È¿À²ÀûÀ¸·Î °ü¸® °¡´ÉÇÏ´Ù.
-- escapingÀº
-    - ÇÔ¼ö ¹Û¿¡¼­ ½ÇÇàµÇ±â ‹š¹®¿¡ Å¬·ÎÀú°¡ ÇÔ¼ö ¹Û¿¡¼­µµ ÀûÀýÈ÷ ½ÇÇàµÇ´Â °ÍÀ» º¸ÀåÇÏ±â À§ÇØ,  
-    Å¬·ÎÀú¿¡¼­ »ç¿ëÇÏ´Â °´Ã¼¿¡ ´ëÇÑ Ãß°¡ÀûÀÎ `reference cycle`À» °ü¸®ÇØÁà¾ß ÇÑ´Ù.
-- ÀÌ·¯ÇÑ ÀÌÀ¯·Î Swift¿¡¼­´Â ÇÊ¿äÇÒ ¶§¸¸ `escaping closure`¸¦ »ç¿ëÇÏµµ·Ï ±¸ºÐÇØµÎ¾ú´Ù.
+## Q. `@escaping`ë¥¼ ì‚¬ìš©í•˜ë©´ escapingê³¼ non-escapingì„ ëª¨ë‘ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤ë©´ ì™œ ë‚˜ëˆ„ì–´ ì‚¬ìš©í•˜ëŠ”ê°€?
+- ì»´íŒŒì¼ëŸ¬ì˜ í¼í¬ë¨¼ìŠ¤ì™€ ìµœì í™” ë•Œë¬¸ì´ë‹¤.
+- non-escapingì€ 
+    - ì»´íŒŒì¼ëŸ¬ê°€ í´ë¡œì €ì˜ ì‹¤í–‰ì´ ì–¸ì œ ì¢…ë£Œë˜ëŠ”ì§€ ì•Œê³  ìžˆë‹¤.
+    ã„·- ë”°ë¼ì„œ í´ë¡œì €ì—ì„œ ì‚¬ìš©í•˜ëŠ” íŠ¹ì • ê°ì²´ì— ëŒ€í•œ `retain, release` ë“±ì˜ ì²˜ë¦¬ë¥¼ ìƒëžµí•´ ê°ì²´ì˜ `life-cycle`ì„ íš¨ìœ¨ì ìœ¼ë¡œ ê´€ë¦¬ ê°€ëŠ¥í•˜ë‹¤.
+- escapingì€
+    - í•¨ìˆ˜ ë°–ì—ì„œ ì‹¤í–‰ë˜ê¸° ë¬¸ì— í´ë¡œì €ê°€ í•¨ìˆ˜ ë°–ì—ì„œë„ ì ì ˆížˆ ì‹¤í–‰ë˜ëŠ” ê²ƒì„ ë³´ìž¥í•˜ê¸° ìœ„í•´,  
+    í´ë¡œì €ì—ì„œ ì‚¬ìš©í•˜ëŠ” ê°ì²´ì— ëŒ€í•œ ì¶”ê°€ì ì¸ `reference cycle`ì„ ê´€ë¦¬í•´ì¤˜ì•¼ í•œë‹¤.
+- ì´ëŸ¬í•œ ì´ìœ ë¡œ Swiftì—ì„œëŠ” í•„ìš”í•  ë•Œë§Œ `escaping closure`ë¥¼ ì‚¬ìš©í•˜ë„ë¡ êµ¬ë¶„í•´ë‘ì—ˆë‹¤.
