@@ -32,6 +32,7 @@
   - [Escaping Closure](Swift/EscapingClosure.md) 
 
 ## [iOS](iOS)
+- [View Life-Cycle](iOS/viewLifeCycle.md)
 - [App Life-Cycle](iOS/appLifeCycle.md)
 - [ARC & GC](iOS/ARC_vs_GC.md)
 - [Storage Modifier](iOS/Storage_Modifier.md)
