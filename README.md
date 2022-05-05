@@ -76,6 +76,8 @@
 - [OSI 7 Layer](CS/네트워크/OSI_7_Layer.md)
 - [캡슐화](CS/네트워크/캡슐화&역캡슐화.md)
 
+## [Database](CS/데이터베이스)
+- [DB가 필요한 이유](CS/데이터베이스/db가필요한이유.md)
 ## [ETC](CS/ETC)
 - [Framework와 Library란?](CS/ETC/Framework&Library.md)
 - [아키택처패턴과 디자인패턴이란?](CS/ETC/아키택처패턴과_디자인패턴이란?.md)
