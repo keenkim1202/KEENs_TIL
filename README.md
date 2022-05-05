@@ -43,7 +43,7 @@
 - [App Life-Cycle](iOS/appLifeCycle.md)
 - [ARC & GC](iOS/ARC_vs_GC.md)
   - [ARC & Retain Cycle 예제](https://nareunhagae.tistory.com/61) `Blog` 
-- [Storage Modifier](iOS/Storage_Modifier.md)
+- [Storage Modifier (Strong, Weak, Unowned)](iOS/Storage_Modifier.md)
 - [SceneDelegate란?](iOS/SceneDelegate.md)
 
 
