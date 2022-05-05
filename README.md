@@ -53,6 +53,9 @@
 - 그래프
 - 트리
 
+## Data Structure
+- [Trie](https://nareunhagae.tistory.com/54) `Blog`
+
 
 ## Design Pattern
 - [Delegate](https://github.com/keenkim1202/DelegateEx)
@@ -82,51 +85,27 @@
 
 ## [Database](CS/데이터베이스)
 - [DB가 필요한 이유](CS/데이터베이스/db가필요한이유.md)
+
+
 ## [ETC](CS/ETC)
 - [Framework와 Library란?](CS/ETC/Framework&Library.md)
 - [아키택처패턴과 디자인패턴이란?](CS/ETC/아키택처패턴과_디자인패턴이란?.md)
+- [tableView vs collectionView 언제 무엇을 사용할까?](https://nareunhagae.tistory.com/19?category=1217062) `Blog`
+
+
 
 ## ISSUE 해결
-<details>
- <summary> 스크롤 시 사라지는 뷰 만드는 방법 </summary>
- 
- - 상단의 작은 뷰와 웹뷰로 화면이 구성되어있음
- - 아래로 스크롤을 하면 안보이고, 다시 위로 스크롤하면 보이는 뷰를 넣고 싶었음
- - view의 상단 제약조건의 contentOffset을 빼주어 구현함. (함께 있는 뷰가 UIScrollView를 상속받고 있다면 아래의 방법으로 적용 가능)
- 
-  ```swift
- class SomeView: UIView {
-    // 변수 선언
-    var topConstraint: Constraint? = nil
-    ...
-
-    // 제약조건 설정
-
-    func setConstraints() {
-      infoView.snp.makeConstraints {
-        $0.leading.trailing.top.equalTo(safeArea)
-        $0.height.equalTo(110)
-        self.topConstraint = $0.top.equalTo(safeArea).constraint
-      }
-    }
- }
-
-  // 스크롤 될 때 뷰 올라가게 하기
-  extension SomeView: UIScrollViewDelegate {
-   func scrollViewDidScroll(_ scrollView: UIScrollView) {
-     guard let topConstraint = topConstraint else { return }
-
-     if scrollView.contentOffset.y > 0 {
-       if scrollView.contentOffset.y < 110 {
-         topConstraint.update(offset: -scrollView.contentOffset.y)
-       } else {
-         topConstraint.update(offset: -110)
-       }
-     } else {
-       topConstraint.update(offset: 0)
-     }
-   }
- }
-  ```
-
-</details>
+- TableView
+  - [TableViewCell 안의 버튼 액션이 작동하지 않을 때](https://nareunhagae.tistory.com/52) `Blog`
+- CollectionView
+  - [cell 안의 imageView를 원으로 만들었는데 찌그러질 때](https://nareunhagae.tistory.com/33?category=1217062) `Blog`
+  - [CollectionView cell 커스텀 시 크기 조절이 잘 안될 때](https://nareunhagae.tistory.com/47?category=1217062) `Blog`
+- ScrollView
+  - [최상단으로 스크롤 시에만 보이는 뷰 구현(아래로 스크롤 시 사라지는 뷰)](https://nareunhagae.tistory.com/63?category=1217062) `Blog`
+- masksToBounds 와 clipsToBounds
+  - [masksToBounds: view 위에 있는 레이블이 view의 너비와 상관없이 안잘리게 하고싶을 때](https://nareunhagae.tistory.com/40?category=1217062) `Blog`
+  - [clipsToBounds: view안에 있는 imageView를 둥글게 하고 싶을 때](https://nareunhagae.tistory.com/39?category=1217062) `Blog`
+- AutoLayout
+  - [StackView: 내가 원하는 컴포넌트를 크게 하고 싶을 때](https://nareunhagae.tistory.com/37?category=1217062) `Blog`
+- Swift
+  - [문자열을 원하는 길이 만큼씰 자르려면?](https://nareunhagae.tistory.com/9?category=1217062) `Blog`
