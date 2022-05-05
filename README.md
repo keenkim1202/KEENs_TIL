@@ -23,6 +23,7 @@
 - Protocol
 - Codable & Encodable
 - Concurrency
+  - [동기 / 비동기 / 직렬 / 동시의 차이](iOS/Sync_Async.md)
   - [GCD](iOS/GCD&Operation.md)
   - [Operation](iOS/GCD&Operation.md)
   - Async/Await
