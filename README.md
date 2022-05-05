@@ -35,6 +35,7 @@
   - [Escaping Closure](Swift/EscapingClosure.md) 
 - [타입캐스팅: as, as!, as?](Swift/typeCasting.md)
 - [Components vs Split 비교](https://nareunhagae.tistory.com/8?category=1217059) `Blog`
+- [protocol 지향 언어로써의 Swift 특징](Swift/protocol지향언어.md)
 
 
 ## [iOS](iOS)
