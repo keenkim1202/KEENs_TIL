@@ -30,6 +30,7 @@
 - [final](Swift/final.md)
 - Closure
   - [Escaping Closure](Swift/EscapingClosure.md) 
+- [타입캐스팅: as, as!, as?](Swift/typeCasting.md)
 
 ## [iOS](iOS)
 - [View Life-Cycle](iOS/viewLifeCycle.md)
