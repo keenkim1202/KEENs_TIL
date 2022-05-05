@@ -32,6 +32,8 @@
 - Closure
   - [Escaping Closure](Swift/EscapingClosure.md) 
 - [타입캐스팅: as, as!, as?](Swift/typeCasting.md)
+- [Components vs Split ](https://nareunhagae.tistory.com/8?category=1217059) `Blog`
+
 
 ## [iOS](iOS)
 - [View Life-Cycle](iOS/viewLifeCycle.md)
@@ -91,7 +93,7 @@
 - [Framework와 Library란?](CS/ETC/Framework&Library.md)
 - [아키택처패턴과 디자인패턴이란?](CS/ETC/아키택처패턴과_디자인패턴이란?.md)
 - [tableView vs collectionView 언제 무엇을 사용할까?](https://nareunhagae.tistory.com/19?category=1217062) `Blog`
-
+- [github에 올리면 안되는 APIKEY 숭기기](https://nareunhagae.tistory.com/44?category=1217058) `Blog`
 
 
 ## ISSUE 해결
@@ -109,3 +111,4 @@
   - [StackView: 내가 원하는 컴포넌트를 크게 하고 싶을 때](https://nareunhagae.tistory.com/37?category=1217062) `Blog`
 - Swift
   - [문자열을 원하는 길이 만큼씰 자르려면?](https://nareunhagae.tistory.com/9?category=1217062) `Blog`
+  - [Extension: 랜덤한 색상을 사용하고 싶을 때](https://nareunhagae.tistory.com/42?category=1217058) `Blog`
