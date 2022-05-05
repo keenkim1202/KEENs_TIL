@@ -1,7 +1,9 @@
 # 🧙🏻‍♀️ KEENs_TIL
 
 > Write what i've learned today.
-- 이틀에 최소 하나 이상의 내용을 작성/수정을 목표로 합니다. ([블로그](https://nareunhagae.tistory.com/)에 정리하는 경우도 있습니다.)
+- 이틀에 최소 하나 이상의 내용을 작성/수정을 목표로 합니다. 
+ - [블로그](https://nareunhagae.tistory.com/)에 정리하는 경우도 있습니다.
+ - 블로그에 정리한 내용은 `Blog` 태그가 붙어있습니다.
 - 주제는 iOS/Swift/CS/ETC 등 개발의 전반적인 영역에 대한 내용을 작성합니다.  
  (메인은 iOS/Swift 이므로 그와 관련된 내용이 주로 작성될 예정)
 
@@ -32,7 +34,7 @@
 - Closure
   - [Escaping Closure](Swift/EscapingClosure.md) 
 - [타입캐스팅: as, as!, as?](Swift/typeCasting.md)
-- [Components vs Split ](https://nareunhagae.tistory.com/8?category=1217059) `Blog`
+- [Components vs Split 비교](https://nareunhagae.tistory.com/8?category=1217059) `Blog`
 
 
 ## [iOS](iOS)
