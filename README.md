@@ -74,6 +74,11 @@
 - MVVM-C
 - VIPER
 
+## Pragramming Paradigm
+- [OOP와 FP 비교]()
+- OOP: Object Oriented Programming (객체 지향 프로그래밍)
+- FP: Functional Programming (함수형 프로그래밍)
+- RP: Reactive Programming (반응형 프로그래밍)
 
 ## [OS](CS/운영체제)
 - [Thread & Process](CS/운영체제/Thread&Process.md)
@@ -86,6 +91,7 @@
   - [HTTP Method](CS/네트워크/HTTPMethod.md)
 - [OSI 7 Layer](CS/네트워크/OSI_7_Layer.md)
 - [캡슐화](CS/네트워크/캡슐화&역캡슐화.md)
+
 
 ## [Database](CS/데이터베이스)
 - [DB가 필요한 이유](CS/데이터베이스/db가필요한이유.md)
