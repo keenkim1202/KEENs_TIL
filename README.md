@@ -17,7 +17,7 @@
   - [override & overlaod](Swift/Override&Overload.md)
 - 타입과 자료형
 - Generic
-- Enumeration
+- [Enumeration](Swift/Enumeration.md)
 - Function
 - Control Flow
 - Protocol
