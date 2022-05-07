@@ -17,3 +17,7 @@
 - 1급 객체는 `함수의 인자로 전달되거나 반환 값으로 사용할 수 있는` 객체를 의미합니다.
 - `변수나 상수에 할당` 할 수 있는 객체입니다.
 - 스위프트는 기본 타입들과 함수나 클로저까지 모두 1급 객체에 해당합니다.
+
+
+### 참고 링크
+- [OOP vs FP](https://www.emizentech.com/blog/oop-vs-functional-programming.html)
