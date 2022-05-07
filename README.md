@@ -106,7 +106,7 @@
 - [github에 올리면 안되는 APIKEY 숭기기](https://nareunhagae.tistory.com/44?category=1217058) `Blog`
 
 
-## ISSUE 해결
+## Trouble Shooting
 - TableView
   - [TableViewCell 안의 버튼 액션이 작동하지 않을 때](https://nareunhagae.tistory.com/52) `Blog`
 - CollectionView
