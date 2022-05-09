@@ -51,6 +51,7 @@
 ## [Algorithm](CS/알고리즘)
 - [완전탐색(BruteForce)](CS/알고리즘/완전탐색.md)
 - [탐욕법(Greedy)](CS/알고리즘/탐욕법(Greedy).md)
+  - [예제 풀이](CS/알고리즘/Greedy_Ex.swift)
 - [BFS  & DFS](CS/알고리즘/DFS&BFS.swift)
   - [예제 + 개념 설명](https://nareunhagae.tistory.com/56) `Blog`
   - BFS (Breath First Search)
