@@ -16,7 +16,7 @@
 - [Optional](Swift/Optional.md)
 - [Collection Type](Swift/Collection_Type.md)
 - [Class & Struct](https://nareunhagae.tistory.com/59)
-  - [override & overlaod](Swift/Override&Overload.md)
+  - [override & overload](Swift/Override&Overload.md)
 - 타입과 자료형
 - Generic
 - [Enumeration](Swift/Enumeration.md)
@@ -104,7 +104,7 @@
 - [Framework와 Library란?](CS/ETC/Framework&Library.md)
 - [아키택처패턴과 디자인패턴이란?](CS/ETC/아키택처패턴과_디자인패턴이란?.md)
 - [tableView vs collectionView 언제 무엇을 사용할까?](https://nareunhagae.tistory.com/19?category=1217062) `Blog`
-- [github에 올리면 안되는 APIKEY 숭기기](https://nareunhagae.tistory.com/44?category=1217058) `Blog`
+- [github에 올리면 안되는 APIKEY 숨기기](https://nareunhagae.tistory.com/44?category=1217058) `Blog`
 
 
 ## Trouble Shooting
@@ -116,7 +116,7 @@
 - ScrollView
   - [최상단으로 스크롤 시에만 보이는 뷰 구현(아래로 스크롤 시 사라지는 뷰)](https://nareunhagae.tistory.com/63?category=1217062) `Blog`
 - masksToBounds 와 clipsToBounds
-  - [masksToBounds: view 위에 있는 레이블이 view의 너비와 상관없이 안잘리게 하고싶을 때](https://nareunhagae.tistory.com/40?category=1217062) `Blog`
+  - [masksToBounds: view 위에 있는 레이블이 view의 너비와 상관없이 안 잘리게 하고싶을 때](https://nareunhagae.tistory.com/40?category=1217062) `Blog`
   - [clipsToBounds: view안에 있는 imageView를 둥글게 하고 싶을 때](https://nareunhagae.tistory.com/39?category=1217062) `Blog`
 - AutoLayout
   - [StackView: 내가 원하는 컴포넌트를 크게 하고 싶을 때](https://nareunhagae.tistory.com/37?category=1217062) `Blog`
