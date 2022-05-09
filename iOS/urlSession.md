@@ -27,7 +27,7 @@
 
 # Thread Safety
 
-[Thread-Safe에 대하여](https://www.notion.so/Thread-Safe-7e98b9ffcfac40309f48a2cd3fdff828)
+[Thread-Safe란?](CS/운영체제/ThreadSafe.md)
 
 - URL session API 는 `thread-safe` 하다.
 - session과 task들을 어느 thread context에서든 자유롭게 생성할 수 있다.
