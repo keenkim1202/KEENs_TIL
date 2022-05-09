@@ -46,6 +46,7 @@
   - [ARC & Retain Cycle 예제](https://nareunhagae.tistory.com/61) `Blog` 
 - [Storage Modifier (Strong, Weak, Unowned)](iOS/Storage_Modifier.md)
 - [SceneDelegate란?](iOS/SceneDelegate.md)
+- [rootViewController란?](iOS/rootViewController.md)
 
 
 ## [Algorithm](CS/알고리즘)
