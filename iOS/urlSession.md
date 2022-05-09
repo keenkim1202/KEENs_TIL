@@ -156,3 +156,44 @@ request.addValue("application/json", forHTTPHeaderField: "Accept")
 ```swift
 session.dataTasks(with:)
 ```
+
+## 사용 예시
+```swift
+extension URLSession {
+  func request<T: Decodable>(_ request: URLRequest, completion: @escaping(T?, APIError?) -> Void) {
+    URLSession.shared.dataTask(with: request) { data, response, error in
+      DispatchQueue.main.async {
+        guard error == nil else {
+          completion(nil, .failed)
+          return
+        }
+        
+        guard let data = data else {
+          completion(nil, .noData)
+          return
+        }
+        
+        guard let response = response as? HTTPURLResponse else {
+          completion(nil, .invalidResponse)
+          return
+        }
+        
+        guard response.statusCode == 200 else {
+          completion(nil, .failed)
+          return
+        }
+        
+        do {
+          let decoder = JSONDecoder()
+          let userData = try decoder.decode(T.self, from: data)
+          completion(userData, nil)
+        } catch {
+          completion(nil, .invalideData)
+        }
+      }
+
+    }.resume()
+  }
+}
+```
+→ [코드 전문 보러기기](https://github.com/keenkim1202/SproutFARM/blob/main/SproutFARM/Sources/Extension/URLSession%2B%2BExtension.swift)
