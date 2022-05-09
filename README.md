@@ -70,7 +70,7 @@
 - [Delegate](https://github.com/keenkim1202/DelegateEx)
 - Observer
 - Protocol
-- Singleton
+- [Singleton](https://github.com/keenkim1202/SingletonEX)
 
 ## [Architecture Pattern](CS/아키택처패턴)
 - [MVC](CS/아키택처패턴/MVC.md)
