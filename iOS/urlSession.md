@@ -27,7 +27,7 @@
 
 # Thread Safety
 
-[Thread-Safe란?](CS/운영체제/ThreadSafe.md)
+[Thread-Safe란?](https://github.com/keenkim1202/KEENs_TIL/blob/main/CS/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/ThreadSafe.md)
 
 - URL session API 는 `thread-safe` 하다.
 - session과 task들을 어느 thread context에서든 자유롭게 생성할 수 있다.
