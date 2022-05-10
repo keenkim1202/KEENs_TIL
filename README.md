@@ -47,7 +47,7 @@
 - [Optional](Swift/Optional.md)
 - [Collection Type](Swift/Collection_Type.md)
 - [Class & Struct](https://nareunhagae.tistory.com/59)
-  - [override & overload](Swift/Override&Overload.md)
+  - [override & overload 란?](Swift/Override&Overload.md)
 - 타입과 자료형
 - Generic
 - [Enumeration](Swift/Enumeration.md)
@@ -57,7 +57,7 @@
 - Codable & Decodable
 - Concurrency
   - [동기 / 비동기 / 직렬 / 동시의 차이](iOS/Sync_Async.md)
-  - [기존방법과_async_await의차이](Swift/기존방법과_async_await의차이.md)
+  - [기존방법과 async await의 차이](Swift/기존방법과_async_await의차이.md)
   - [GCD](iOS/GCD&Operation.md)
   - [Operation](iOS/GCD&Operation.md)
   - Async/Await
@@ -225,12 +225,12 @@
 - ScrollView
   - [최상단으로 스크롤 시에만 보이는 뷰 구현(아래로 스크롤 시 사라지는 뷰)](https://nareunhagae.tistory.com/63?category=1217062) `Blog`
 - masksToBounds 와 clipsToBounds
-  - [masksToBounds: view 위에 있는 레이블이 view의 너비와 상관없이 안 잘리게 하고싶을 때](https://nareunhagae.tistory.com/40?category=1217062) `Blog`
-  - [clipsToBounds: view안에 있는 imageView를 둥글게 하고 싶을 때](https://nareunhagae.tistory.com/39?category=1217062) `Blog`
+  - [masksToBounds : view 위에 있는 레이블이 view의 너비와 상관없이 안 잘리게 하고싶을 때](https://nareunhagae.tistory.com/40?category=1217062) `Blog`
+  - [clipsToBounds : view안에 있는 imageView를 둥글게 하고 싶을 때](https://nareunhagae.tistory.com/39?category=1217062) `Blog`
 - AutoLayout
-  - [StackView: 내가 원하는 컴포넌트를 크게 하고 싶을 때](https://nareunhagae.tistory.com/37?category=1217062) `Blog`
+  - [StackView : 내가 원하는 컴포넌트를 크게 하고 싶을 때](https://nareunhagae.tistory.com/37?category=1217062) `Blog`
 - Swift
   - [문자열을 원하는 길이 만큼씰 자르려면?](https://nareunhagae.tistory.com/9?category=1217062) `Blog`
-  - [Extension: 랜덤한 색상을 사용하고 싶을 때](https://nareunhagae.tistory.com/42?category=1217058) `Blog`
+  - [Extension : 랜덤한 색상을 사용하고 싶을 때](https://nareunhagae.tistory.com/42?category=1217058) `Blog`
 - Network
-  - [다수의 반복적인 네트워크 통신 처리를 완료한 후 화면을 갱신해주고 싶을 때](https://nareunhagae.tistory.com/65) `Blog`
+  - [DispatchGroup : 다수의 반복적인 네트워크 통신 처리를 완료한 후 화면을 갱신해주고 싶을 때](https://nareunhagae.tistory.com/65) `Blog`
