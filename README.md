@@ -7,10 +7,13 @@
 - 주제는 iOS/Swift/CS/ETC 등 개발의 전반적인 영역에 대한 내용을 작성합니다.  
  (메인은 iOS/Swift 이므로 그와 관련된 내용이 주로 작성될 예정)
 
-# INDEX
-## ETC
-- [Rx](https://github.com/keenkim1202/RxSwift_Practice)
+</br>
+</br>
 
+## Rx
+- [Rx 레포로 이동하기](https://github.com/keenkim1202/RxSwift_Practice)
+
+</br>
 
 ## [swift](Swift)
 - [Optional](Swift/Optional.md)
@@ -37,6 +40,7 @@
 - [Components vs Split 비교](https://nareunhagae.tistory.com/8?category=1217059) `Blog`
 - [protocol 지향 언어로써의 Swift 특징](Swift/protocol지향언어.md)
 
+</br>
 
 ## [iOS](iOS)
 - [View Life-Cycle](iOS/viewLifeCycle.md)
@@ -49,6 +53,7 @@
 - [rootViewController란?](iOS/rootViewController.md)
 - [URLSession](iOS/urlSession.md)
 
+</br>
 
 ## [Algorithm](CS/알고리즘)
 - [완전탐색(BruteForce)](CS/알고리즘/완전탐색.md)
@@ -62,9 +67,12 @@
 - 그래프
 - 트리
 
+</br>
+
 ## Data Structure
 - [Trie](https://nareunhagae.tistory.com/54) `Blog`
 
+</br>
 
 ## Design Pattern
 - [Delegate](https://github.com/keenkim1202/DelegateEx)
@@ -73,12 +81,16 @@
 - [Singleton](https://github.com/keenkim1202/SingletonEX)
 - [Dependency Injection](https://github.com/keenkim1202/DependencyInjectionEx)
 
+</br>
+
 ## [Architecture Pattern](CS/아키택처패턴)
 - [MVC](CS/아키택처패턴/MVC.md)
 - [MVVM](CS/아키택처패턴/MVVM.md)
 - MVP
 - MVVM-C
 - VIPER
+
+</br>
 
 ## Pragramming Paradigm
 - [OOP와 FP 비교](CS/패러다임/OOP_vs_FP.md)
@@ -90,10 +102,13 @@
   - 순수 함수
 - RP: Reactive Programming (반응형 프로그래밍)
 
+</br>
+
 ## [OS](CS/운영체제)
 - [Thread & Process](CS/운영체제/Thread&Process.md)
   - [Thread-Safe란?](CS/운영체제/ThreadSafe.md) 
 
+</br>
 
 ## [Network](CS/네트워크)
 - [TCP & UDP](CS/네트워크/TCP&UDP.md)
@@ -103,10 +118,12 @@
 - [OSI 7 Layer](CS/네트워크/OSI_7_Layer.md)
 - [캡슐화](CS/네트워크/캡슐화&역캡슐화.md)
 
+</br>
 
 ## [Database](CS/데이터베이스)
 - [DB가 필요한 이유](CS/데이터베이스/db가필요한이유.md)
 
+</br>
 
 ## [ETC](CS/ETC)
 - [Framework와 Library란?](CS/ETC/Framework&Library.md)
@@ -114,6 +131,7 @@
 - [tableView vs collectionView 언제 무엇을 사용할까?](https://nareunhagae.tistory.com/19?category=1217062) `Blog`
 - [github에 올리면 안되는 APIKEY 숨기기](https://nareunhagae.tistory.com/44?category=1217058) `Blog`
 
+</br>
 
 ## Trouble Shooting
 - TableView
