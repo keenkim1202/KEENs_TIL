@@ -71,6 +71,7 @@
 - Observer
 - Protocol
 - [Singleton](https://github.com/keenkim1202/SingletonEX)
+- [DI](https://github.com/keenkim1202/DependencyInjectionEx)
 
 ## [Architecture Pattern](CS/아키택처패턴)
 - [MVC](CS/아키택처패턴/MVC.md)
