@@ -1,21 +1,49 @@
 # 🧙🏻‍♀️ KEENs_TIL
 
 > Write what i've learned today.
-- 이틀에 최소 하나 이상의 내용을 작성/수정을 목표로 합니다. 
-  - [블로그](https://nareunhagae.tistory.com/)에 정리하는 경우도 있습니다.
-  - 블로그에 정리한 내용은 `Blog` 태그가 붙어있습니다.
-- 주제는 iOS/Swift/CS/ETC 등 개발의 전반적인 영역에 대한 내용을 작성합니다.  
- (메인은 iOS/Swift 이므로 그와 관련된 내용이 주로 작성될 예정)
+> [블로그](https://nareunhagae.tistory.com/)에 정리하는 경우도 있습니다.  
+> 블로그에 정리한 내용은 `Blog` 태그가 붙어있습니다.  
 
 </br>
 </br>
 
-## Rx
+<div align=center>
+
+ # 🧞‍♂️ 🧞 🧞‍♀️  
+ <i> 당신을 깃헙에서 다른 사람들의 레포를 구경 👀 하다가 </i>  
+ <i> 우연히 머리 위로 책 📚 하나가 떨어졌습니다. </i>  
+
+<img src="https://user-images.githubusercontent.com/59866819/167699740-4201376d-a868-45a6-bca1-56f981b08922.gif">
+
+ <i> 책을 펼쳐보니... Holy !! 🤷🏻‍♀️ </i>  
+ <i> **KEENs_TIL** 이 적혀있네요 ! </i>  
+ <i> 당신은 행운아 입니다 ! 이런 귀중한 정보를 볼 수 있게 되다니 ! </i>  
+  
+ </br>
+  
+ <i> 다른 사람이 또 발견하기 전에 어서 숙지하세요! 💨 💨 💨 </i>
+  
+</div>
+
+</br>
+</br>
+
+<div align=center>
+  
+## 🧞‍♂️ Rx
+  
+</div>
+  
 - [Rx 레포로 이동하기](https://github.com/keenkim1202/RxSwift_Practice)
 
 </br>
 
-## [swift](Swift)
+<div align=center>
+  
+## 🧞‍♂️ [swift](Swift)
+  
+</div>
+
 - [Optional](Swift/Optional.md)
 - [Collection Type](Swift/Collection_Type.md)
 - [Class & Struct](https://nareunhagae.tistory.com/59)
@@ -42,7 +70,12 @@
 
 </br>
 
-## [iOS](iOS)
+<div align=center>
+  
+## 🧞‍♂️ [iOS](iOS)
+  
+</div>
+
 - [View Life-Cycle](iOS/viewLifeCycle.md)
   - [loadView()와 viewDidLoad() 의 차이는?](iOS/loadView_vs_viewDidLoad.md)
 - [App Life-Cycle](iOS/appLifeCycle.md)
@@ -55,7 +88,12 @@
 
 </br>
 
-## [Algorithm](CS/알고리즘)
+<div align=center>
+  
+## 🧞‍♂️ [Algorithm](CS/알고리즘)
+  
+</div>
+  
 - [완전탐색(BruteForce)](CS/알고리즘/완전탐색.md)
 - [탐욕법(Greedy)](CS/알고리즘/탐욕법(Greedy).md)
   - [예제 풀이](CS/알고리즘/Greedy_Ex.swift)
@@ -69,12 +107,22 @@
 
 </br>
 
-## Data Structure
+<div align=center>
+  
+## 🧞‍♂️ Data Structure
+  
+</div>
+
 - [Trie](https://nareunhagae.tistory.com/54) `Blog`
 
 </br>
 
-## Design Pattern
+<div align=center>
+  
+## 🧞‍♂️ Design Pattern
+  
+</div>
+
 - [Delegate](https://github.com/keenkim1202/DelegateEx)
 - Observer
 - Protocol
@@ -83,7 +131,12 @@
 
 </br>
 
-## [Architecture Pattern](CS/아키택처패턴)
+<div align=center>
+  
+## 🧞‍♂️ [Architecture Pattern](CS/아키택처패턴)
+  
+</div>
+
 - [MVC](CS/아키택처패턴/MVC.md)
 - [MVVM](CS/아키택처패턴/MVVM.md)
 - MVP
@@ -92,7 +145,12 @@
 
 </br>
 
-## Pragramming Paradigm
+<div align=center>
+  
+## 🧞‍♂️ Pragramming Paradigm
+  
+</div>
+
 - [OOP와 FP 비교](CS/패러다임/OOP_vs_FP.md)
 - OOP: Object Oriented Programming (객체 지향 프로그래밍)
   - 특징 (추상화/캡슐화/상속/다형성)
@@ -104,13 +162,23 @@
 
 </br>
 
-## [OS](CS/운영체제)
+<div align=center>
+  
+## 🧞‍♂️ [OS](CS/운영체제)
+  
+</div>
+
 - [Thread & Process](CS/운영체제/Thread&Process.md)
   - [Thread-Safe란?](CS/운영체제/ThreadSafe.md) 
 
 </br>
 
-## [Network](CS/네트워크)
+<div align=center>
+  
+## 🧞‍♂️ [Network](CS/네트워크)
+  
+</div>
+
 - [TCP & UDP](CS/네트워크/TCP&UDP.md)
 - [HTTP/HTTPS](CS/네트워크/HTTP와HTTPS.md)
   - [HTTP와 Socket](CS/네트워크/HTTP와Socket.md)
@@ -120,12 +188,22 @@
 
 </br>
 
-## [Database](CS/데이터베이스)
+<div align=center>
+  
+## 🧞‍♂️ [Database](CS/데이터베이스)
+  
+</div>
+
 - [DB가 필요한 이유](CS/데이터베이스/db가필요한이유.md)
 
 </br>
 
-## [ETC](CS/ETC)
+<div align=center>
+  
+## 🧞‍♂️ [ETC](CS/ETC)
+  
+</div>
+
 - [Framework와 Library란?](CS/ETC/Framework&Library.md)
 - [아키택처패턴과 디자인패턴이란?](CS/ETC/아키택처패턴과_디자인패턴이란?.md)
 - [tableView vs collectionView 언제 무엇을 사용할까?](https://nareunhagae.tistory.com/19?category=1217062) `Blog`
@@ -133,7 +211,12 @@
 
 </br>
 
-## Trouble Shooting
+<div align=center>
+  
+## 🧞‍♂️ Trouble Shooting
+  
+</div>
+
 - TableView
   - [TableViewCell 안의 버튼 액션이 작동하지 않을 때](https://nareunhagae.tistory.com/52) `Blog`
 - CollectionView
