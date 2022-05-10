@@ -83,7 +83,11 @@
 ## Pragramming Paradigm
 - [OOP와 FP 비교](CS/패러다임/OOP_vs_FP.md)
 - OOP: Object Oriented Programming (객체 지향 프로그래밍)
+  - 특징 (추상화/캡슐화/상속/다형성)
+  - SOLID 원칙
 - FP: Functional Programming (함수형 프로그래밍)
+  - 1급 객체(1급 시민)
+  - 순수 함수
 - RP: Reactive Programming (반응형 프로그래밍)
 
 ## [OS](CS/운영체제)
