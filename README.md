@@ -50,6 +50,7 @@
 - [Class & Struct](https://nareunhagae.tistory.com/59)
   - [override & overload 란?](Swift/Override&Overload.md)
 - 타입과 자료형
+  - [Array 와 subscript를 함께 사용하여 Index Out Of Range 대처하기](Swift/array_subscript.md)
 - Generic
 - [Enumeration](Swift/Enumeration.md)
 - Function
