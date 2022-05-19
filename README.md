@@ -3,6 +3,7 @@
 > Write what i've learned today.
 > [블로그](https://nareunhagae.tistory.com/)에 정리하는 경우도 있습니다.  
 > 블로그에 정리한 내용은 `Blog` 태그가 붙어있습니다.  
+> 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 </br>
 </br>
@@ -86,7 +87,7 @@
 - [Storage Modifier (Strong, Weak, Unowned)](iOS/Storage_Modifier.md)
 - [SceneDelegate란?](iOS/SceneDelegate.md)
 - [rootViewController란?](iOS/rootViewController.md)
-- [URLSession](iOS/urlSession.md)
+- [URLSession](iOS/urlSession.md) `🚧`
 
 </br>
 
@@ -146,6 +147,7 @@
 - MVP
 - MVVM-C
 - VIPER
+- [MVC -> MVP -> MVVM 까지의 변천사](https://nareunhagae.tistory.com/64) `Blog` `🚧`
 
 </br>
 
