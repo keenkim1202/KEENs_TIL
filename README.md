@@ -132,7 +132,7 @@
 - Observer
 - Protocol
 - [Singleton](https://github.com/keenkim1202/SingletonEX)
-- [Dependency Injection](https://github.com/keenkim1202/DependencyInjectionEx)
+- [Dependency Injection](https://github.com/keenkim1202/DependencyInjectionEx) 
 
 </br>
 
@@ -142,8 +142,8 @@
   
 </div>
 
-- [MVC](CS/아키택처패턴/MVC.md)
-- [MVVM](CS/아키택처패턴/MVVM.md)
+- [MVC](CS/아키택처패턴/MVC.md) `🚧`
+- [MVVM](CS/아키택처패턴/MVVM.md) `🚧`
 - MVP
 - MVVM-C
 - VIPER
