@@ -73,6 +73,7 @@
 
 </br>
 
+
 <div align=center>
   
 ## 🧞‍♂️ [iOS](iOS)
@@ -90,6 +91,7 @@
 - [URLSession](iOS/urlSession.md) `🚧`
 
 </br>
+
 
 <div align=center>
   
@@ -112,6 +114,7 @@
 
 </br>
 
+
 <div align=center>
   
 ## 🧞‍♂️ Data Structure
@@ -124,6 +127,7 @@
 
 <div align=center>
   
+
 ## 🧞‍♂️ Design Pattern
   
 </div>
@@ -135,6 +139,7 @@
 - [Dependency Injection](https://github.com/keenkim1202/DependencyInjectionEx) 
 
 </br>
+
 
 <div align=center>
   
@@ -150,6 +155,7 @@
 - [MVC -> MVP -> MVVM 까지의 변천사](https://nareunhagae.tistory.com/64) `Blog` `🚧`
 
 </br>
+
 
 <div align=center>
   
@@ -168,6 +174,7 @@
 
 </br>
 
+
 <div align=center>
   
 ## 🧞‍♂️ [OS](CS/운영체제)
@@ -178,6 +185,7 @@
   - [Thread-Safe란?](CS/운영체제/ThreadSafe.md) 
 
 </br>
+
 
 <div align=center>
   
@@ -194,6 +202,7 @@
 
 </br>
 
+
 <div align=center>
   
 ## 🧞‍♂️ [Database](CS/데이터베이스)
@@ -203,6 +212,7 @@
 - [DB가 필요한 이유](CS/데이터베이스/db가필요한이유.md)
 
 </br>
+
 
 <div align=center>
   
@@ -216,6 +226,7 @@
 - [github에 올리면 안되는 APIKEY 숨기기](https://nareunhagae.tistory.com/44?category=1217058) `Blog`
 
 </br>
+
 
 <div align=center>
   
