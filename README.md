@@ -62,6 +62,7 @@
   - [동기 / 비동기 / 직렬 / 동시의 차이](iOS/Sync_Async.md)
   - [기존방법과 async await의 차이](Swift/기존방법과_async_await의차이.md)
   - [GCD](iOS/GCD&Operation.md)
+   - [GCD: Queue의 종류와 사용 예제 코드](Swift/gcd_ex.md)
   - [Operation](iOS/GCD&Operation.md)
   - Async/Await
 - [final](Swift/final.md)
