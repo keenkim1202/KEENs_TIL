@@ -28,3 +28,19 @@
 - `ConcurrentQueue`, `SerialQueue`로 생성 가능
 
 
+## 예제 코드
+- Network 작업을 통해 데이터를 받아와 화면에 보여주고자 할 때
+```swift
+DispatchQueue.global().async {
+  // 1) some networking code...
+  
+  DispatchQueue.main.async {
+    // 2) some UI update code..
+  }
+}
+```
+1) 데이터 통신을 통해 데이터를 받아오는 작업을 global queue 에서 해줍니다.
+e.g. 데이터로부터 이미지를 받아오거나 API 를 통해 특정 쿼리에 대한 정보를 받아오는 작업
+
+2) 받아온 데이터를 사용자가 보는 화면(UI)에 보여줍니다.
+e.g. imageView에 다운 받은 이미지를 대입, tableView를 갱신하여 가져온 데이터를 바탕으로 UI에 반영
