@@ -58,13 +58,6 @@
 - Control Flow
 - Protocol
 - Codable & Decodable
-- Concurrency
-  - [동기 / 비동기 / 직렬 / 동시의 차이](iOS/Sync_Async.md)
-  - [기존방법과 async await의 차이](Swift/기존방법과_async_await의차이.md)
-  - [GCD](iOS/GCD&Operation.md)
-   - [GCD: Queue의 종류와 사용 예제 코드](Swift/gcd_ex.md)
-  - [Operation](iOS/GCD&Operation.md)
-  - Async/Await
 - [final](Swift/final.md)
 - Closure
   - [Escaping Closure](Swift/EscapingClosure.md) 
@@ -81,6 +74,12 @@
   
 </div>
 
+- Concurrency
+  - [동기 / 비동기 / 직렬 / 동시의 차이](iOS/Sync_Async.md)
+  - [기존방법과 async await의 차이](Swift/기존방법과_async_await의차이.md)
+  - [GC & Operation 개념 및 비교](iOS/GCD&Operation.md)
+    - [GCD: Queue의 종류와 사용 예제 코드](iOS/GCD_EX.md)
+  - Async/Await
 - [View Life-Cycle](iOS/viewLifeCycle.md)
   - [loadView()와 viewDidLoad() 의 차이는?](iOS/loadView_vs_viewDidLoad.md)
 - [App Life-Cycle](iOS/appLifeCycle.md)
