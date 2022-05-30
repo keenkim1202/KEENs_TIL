@@ -1,4 +1,4 @@
-# GCD & Operation
+# GCD & Operation 비교
 
 ## 📌 GCD : Grand Central Dispatch
 
