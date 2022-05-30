@@ -52,7 +52,6 @@
   - [override & overload 란?](Swift/Override&Overload.md)
 - 타입과 자료형
   - [Array 와 subscript를 함께 사용하여 Index Out Of Range 대처하기](Swift/array_subscript.md)
-- Generic
 - [Enumeration](Swift/Enumeration.md)
 - Function
 - Control Flow
@@ -64,6 +63,8 @@
 - [타입캐스팅: as, as!, as?](Swift/typeCasting.md)
 - [Components vs Split 비교](https://nareunhagae.tistory.com/8?category=1217059) `Blog`
 - [protocol 지향 언어로써의 Swift 특징](Swift/protocol지향언어.md)
+  - Generic
+  - Value Semantics
 
 </br>
 
@@ -74,12 +75,19 @@
   
 </div>
 
-- Concurrency
+- Cocoa Touch Framework
+- Swift Foundation
+- Swift Standard Library
+
+- Concurrent Programming
   - [동기 / 비동기 / 직렬 / 동시의 차이](iOS/Sync_Async.md)
   - [기존방법과 async await의 차이](Swift/기존방법과_async_await의차이.md)
   - [GC & Operation 개념 및 비교](iOS/GCD&Operation.md)
     - [GCD: Queue의 종류와 사용 예제 코드](iOS/GCD_EX.md)
   - Async/Await
+  - Dispatch WorkItem
+  - Dispatch Group
+  - Dispatch Semaphore
 - [View Life-Cycle](iOS/viewLifeCycle.md)
   - [loadView()와 viewDidLoad() 의 차이는?](iOS/loadView_vs_viewDidLoad.md)
 - [App Life-Cycle](iOS/appLifeCycle.md)
@@ -88,7 +96,9 @@
 - [Storage Modifier (Strong, Weak, Unowned)](iOS/Storage_Modifier.md)
 - [SceneDelegate란?](iOS/SceneDelegate.md)
 - [rootViewController란?](iOS/rootViewController.md)
-- [URLSession](iOS/urlSession.md) `🚧`
+- Network
+  - [URLSession](iOS/urlSession.md) `🚧`
+  - Debounce vs Throttle
 
 </br>
 
@@ -215,6 +225,9 @@
 </div>
 
 - [DB가 필요한 이유](CS/데이터베이스/db가필요한이유.md)
+- Realm
+- Firebase
+- CoreData
 
 </br>
 
@@ -229,6 +242,17 @@
 - [아키택처패턴과 디자인패턴이란?](CS/ETC/아키택처패턴과_디자인패턴이란?.md)
 - [tableView vs collectionView 언제 무엇을 사용할까?](https://nareunhagae.tistory.com/19?category=1217062) `Blog`
 - [github에 올리면 안되는 APIKEY 숨기기](https://nareunhagae.tistory.com/44?category=1217058) `Blog`
+- Package Manager : SPM, CocoaPods, Carthage
+- CI / CD
+  - Jenkins
+  - Travis
+  - Fastlane
+- Test
+  - XCTest
+    - TDD
+    - Quick / Nimble
+  - UITest
+  - Code Coverage
 
 </br>
 
