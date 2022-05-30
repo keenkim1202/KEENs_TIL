@@ -4,10 +4,13 @@
 
 - 멀티 코어 시스템에서 동시성 실행을제공하는 프로그래밍 언어 요소, 라이브러리를 말한다.
 - 이 CGD의 개념으로 동시성 프로그래밍을 하는것이 Dispatch Queue 이다.
-- DispatchQueue에 작업을 정의해서 넣어주면 , 운영체제가 작업들을 적절한 스레드에 할당해준다.
+- DispatchQueue에 작업을 정의해서 넣어주면, 운영체제가 작업들을 적절한 스레드에 할당해준다.
 - `큐의 종류, qos 우선순위, sync, async`를 설정해서 지정한 작업이 현재 스레드 혹은 다른 스레드에서 실행 될 수 있도록 한다.
 
 ## DispatchQueue
+> `Class`  
+> : 앱의 main thread 혹은 background thread 에서 serially 혹은 concurrently 하게 작업을 실행을 관리하는 객체이다.
+
 DispatchQueue를 크게 두가지로 나눌 수 있다.
 - Serial
   - 큐에 등록된 작업을 한 번에 하나씩 처리하는 것이다.
@@ -15,7 +18,8 @@ DispatchQueue를 크게 두가지로 나눌 수 있다.
 
 </br>
 
-- Concurrent는 동시에 여러 작업을 수행할 수 있다.
+- Concurrent
+  - 동시에 여러 작업을 수행할 수 있다.
   - 운영체제는 Dispatch Queue에서 꺼내온 현재 작업이 끝나지 않아도 다음작업을 다른 스레드에 할당해 여러 작업이 실행되게 한다.
 
 </br>
