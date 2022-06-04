@@ -23,8 +23,32 @@
 
 </br>
 
+## 결론
+> `loadView 관련 공식 문서` :   
+> Your custom implementation of this method should not call super.  
+> If you use Interface Builder to create your views and initialize the view controller, you must not override this method.
+
+- loadView()는 
+- `viewController`에서 `root view`를 그리는 메서드이고, `viewDidLoad()` 이전에 실행된다.
+- 뷰를 직접 초기화 해주어야 한다.
+- 코드로 직접 뷰 컨트롤러를 그리는 경우에만 사용해야 한다. (custom view 대입 등)
+  ```swift
+  override loadView() {
+    self.view = customView
+  }
+  ```
+
+## 용도에 따른 사용
+- `loadView`는 뷰 컨트롤러의 기본 `view`를 custom view로 사용하고자 할 때 유용하다.
+- `loadView`에서는 새로운 view를 생성해서 `return`해주는 것을 코드를 까보면 알 수 있다.
+- 반면에 기본 `UIView`를 ciewController의 기본 `view`로 사용하고, 그 위에 무언가 얹어서 쓰거나 뷰가 생성된 이후에 어떤 세팅을 해서 사용하고 싶다면 `viewDidLoad`에서 하면 된다.
+
   > 공식문서
 
   [loadView()란?](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621454-loadview)
 
   [viewDidLoad()란?](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621495-viewdidload)
+  
+  > 참고 링크
+  
+  [loadView에서 super.loadView()를 부르면 안되는 이유](https://stackoverflow.com/questions/9105450/should-super-loadview-be-called-from-loadview-or-not)
