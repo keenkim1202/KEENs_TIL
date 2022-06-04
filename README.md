@@ -280,3 +280,4 @@
   - [Extension : 랜덤한 색상을 사용하고 싶을 때](https://nareunhagae.tistory.com/42?category=1217058) `Blog`
 - Network
   - [DispatchGroup : 다수의 반복적인 네트워크 통신 처리를 완료한 후 화면을 갱신해주고 싶을 때](https://nareunhagae.tistory.com/65) `Blog`
+  - [API Pagination 구현 시, prefetching 작업이 smooth 하게 이루어지지 않을 때]()
