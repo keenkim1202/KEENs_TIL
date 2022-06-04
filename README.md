@@ -99,6 +99,7 @@
 - Network
   - [URLSession](iOS/urlSession.md) `🚧`
   - Debounce vs Throttle
+- [Frame과 Bounds의 차이](https://nareunhagae.tistory.com/3) `Blog`
 
 </br>
 
