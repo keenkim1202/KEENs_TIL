@@ -33,7 +33,7 @@ extension ViewController: UICollectionViewDataSourcePrefetching {
 `contentView의 높이 - bound 즉, 자신만의 상대적 좌표계를 기준으로 계산한 collectionView에서의 높이` 보다 크거나 같은지를 비교하여  
 현재 스크롤하고 있는 위치가 컬렉션뷰의 최하단에 도착하면 api 호출을 하도록 구현하였다.
 
-(*헷갈린다면 view에서의 frame / bound 그리고 origin과 offset의 개념을 체크해보세요.)
+(*헷갈린다면 view에서의 [frame / bounds](https://nareunhagae.tistory.com/3) 그리고 origin과 offset의 개념을 체크해보세요.)
 
 - 위의 코드는 다음과 같다.
 ```swift
