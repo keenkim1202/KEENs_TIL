@@ -241,7 +241,7 @@
 
 - [WWDC 2022 요약](ETC/WWDC2022.md)
 - [Framework와 Library란?](CS/ETC/Framework&Library.md)
-- [아키택처패턴과 디자인패턴이란?](CS/ETC/아키택처패턴과_디자인패턴이란?.md)
+- [아키택처패턴과 디자인패턴이란?](CS/ETC/%EC%95%84%ED%82%A4%ED%83%9D%EC%B2%98%ED%8C%A8%ED%84%B4%EA%B3%BC_%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80%3F.md)
 - [tableView vs collectionView 언제 무엇을 사용할까?](https://nareunhagae.tistory.com/19?category=1217062) `Blog`
 - [github에 올리면 안되는 APIKEY 숨기기](https://nareunhagae.tistory.com/44?category=1217058) `Blog`
 - Package Manager : SPM, CocoaPods, Carthage
@@ -259,9 +259,9 @@
 <details>
   <summary> Clean Code 책 요약 </summary>
 
-  - [0. 들어가며](ETC/clean_code_00.md)
-  - [1. 깨끗한 코드](ETC/clean_code_01.md)
-    - [깨끗한 코드란?](ETC/깨끗한코드란.md)
+  - [0. 들어가며](CS/ETC/clean_code_00.md)
+  - [1. 깨끗한 코드](CS/ETC/clean_code_01.md)
+    - [깨끗한 코드란?](CS/ETC/깨끗한코드란.md)
   - 2. 의미있는 이름
   - 3. 함수
   - 4. 주석
