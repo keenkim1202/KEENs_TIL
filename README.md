@@ -256,7 +256,7 @@
   - UITest
   - Code Coverage
 
-<details>
+<details open>
   <summary> Clean Code 책 요약 </summary>
 
   - [0. 들어가며](CS/ETC/clean_code_00.md)
