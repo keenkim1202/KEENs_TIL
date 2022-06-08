@@ -266,10 +266,57 @@ var phoneString: PhoneNumber // 타입을 바꿔도 이름은 바뀌지 않는�
 
 
 ## 자신의 기억력을 자랑하지 마라
+- 독자가 코드를 읽으면서 자신이 아는 이름으로 변환해야 한다면
+    - 이는 일반적으로 문제 영역이나 해법 영역에서 사용하지 않는 이름을 선택했기 때문에 생기는 문제다.
+
+- 반복문에서 반복 횟수를 세는 변수 `i, j, k`는 괜찮다. (l은 안된다)
+    - 그 외에 `a, b`를 사용했으므로 `c`를 선택하는 경우는 적절하지 못하다. 독자가 실제 개념으로 변환해야하므로
+
+- 똑똑한 프로그래머와 전문가 프로그래머 사이의 차이점은 전문가 프로그래머는 
+    - `명료함이 최고`라는 사실을 이해한다.
+    - 자신의 능력을 좋은 방향으로 사용해 남들이 이해하는 코드를 내놓는다.
+
 
 ## 클래스 이름
+> 클래스, 객체명은 명사나 명사구가 적합하다. 동사는 사용하지 않는다.
+
+- O : `Customer`, `WikiPage`, `Account`, `AddressParser`
+- X : `Manager`, `Processor`, `Data`, `Info`
+
 
 ## 메서드 이름
+> 메서드명은 동사나 동사구가 적합하다.
+
+ - 접근자, 변경자, 조건자는 값 앞에 get, set, is를 붙인다.  
+ (* 첨언: 이부분은 swift에 적용이 될지 모르겠다. get, set을 메서드 앞에 붙이는 것이 안좋다고 배웠으나 정확한 이유는 모르겠다.)
+ ```swift
+ var name: String = employee.getName()
+ customer.setName("mike")
+
+if paycheck.isPosted() { ... }
+ ```
+
+</br>
+
+ - 생성자를 overload할 때는 정적 팩토리 메서드를 사용한다.
+    - 메서드는 인수를 설명하는 이름을 사용한다.
+    - 2번과 같이 선언하는 것이 더 좋다.
+```swift
+// 1
+var fulcrmPoint: Complex = Complex.FromRealNumber(23.0)
+
+// 2
+class Complex {
+    private init() { }
+    
+    public static func initMethod(_ number: Float) -> Complex {
+        return Complex(number)
+    }
+}
+
+var fulcrmPoint: Complex = Complex.initMethod(23.0)
+```
+- 생성자 사용을 제한하려면 해당 생성자를 private으로 선언한다.
 
 ## 기발한 이름은 피하라
 
