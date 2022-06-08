@@ -7,6 +7,21 @@
 
 #### 📌 `New Update` : ETC > clean code 책 정리
 
+## INDEX
+- [Rx](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-rx)
+- [Swift](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-swift)
+- [iOS](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-ios)
+- [Algorithm](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-algorithm)
+- [DataStructure](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-data-structure)
+- [DesignPattern](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-design-pattern)
+- [ArchitecturePattern](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-architecture-pattern)
+- [ProgrammingParadigm](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-pragramming-paradigm)
+- [OS](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-os)
+- [Network](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-network)
+- [Database](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-database)
+- [ETC](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-etc)
+- [TroubleShooting](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-trouble-shooting)
+
 </br>
 </br>
 
@@ -43,7 +58,7 @@
 
 <div align=center>
   
-## 🧞‍♂️ [swift](Swift)
+## 🧞‍♂️ Swift
   
 </div>
 
@@ -73,7 +88,7 @@
 
 <div align=center>
   
-## 🧞‍♂️ [iOS](iOS)
+## 🧞‍♂️ iOS
   
 </div>
 
@@ -108,7 +123,7 @@
 
 <div align=center>
   
-## 🧞‍♂️ [Algorithm](CS/알고리즘)
+## 🧞‍♂️ Algorithm
   
 </div>
   
@@ -161,7 +176,7 @@
 
 <div align=center>
   
-## 🧞‍♂️ [Architecture Pattern](CS/아키택처패턴)
+## 🧞‍♂️ Architecture Pattern
   
 </div>
 
@@ -195,7 +210,7 @@
 
 <div align=center>
   
-## 🧞‍♂️ [OS](CS/운영체제)
+## 🧞‍♂️ OS
   
 </div>
 
@@ -207,7 +222,7 @@
 
 <div align=center>
   
-## 🧞‍♂️ [Network](CS/네트워크)
+## 🧞‍♂️ Network
   
 </div>
 
@@ -223,7 +238,7 @@
 
 <div align=center>
   
-## 🧞‍♂️ [Database](CS/데이터베이스)
+## 🧞‍♂️ Database
   
 </div>
 
@@ -237,7 +252,7 @@
 
 <div align=center>
   
-## 🧞‍♂️ [ETC](CS/ETC)
+## 🧞‍♂️ ETC
   
 </div>
 
