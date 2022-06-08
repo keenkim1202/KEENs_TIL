@@ -60,7 +60,7 @@ func getThem() -> [Int] {
 </br>
 
 지뢰찾기 게임을 만든다고 가정하자.
-- 그러면 theList가 게임판이라는 것을 을 알 수 있으므로 gameBoard로 바꿔보자.
+- 그러면 `theList`가 게임판이라는 것을 을 알 수 있으므로 `gameBoard`로 바꿔보자.
 - 게임판에서 각 칸은 단순 배열로 표현한다. 배열에서 0번째 값은 칸 상태를 뜻한다.
 - 값 4는 깃발이 꽂힌 상태를 가리킨다. 
 위의 내용을 바탕으로 각 개념에 이름만 붙여도 코드가 상당히 나아진다.
@@ -82,8 +82,8 @@ func getFlaggedCells() -> [Int] {
 ```
 - 코드의 단순성을 변하지 않았다. 그런데도 코드는 더욱 명확해졌다.
 - 한 걸음 더 나아가, 
-    - init 배열을 사용하는 대신 칸을 간단한ㄴ 클래스로 만들어도 되겠다.
-    - isFlagged 라는 좀 더 명ㅇ시적인 함수를 사용해 flagged 라는 상수를 감춰도 좋겠다.
+    - init 배열을 사용하는 대신 칸을 간단한 클래스로 만들어도 되겠다.
+    - `isFlagged` 라는 좀 더 명시적인 함수를 사용해 `flagged` 라는 상수를 감춰도 좋겠다.
 
 ```swift
 func isFlagged() -> Bool {
@@ -120,7 +120,7 @@ func getFlaggedCells() -> [Int] {
     - 계정을 담는 컨테이너가 실제 List가 아니면 프로그래머에게 그릇된 정보를 제공하는 셈이다.
     - `accountGroup`, `bunchOfAccounts`, `Accounts` 와 같이 명명하자.
 ```
-나중에 살펴보겠지만, 실제 컨테이너가 List 인 경우라도 컨테이너 유형을 이름에 넣지 않는편이 바람직하다.
+실제 컨테이너가 List 인 경우라도 컨테이너 유형을 이름에 넣지 않는편이 바람직하다.
 ```
 
 </br>
@@ -128,15 +128,14 @@ func getFlaggedCells() -> [Int] {
 > 서로 흡사한 이름은 사용하지 않도록 주의한다.
 
 - 한 모듈에서   
-    `XYZControllerFOrEfficientHandlingOfStrings`,   `XYZControllerForEfficientStorageOfStrings`   
-     라는 이름을 사용한다면? 두 단어는 매우 유사하다.
-    - 유사한 개념은 유사한 표기법을 사용한다. 이것도 "정보"다.
+    `XYZControllerFOrEfficientHandlingOfStrings`, `XYZControllerForEfficientStorageOfStrings`   
+     라는 이름을 사용한다면?
+    - 유사한 개념은 유사한 표기법을 사용한다.
     - 일관성이 떨어지는 표기법은 `그릇된 정보`이다.
 
 - 이름으로 그릇된 정보를 제공하는 가장 끔찍한 예는 소문자 `L`이나 대문자 `O`변수이다.
-    - 두 변수를 한꺼번에 사용하면 더욱 끔찍해진다.
     - 소문자`L`은 숫자`1`처럼 보이고 대문자 `O`는 숫자 `0`처럼 보인다.
-- 어떤 경우는 코드 작성자가 글꼴을 바꿔 차이를 드러내는 해결책을 제안했다.
+    - 어떤 경우는 코드 작성자가 글꼴을 바꿔 차이를 드러내는 해결책을 제안했다.
     - 이름만 바꾸면 문제가 깨끗이 풀린다. 괜스레 일거리를 만들 필요가 없다.
 
 
@@ -148,8 +147,8 @@ func getFlaggedCells() -> [Int] {
 진짜로 황당한 예는 klass 이다. class는 이미 사용했다고 klass를 사용한다.
 ```
 - 컴파일러를 통과할지라도 연속된 숫자를 덧붙이거나 noise word를 추가하는 방식은 적절하지 못하다.
-- 이름이 달라야 한다면 의미도 달라야 한다.
-- 위의 예시와 같은 이름은 그릇된 정보를 제공하는 이름도 아니며, 아무런 정보를 제공하지 못하는 이름일 뿐이다.
+    - 이름이 달라야 한다면 의미도 달라야 한다.
+    - 위의 예시와 같은 이름은 그릇된 정보를 제공하는 이름도 아니며, 아무런 정보를 제공하지 못하는 이름일 뿐이다.
 
 </br>
 
@@ -169,11 +168,13 @@ func copyChars(a1: [Character], a2: [Character]) -> [Character] {
 
 - `a, the` 같은 접두사를 사용하지 말라는 소리가 아니다.
 - 의미가 분명히 다르다면 사용해도 무방하다.
-    - ex. 모든 지역 변수는 a를 사용하고, 함수 인수는 the를 사옹해도 좋다.
+    - ex. 모든 지역 변수는 `a`를 사용하고, 함수 인수는 `the`를 사옹해도 좋다.
+
+</br>
 
 - 불용어는 중복이다.
-    - `Customer`, `CustomerObject` 라는 클래스를 발견했다면, 고객 급여 이력을 찾으려면 어느 클래스를 뒤져야 빠를까?
-- 이와 같은 오류를 저지르는 어플리케이션이 있다. 오류의 형태는 다음과 같다.
+    - `Customer`, `CustomerObject` 라는 클래스를 발견했다면, '고객 급여 이력'을 찾으려면 어느 클래스를 뒤져야 빠를까?
+
 ```swift
 getActiveAccount()
 getActiveAccounts()
@@ -181,10 +182,7 @@ getActiveAccountInfo()
 ```
 - 이 프로젝트에 참여한 프로그래머는 어느 함수를 호출할지 어떻게 알까?
 - 명확한 관례가 없다면 아래의 것들은 구분이 안된다.
-    - `moneyAmount` <-> `money`
-    - `customerInfo` <-> `customer`
-    - `accountData` <-> `account`
-    - `theMessage` <-> `message`
+    - ex. `moneyAmount <-> money`, `customerInfo <-> customer`, `accountData <-> account`
 
 ```
 읽는 사람이 차이를 알도록 이름을 지어라.
