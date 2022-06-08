@@ -9,23 +9,6 @@
 #### 📌 `New Update` : ETC > clean code 책 정리
 -----
 
-## INDEX
-- [Rx](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-rx)
-- [Swift](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-swift)
-- [iOS](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-ios)
-- [Algorithm](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-algorithm)
-- [Data Structure](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-data-structure)
-- [Design Pattern](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-design-pattern)
-- [Architecture Pattern](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-architecture-pattern)
-- [Programming Paradigm](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-pragramming-paradigm)
-- [OS](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-os)
-- [Network](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-network)
-- [Database](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-database)
-- [ETC](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-etc)
-- [Trouble Shooting](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-trouble-shooting)
-
------
-
 </br>
 </br>
 
@@ -50,8 +33,31 @@
 </br>
 </br>
 
+  -----
+## 🔖 INDEX
+- [Rx](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-rx)
+- [Swift](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-swift)
+- [iOS](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-ios)
+- [Algorithm](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-algorithm)
+- [Data Structure](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-data-structure)
+- [Design Pattern](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-design-pattern)
+- [Architecture Pattern](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-architecture-pattern)
+- [Programming Paradigm](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-pragramming-paradigm)
+- [OS](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-os)
+- [Network](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-network)
+- [Database](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-database)
+- [ETC](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-etc)
+- [Trouble Shooting](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-trouble-shooting)
+
+-----
+
+</br>
+</br>
+
 <div align=center>
   
+
+
 ## 🧞‍♂️ Rx
   
 </div>
