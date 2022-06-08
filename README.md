@@ -5,7 +5,9 @@
 > 블로그에 정리한 내용은 `Blog` 태그가 붙어있습니다.  
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
+-----
 #### 📌 `New Update` : ETC > clean code 책 정리
+-----
 
 ## INDEX
 - [Rx](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-rx)
@@ -21,6 +23,8 @@
 - [Database](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-database)
 - [ETC](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-etc)
 - [TroubleShooting](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-trouble-shooting)
+
+-----
 
 </br>
 </br>
