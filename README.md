@@ -14,15 +14,15 @@
 - [Swift](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-swift)
 - [iOS](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-ios)
 - [Algorithm](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-algorithm)
-- [DataStructure](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-data-structure)
-- [DesignPattern](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-design-pattern)
-- [ArchitecturePattern](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-architecture-pattern)
-- [ProgrammingParadigm](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-pragramming-paradigm)
+- [Data Structure](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-data-structure)
+- [Design Pattern](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-design-pattern)
+- [Architecture Pattern](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-architecture-pattern)
+- [Programming Paradigm](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-pragramming-paradigm)
 - [OS](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-os)
 - [Network](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-network)
 - [Database](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-database)
 - [ETC](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-etc)
-- [TroubleShooting](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-trouble-shooting)
+- [Trouble Shooting](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-trouble-shooting)
 
 -----
 
