@@ -262,7 +262,7 @@
   - [0. 들어가며](CS/ETC/clean_code_00.md)
   - [1. 깨끗한 코드](CS/ETC/clean_code_01.md)
     - [깨끗한 코드란?](CS/ETC/깨끗한코드란.md)
-  - 2. 의미있는 이름
+  - [2. 의미있는 이름](CS/ETC/clean_code_02.md)
   - 3. 함수
   - 4. 주석
   - 5. 형식 맞추기
