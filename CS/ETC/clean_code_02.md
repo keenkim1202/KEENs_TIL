@@ -218,6 +218,30 @@ class Customer {
     - "마이키, 이 레코드 좀 보세요. 'Generation Timestamp' 값이 내일 날짜입니다. 어떻게 이렇죠?"
 
 ## 검색하기 쉬운 이름을 사용하라
+- 문자 하나를 사용하는 이름과 상수는 쉽게 눈에 띄지 않는다는 문제점이 있다.
+    - `grep`으로 `7`을 찾게 되면, `7`이 들어가는 모든 파일 이름이나 수식이 검색되기 때문이다.
+- 변수나 상수를 코드 여러 곳에서 사용한다면 검색하기 쉬운 이름이 바람직하다.
+```swift
+// 1
+for j in 0..<34 {
+    s += (t[j] * 4) / 5
+}
+
+// 2 
+var realDaysPerIdealDay: Int = 4
+let workDaysPerWeek: Int = 5
+var sum: Int = 0
+
+for j in 0..<numberOfTasks.count {
+    let realTaskDays = taskEstimate[j] * realDaysPerIdealDay
+    let realTaskWeeks = realTaskDays / workDaysPerWeek
+    sum += realTaskWeeks
+}
+```
+- 위의 코드에서 `sum`이 별로 유용하진 않으나 최소한 검색이 가능하다.
+- 이름을 의미있게 지으면 함수가 길어진다.
+    - 하지만 `workDaysPerWeek` 을 찾기가 얼마나 쉬운지 생각해보라. 
+    - 그냥 5를 사용하면 5가 들어간 임름을 모두 찾고, 의미를 분석해 원하는 상수를 가려내야 한다.
 
 
 ## 인코딩을 피하라
