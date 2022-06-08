@@ -190,6 +190,32 @@ getActiveAccountInfo()
 
 
 ## 발음하기 쉬운 이름을 사용하라
+> 발음하기 어려운 이름은 토론하기도 어렵다.
+
+- 내가 아는 회사 하나는 `genymdhms` 라는 단어를 사용했다.
+    - 직원들은 "젠 와이 엠 디 에이치 엠 에스" 라고 발음했고, 나느 쓰이는 대로 발음하는 습관이 있어 "젠 야 무다 힘즈"라고 읽었다. 나중에 몇몇은 나처럼 발음하기 시작했다.
+    - 새로운 개발자가 들어오면 변수를 설명해준 다음 우리가 만들어낸 발음을 알려줬다. (올바른 영단어가 아니라)
+
+</br>
+
+> 다음 두 예제를 비교해보자
+```swift
+// 1
+class DtaRcrd102 {
+    private var genymdhms: Date
+    private var modymdhms: Date
+    private var pszqint: String = "102"
+}
+
+// 2
+class Customer {
+    private var generationTimestamp: Date
+    private var modificationTimestamp: Date
+    private var recordId: String = "102"
+}
+```
+- 2번 코드는 지적인 대화가 가능해진다.
+    - "마이키, 이 레코드 좀 보세요. 'Generation Timestamp' 값이 내일 날짜입니다. 어떻게 이렇죠?"
 
 ## 검색하기 쉬운 이름을 사용하라
 
