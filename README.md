@@ -258,10 +258,11 @@
 - Realm
 - Firebase
 - CoreData
-- Commit과 Rollback 이란?
-- 교착상태에 대하여
-- 1~3 정규형
+- [Commit과 Rollback 이란?](CS/데이터베이스/commit_&_rollback.md)
+- [교착상태에 대하여](CS/데이터베이스/deadlock.md)
+- [1~3 정규형(NF)](CS/데이터베이스/db_normal_form.md)
 - 반정규화와 목적
+- [View](CS/데이터베이스/db_view.md)
 
 </br>
 
