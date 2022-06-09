@@ -226,7 +226,9 @@
 
 - [Thread & Process](CS/운영체제/Thread&Process.md)
   - [Thread-Safe란?](CS/운영체제/ThreadSafe.md) 
-
+  - [멀티 프로세싱 vs 멀티 스레딩](CS/운영체제/MultiProcessing과MultiThreading.md)
+- [스택 영역과 힙 영역(Stack & Heap)](CS/운영체제/Stack&Heap.md)
+- [메모리에 대하여](CS/운영체제/Memory.md)
 </br>
 
 
