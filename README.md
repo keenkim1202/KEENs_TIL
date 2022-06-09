@@ -243,7 +243,7 @@
   - [HTTP와 Socket](CS/네트워크/HTTP와Socket.md)
   - [HTTP Method](CS/네트워크/HTTPMethod.md)
 - [OSI 7 Layer](CS/네트워크/OSI_7_Layer.md)
-- [캡슐화](CS/네트워크/캡슐화&역캡슐화.md)
+- [캡슐화와 역캡슐화](CS/네트워크/캡슐화&역캡슐화.md)
 
 </br>
 
@@ -258,6 +258,10 @@
 - Realm
 - Firebase
 - CoreData
+- Commit과 Rollback 이란?
+- 교착상태에 대하여
+- 1~3 정규형
+- 반정규화와 목적
 
 </br>
 
