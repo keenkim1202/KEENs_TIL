@@ -282,7 +282,7 @@
 - CI / CD
   - Jenkins
   - Travis
-  - Fastlane
+  - [Fastlane 사용 방법과 장점](CS/ETC/fastlane.md)
 - Test
   - XCTest
     - TDD
