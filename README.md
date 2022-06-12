@@ -147,6 +147,7 @@
   - DFS (Depth First Search)
     - `이코테 ex` [음료수얼려먹기](https://github.com/keenkim1202/CodingTest_Algorithm/blob/main/DFS/%EC%9D%8C%EB%A3%8C%EC%88%98%EC%96%BC%EB%A0%A4%EB%A8%B9%EA%B8%B0.swift)
 - 이진탐색(Linear Search)
+- 동적계획법(Dynamic Programming)
 - 그래프
 - [트리의 개념과 관련 용어 톺아보기](CS/알고리즘/트리.md)
 - [정렬의 시간복잡도 & 개념 이해하기](CS/알고리즘/정렬.md)
@@ -338,7 +339,7 @@
 - AutoLayout
   - [StackView : 내가 원하는 컴포넌트를 크게 하고 싶을 때](https://nareunhagae.tistory.com/37?category=1217062) `Blog`
 - Swift
-  - [문자열을 원하는 길이 만큼씰 자르려면?](https://nareunhagae.tistory.com/9?category=1217062) `Blog`
+  - [문자열을 원하는 길이 만큼씩 자르려면?](https://nareunhagae.tistory.com/9?category=1217062) `Blog`
   - [Extension : 랜덤한 색상을 사용하고 싶을 때](https://nareunhagae.tistory.com/42?category=1217058) `Blog`
 - Network
   - [DispatchGroup : 다수의 반복적인 네트워크 통신 처리를 완료한 후 화면을 갱신해주고 싶을 때](https://nareunhagae.tistory.com/65) `Blog`
