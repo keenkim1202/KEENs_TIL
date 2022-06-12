@@ -416,6 +416,114 @@ domain에 더 관련이 깊은 코드라면 거기서 이름을 가져오는 것
 
 ## 의미 있는 맥락을 추가하라
 
+> 클래스, 함수, 이름 공간에 넣어 맥락을 부여한다. 모든 방법이 실패하면 마지막 수단으로 접두어를 붙인다.
+
+ex. `firstName, lastName, street, houseNumber, city, state, zipcode` 라는 변수가 있다.  
+
+- 변수를 훑어보면 주소라는 사실을 금방 알아챈다.  
+- 하지만 어느 메서드가 `state`라는 변수 하나만 사용한다면? 변수 `state`가 주소 일부라는 사실을 금방 알아챌까?  
+
+</br>
+
+`addr` 라는 접두어를 추가해
+- `addrFirstName, addrLastName, addrState` 라 쓰면 맥락이 좀 더 분명해진다.  
+- 물론 Address 라는 클래스를 생성하면 더 좋다.  
+
+```
+그러면 변수가 좀 더 큰 개념에 속한다는 사실이 컴파일러에게도 분명해진다.  
+```
+
+> 변수에 좀 더 의미 있는 맥락이 필요할까? 
+
+함수 이름은 맥락 일부만 제공하며, 알고리즘이 나머지 맥락을 제공한다.  
+함수를 끝까지 읽어보고 나서야 `number, verb, pluralModifier` 라는 변수 세 개가 "통계 추측 메세지"에 사용된다는 사실이 드러난다.  
+
+- 불행히도 독자는 맥락을 유추해야만 한다.  
+- 그냥 메서드만 훑어서는 세 변수의 의미가 불분명하다.  
+
+위의 내용을 바탕으로 아래의 예제 코드를 보자.
+```swift
+func printGuessStatistics(candidate: Character, count: Int) {
+    var number: String
+    var verb: String
+    var pluralModifier: String
+
+    if count == 0 {
+        number = "no"
+        verb = "are"
+        pluralModifier = "s"
+    } else if count == 1 {
+        number = "1"
+        verb = "is"
+        pluralModifier = ""
+    } else {
+        number = String(count)
+        verb = "are"
+        pluralModifier = "s"
+    }
+
+    let guessMessage = "There \(verb) \(number) \(candidate) \(pluralModifier)"
+    print(guessMessage)
+}
+```
+
+</br>
+
+> 의미있는 맥락을 추가해보자.
+
+일단 함수가 좀 길다.  
+그리고 세 변수를 함수 전반에서 사용한다.  
+- 함수를 작은 조각으로 쪼개고자 `GuessStatisticsMessage라는` 클래스를 만든 후 세 변수를 클래스에 넣었다.  
+
+그러면 세 변수의 맥락이 분명해진다.  
+- 즉, 세 변수는 확실하게 `GuessStatisticsMessage`에 속한다.  
+
+```
+이렇게 맥락을 개선하면 함수를 쪼개기가 쉬어지므로 알고리즘도 좀 더 명확해진다.  
+```
+
+```swift
+class GuessStatisticsMessage {
+    var number: String
+    var verb: String
+    var pluralModifier: String
+
+    func make(candidate: Character, count: Int) {
+        createPluralDependentMessageParts(count)
+        return "There \(verb) \(number) \(candidate) \(pluralModifier)"
+    }
+
+    func createPluralDependentMessageParts(count: Int) {
+        if count == 0 {
+            thereAreNoLetters()
+        } else if count == 1 {
+            thereIsOneLetter()
+        } else {
+            thereAreMantLetters(count: count)
+        }
+    }
+
+    func thereAreMantLetters(count: Int) {
+        number = String(count)
+        verb = "are"
+        pluralModifier = "s"
+    }
+
+    func thereIsOneLetter() {
+        number = "1"
+        verb = "is"
+        pluralModifier = ""
+    }
+
+    func thereAreNoLetters() {
+        number = "no"
+        verb = "are"
+        pluralModifier = "s"
+    }
+}
+```
+
+
 
 -----
 
