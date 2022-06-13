@@ -483,11 +483,13 @@ func printGuessStatistics(candidate: Character, count: Int) {
 ```
 
 ```swift
+// 클래스를 만들어 세 변수들의 연관성을 만들고 의미를 더한다.
 class GuessStatisticsMessage {
     var number: String
     var verb: String
     var pluralModifier: String
-
+    
+    // 클래스 내부에 메서드를 잘게 쪼개어 
     func make(candidate: Character, count: Int) {
         createPluralDependentMessageParts(count)
         return "There \(verb) \(number) \(candidate) \(pluralModifier)"
