@@ -6,7 +6,8 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` : ETC > clean code 책 정리
+#### 📌 `New Update` : ETC > clean code 2장
+#### 📌 `New Update` Swift : 정규 표현식 작성하는 방법
 -----
 
 </br>
@@ -92,7 +93,7 @@
 - [protocol 지향 언어로써의 Swift 특징](Swift/protocol지향언어.md)
   - Generic
   - Value Semantics
-
+- [정규 표현식 작성하는 방법](Swift/regEx.md)
 </br>
 
 
