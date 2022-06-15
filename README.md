@@ -290,7 +290,7 @@
     - Quick / Nimble
   - UITest
   - Code Coverage
-  - [Clean Code 요약 레포로 이동하기](https://github.com/keenkim1202/CleanCode_Summary)
+- [Clean Code 요약 레포로 이동하기](https://github.com/keenkim1202/CleanCode_Summary)
 
 </br>
 
