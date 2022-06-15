@@ -6,7 +6,6 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` : ETC > clean code 2장
 #### 📌 `New Update` Swift : 정규 표현식 작성하는 방법
 -----
 
@@ -291,32 +290,7 @@
     - Quick / Nimble
   - UITest
   - Code Coverage
-
-<details open>
-  <summary> Clean Code 책 요약 </summary>
-
-  - [0. 들어가며](CS/ETC/clean_code_00.md)
-  - [1. 깨끗한 코드](CS/ETC/clean_code_01.md)
-    - [깨끗한 코드란?](CS/ETC/깨끗한코드란.md)
-  - [2. 의미있는 이름](CS/ETC/clean_code_02.md)
-  - 3. 함수
-  - 4. 주석
-  - 5. 형식 맞추기
-  - 6. 객체와 자료 구조
-  - 7. 오류 처리
-  - 8. 경계
-  - 9. 단위 테스트
-  - 10. 클래스
-  - 11. 시스템
-  - 12. 창발성
-  - 13. 동시성
-  - 14. 점진적인 개선
-  - 15. JUnit 들여다보기
-  - 16. SerialDate 리팩터링
-  - 17. 냄새와 휴리스틱
-  - 부록 A: 동시성2
-
-</details>
+  - [Clean Code 요약 레포로 이동하기](https://github.com/keenkim1202/CleanCode_Summary)
 
 </br>
 
