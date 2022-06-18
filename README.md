@@ -7,6 +7,7 @@
 
 -----
 #### 📌 `New Update` Swift : 정규 표현식 작성하는 방법
+#### 📌 `New Update` Swift : Dynamic Dispatch 초안 추가
 -----
 
 </br>
@@ -93,6 +94,7 @@
   - Generic
   - Value Semantics
 - [정규 표현식 작성하는 방법](Swift/regEx.md)
+- [Dynamic Dispatch 와 Static Dispatch (성능 최적화)](Swift/dynamicDispatch.md)
 </br>
 
 
