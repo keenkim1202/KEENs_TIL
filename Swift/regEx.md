@@ -7,6 +7,27 @@
 : An immutable representation of a compiled regular expression that you apply to Unicode Strings.  
 (유니코드 문자열들에 내가 적용한 컴파일된 정규표현식의 불변 표현이다.)
 
+## Swfit에서의 regEx 특징
+- swift의 NSReguularExpression은 ICU (International Components for Unicode) 를 준수하고 있다.
+- 특수기호를 사용하고자 할 때 앞에 `\` 를 붙인다.
+-   regex에서 `\` 가 사용되는 기호는 `\\` 이렇게 백슬래시를 2개 사용해주어야 한다.
+    - ex1 ) `.` 을 정규표현식에 넣고 싶다면 `\.`
+    - ex2 ) `\.`을 정규표현식에 넣고 싶다면  `\\.`
+
+## 사용 예시
+- 보통 회원가입 혹은 로그인 시에 사용자가 올바른 형식으로 입력값을 주었는지 체크할 때 사용된다.
+    - 이메일, 닉네임, 비밀번호 등
+
+## 참고할만한 메서드
+- [numberOfMatches(in:options:range:)](https://developer.apple.com/documentation/foundation/nsregularexpression/1414308-numberofmatches)
+    - 주어진 범위의 문자열에서 정규표현식과 일치하는 건의 갯수를 세는 메서드도 제공한다.
+
+
+</br>
+</br>
+</br>
+
+-----
 
 ## 기호 설명
 - ^ : 시작
