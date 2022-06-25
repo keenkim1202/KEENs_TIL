@@ -1,5 +1,12 @@
 # 정규 표현식
 
+> 정규표현식 (Regular Expression)  
+: 정규표현식 또는 정규식은 특정한 규칙을 가진 문자열의 집합을 표현하는 데 사용하는 언어이다.
+
+> `Class` [NSRegularExpression](https://developer.apple.com/documentation/foundation/nsregularexpression)
+: An immutable representation of a compiled regular expression that you apply to Unicode Strings.  
+(유니코드 문자열들에 내가 적용한 컴파일된 정규표현식의 불변 표현이다.)
+
 
 ## 기호 설명
 - ^ : 시작
