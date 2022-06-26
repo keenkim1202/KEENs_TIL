@@ -37,6 +37,12 @@
     self.view = customView
   }
   ```
+  
+## 주의할 점!
+- 커스텀뷰를 대입하여 사용할 때는 `super.loadView()`를 쓰면 안된다.
+  - IB(Inetface Builder)를 사용하여 구현하는 경우는 super.loadView()를 호출해야 하자만, 커스텀뷰를 사용하는 경우는 IB로 뷰를 생성할 필요가 없기 때문이다.
+  - IB로 뷰를 생성한 다음에 다시 내가 만든 커스텀뷰를 대입한다? -> 낭비
+
 
 ## 용도에 따른 사용
 - `loadView`는 뷰 컨트롤러의 기본 `view`를 custom view로 사용하고자 할 때 유용하다.
