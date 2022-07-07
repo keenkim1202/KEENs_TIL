@@ -81,6 +81,7 @@
 - 타입과 자료형
   - [Array 와 subscript를 함께 사용하여 Index Out Of Range 대처하기](Swift/array_subscript.md)
 - [Enumeration](Swift/Enumeration.md)
+  - [unknown default](Swift/unknown_default.md)
 - Function
 - Control Flow
 - Protocol
