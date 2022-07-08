@@ -6,8 +6,7 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` Swift : 정규 표현식 작성하는 방법
-#### 📌 `New Update` Swift : Dynamic Dispatch 초안 추가
+#### 📌 `New Update` iOS : 웹뷰 관련 메서드에 대하여
 -----
 
 </br>
