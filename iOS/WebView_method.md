@@ -1,5 +1,12 @@
 # WebView 관련 메서드
 
+웹뷰에서 네이티브(iOS, AOS)로 메세지를 전달할 수 있다.
+그때 웹에서 보내는 메세지의 이름과 메세지가 전달될 때 처리할 대상(self)를 등록해야 한다.
+```swift
+let contentController = webView.configuration.userContentController
+contentController.add(self, name: "test")
+```
+
 ## WKNavigationDelegate
 ```swift
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) { }
