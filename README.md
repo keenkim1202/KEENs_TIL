@@ -251,6 +251,7 @@
   - [HTTP Method](CS/네트워크/HTTPMethod.md)
 - [OSI 7 Layer](CS/네트워크/OSI_7_Layer.md)
 - [캡슐화와 역캡슐화](CS/네트워크/캡슐화&역캡슐화.md)
+- [세션과 쿠키란 무엇엇인가](CS/네트워크/session_cookie.md)
 
 </br>
 
