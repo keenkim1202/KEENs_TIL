@@ -330,3 +330,5 @@
   - [이미지 캐싱 처리를 라이브러리 없이 해주고 싶다면?](iOS/imageCachingExtension.md)
 - Keyboard
   - [키보드와 함께 버튼을 올리고 내려주는 방법은?](iOS/keyboardIssue_UIView_Extension.md)
+- View Transition
+  - [present/dismiss를 push/pop 처럼 보이게 애니메이션 효과를 주고 싶을 때](https://nareunhagae.tistory.com/70) `Blog`
