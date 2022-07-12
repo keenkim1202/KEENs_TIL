@@ -134,6 +134,9 @@
   - Debounce vs Throttle
 - [Frame과 Bounds의 차이](https://nareunhagae.tistory.com/3) `Blog`
 - [WebView와 관련된 메서드들에 대하여](iOS/WebView_method.md)
+- 화면 전환
+  - [present/dismiss를 push/pop 처럼 애니메이션을 주고 싶을 때 (보다 스무스한 애니메이션으로 구현하는 방법)](iOS/present_dismiss_transition_smooth.md)
+
 
 </br>
 
