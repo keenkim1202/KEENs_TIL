@@ -132,6 +132,16 @@ class ViewController: UIViewController {
         self.present(secondVC, animated: true, completion: nil)
     }
 }
+
+extension ViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentTransition()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissTransition()
+    }
+}
 ```
 
 ## SecondViewController
