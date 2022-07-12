@@ -7,6 +7,7 @@
 
 -----
 #### 📌 `New Update` iOS : 웹뷰 관련 메서드에 대하여
+#### 📌 `New Update` trouble shotting : present/dismiss를 push/pop 처럼 보이게 애니메이션 효과를 주고 싶을 때
 -----
 
 </br>
