@@ -9,6 +9,7 @@
 #### 📌 `New Update` iOS : 웹뷰 관련 메서드에 대하여
 #### 📌 `New Update` trouble shotting : present/dismiss를 push/pop 처럼 보이게 애니메이션 효과를 주고 싶을 때
 #### 📌 `New Update` iOS : present/dismiss를 push/pop 처럼 애니메이션을 주고 싶을 때 (보다 스무스한 애니메이션으로 구현하는 방법)
+#### 📌 `New Update` iOS : presentingViewController, presentedViewController, parent 프로퍼티들은 각각 무엇인가요?
 -----
 
 </br>
@@ -137,7 +138,7 @@
 - [WebView와 관련된 메서드들에 대하여](iOS/WebView_method.md)
 - 화면 전환
   - [present/dismiss를 push/pop 처럼 애니메이션을 주고 싶을 때 (보다 스무스한 애니메이션으로 구현하는 방법)](iOS/present_dismiss_transition_smooth.md)
-
+  - [presentingViewController, presentedViewController, parent 프로퍼티들은 각각 무엇인가요?](iOS/presentedVC_presentingVC.md)
 
 </br>
 
