@@ -17,6 +17,10 @@ TCP 접속을 성공적으로 성립하기 위해서는 반드시 필요한 절�
 
 > 과정
 
+<p align="center">
+  <img width="600" src="https://user-images.githubusercontent.com/59866819/179362772-9e96bebf-a834-40ac-9f8f-aed307a52b02.png">
+</p>
+  
 ```
 클라이언트 > 서버 : TCP SYN
 서버 > 클라이언트 : TCP SYN ACK
@@ -56,6 +60,10 @@ TCP 접속을 성공적으로 성립하기 위해서는 반드시 필요한 절�
 
 > 과정
 
+<p align="center">
+  <img width="600" src="https://user-images.githubusercontent.com/59866819/179362780-4b2a3eb8-d9d9-4e25-83b9-6d9041aa1dab.png">
+</p>
+  
 (1)  
 클라이언트가 연결을 종료하곘다는 `FIN` 플래그를 전송한다.
 
