@@ -7,9 +7,9 @@
 
 -----
 #### 📌 `New Update` iOS : 웹뷰 관련 메서드에 대하여
-#### 📌 `New Update` trouble shooting : present/dismiss를 push/pop 처럼 보이게 애니메이션 효과를 주고 싶을 때
 #### 📌 `New Update` iOS : present/dismiss를 push/pop 처럼 애니메이션을 주고 싶을 때 (보다 스무스한 애니메이션으로 구현하는 방법)
 #### 📌 `New Update` iOS : presentingViewController, presentedViewController, parent 프로퍼티들은 각각 무엇인가요?
+#### 📌 `New Update` 네트워크 : 3-Way-Handshake 와 4-way-handshake 란?
 -----
 
 </br>
@@ -34,7 +34,6 @@
 </div>
 
 </br>
-</br>
 
   -----
 ## 🔖 INDEX
@@ -55,11 +54,8 @@
 -----
 
 </br>
-</br>
 
 <div align=center>
-  
-
 
 ## 🧞‍♂️ Rx
   
@@ -101,8 +97,8 @@
 - Library
   - Snapkit / FlexLayout / PinLayout 장단점 비교하기
 - [NSMutableAttributedString 관련 extension 활용하기](https://nareunhagae.tistory.com/68) `Blog`
-</br>
 
+</br>
 
 <div align=center>
   
@@ -142,7 +138,6 @@
 
 </br>
 
-
 <div align=center>
   
 ## 🧞‍♂️ Algorithm
@@ -168,8 +163,8 @@
   - 힙 정렬
   - 선택 정렬
   - 삽입 정렬
-</br>
 
+</br>
 
 <div align=center>
   
@@ -182,7 +177,6 @@
 </br>
 
 <div align=center>
-  
 
 ## 🧞‍♂️ Design Pattern
   
@@ -195,7 +189,6 @@
 - [Dependency Injection](https://github.com/keenkim1202/DependencyInjectionEx) 
 
 </br>
-
 
 <div align=center>
   
@@ -211,7 +204,6 @@
 - [MVC -> MVP -> MVVM 까지의 변천사](https://nareunhagae.tistory.com/64) `Blog` `🚧`
 
 </br>
-
 
 <div align=center>
   
@@ -230,7 +222,6 @@
 
 </br>
 
-
 <div align=center>
   
 ## 🧞‍♂️ OS
@@ -244,7 +235,6 @@
 - [메모리에 대하여](CS/운영체제/Memory.md)
 </br>
 
-
 <div align=center>
   
 ## 🧞‍♂️ Network
@@ -252,6 +242,7 @@
 </div>
 
 - [TCP & UDP](CS/네트워크/TCP&UDP.md)
+- [3-Way-Handshake 와 4-way-handshake 란?](CS/네트워크/3wayHandshake_4wayHandshake.md)
 - [HTTP/HTTPS](CS/네트워크/HTTP와HTTPS.md)
   - [HTTP와 Socket](CS/네트워크/HTTP와Socket.md)
   - [HTTP Method](CS/네트워크/HTTPMethod.md)
@@ -260,7 +251,6 @@
 - [세션과 쿠키란 무엇엇인가](CS/네트워크/session_cookie.md)
 
 </br>
-
 
 <div align=center>
   
@@ -279,7 +269,6 @@
 - [View](CS/데이터베이스/db_view.md)
 
 </br>
-
 
 <div align=center>
   
@@ -306,7 +295,6 @@
 - [Clean Code 요약 레포로 이동하기](https://github.com/keenkim1202/CleanCode_Summary)
 
 </br>
-
 
 <div align=center>
   
