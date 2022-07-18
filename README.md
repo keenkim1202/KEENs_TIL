@@ -6,10 +6,8 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` iOS : 웹뷰 관련 메서드에 대하여
-#### 📌 `New Update` iOS : present/dismiss를 push/pop 처럼 애니메이션을 주고 싶을 때 (보다 스무스한 애니메이션으로 구현하는 방법)
-#### 📌 `New Update` iOS : presentingViewController, presentedViewController, parent 프로퍼티들은 각각 무엇인가요?
 #### 📌 `New Update` 네트워크 : 3-Way-Handshake 와 4-way-handshake 란?
+#### 📌 `New Update` 기타 : 깃헙 회사계정과 개인계정을 한 컴퓨터에서 분리하여 사용하고 싶을 때 (SSH 활용)
 -----
 
 </br>
@@ -293,6 +291,7 @@
   - UITest
   - Code Coverage
 - [Clean Code 요약 레포로 이동하기](https://github.com/keenkim1202/CleanCode_Summary)
+- [깃헙 회사계정과 개인계정을 한 컴퓨터에서 분리하여 사용하고 싶을 때 (SSH 활용)](https://nareunhagae.tistory.com/manage/posts/) `Blog`
 
 </br>
 
