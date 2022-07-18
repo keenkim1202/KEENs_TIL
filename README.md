@@ -6,8 +6,8 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` 네트워크 : 3-Way-Handshake 와 4-way-handshake 란?
-#### 📌 `New Update` 기타 : 깃헙 회사계정과 개인계정을 한 컴퓨터에서 분리하여 사용하고 싶을 때 (SSH 활용)
+#### 📌 `New Update` 네트워크 : 3-Way-Handshake 와 4-way-handshake 란? [👉 보러가기](https://github.com/keenkim1202/KEENs_TIL/blob/main/README.md#%EF%B8%8F-network)
+#### 📌 `New Update` 기타 : 깃헙 회사계정과 개인계정을 한 컴퓨터에서 분리하여 사용하고 싶을 때 (SSH 활용) [👉 보러가기](https://github.com/keenkim1202/KEENs_TIL/edit/main/README.md#%EF%B8%8F-etc)
 -----
 
 </br>
