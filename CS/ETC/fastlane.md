@@ -257,6 +257,14 @@ end
 - 추가
     - `fastlane/metadata/ko` 디렉토리 안의 `release_notes.txt` 파일을 열어 변경 사항 문구를 작성한 후 `release` lane에서 실행하면 `metadata` 업로드 시 해당 정보를 포함해서 올려준다.
 
+## 슬랙용 웹 후크 url 만드는 방법
+- slack 채널에 사용되는 훅 링크는 [여기](https://feat-ooq9217.slack.com/apps/new/A0F7XDUAZ--)에서 찾을 수 있다.
+    - 슬랙 워크스페이스에 로그인
+    - 포스트할 채널 선택
+    - '수신 웹 후크를 통한 앱 추가' 클릭
+    - 생성된 url을 복사하여 위의 `slack_url` 에 넣기
+
+
 ## 확장가능 CI/CD
 
 > CI: Continuous Integration  
