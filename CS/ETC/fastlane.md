@@ -18,7 +18,6 @@ fastlane lets you automate every aspect of your development and release workflow
 컴퓨터에 `HomeBrew`가 설치되어있지 않다면 아래의 명령어를 통해 먼저 설치하자.
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 ```
 
 </br>
