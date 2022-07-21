@@ -8,6 +8,8 @@
 -----
 #### 📌 `New Update` 네트워크 : 3-Way-Handshake 와 4-way-handshake 란? [👉 보러가기](https://github.com/keenkim1202/KEENs_TIL/blob/main/README.md#%EF%B8%8F-network)
 #### 📌 `New Update` 기타 : 깃헙 회사계정과 개인계정을 한 컴퓨터에서 분리하여 사용하고 싶을 때 (SSH 활용) [👉 보러가기](https://github.com/keenkim1202/KEENs_TIL/blob/main/README.md#%EF%B8%8F-etc)
+
+#### 📌 `New Update` Trouble Shooting : Firebase 관련 debug창 출력 비활성화 하기
 -----
 
 </br>
@@ -397,6 +399,8 @@
   - [키보드와 함께 버튼을 올리고 내려주는 방법은?](iOS/keyboardIssue_UIView_Extension.md)
 - View Transition
   - [present/dismiss를 push/pop 처럼 보이게 애니메이션 효과를 주고 싶을 때](https://nareunhagae.tistory.com/70) `Blog`
+- Thrid-Party
+  - [Firebase 관련 debug창 출력 비활성화 하기](https://nareunhagae.tistory.com/manage/posts/) `Blog`
 
 
 <div align=right> 
