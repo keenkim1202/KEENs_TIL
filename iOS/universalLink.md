@@ -1,4 +1,10 @@
 # universal link
+> Seamlessly link to content in your app or on your website.   
+> With universal links, you can always give users the most integrated mobile experience,  
+>  even when your app isn’t installed on their device.
+
+
+
 - iOS에서만 작동하는 딥링크의 한 종류로 웹에서 앱을 호출하는 기능이 필요할 때 사용한다.
 - 사용자가 유니버설 링크를 사용하면 링크 접근 시, 
   - 앱이 설치되어있는 경우 앱으로 이동
@@ -154,3 +160,10 @@ func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>)
     // ...
 }
 ```
+
+
+
+
+참고 자료
+- [Apple Developer - Universal Link](https://developer.apple.com/ios/universal-links/)
+- [유니버설링크와 딥링크 차이점](https://www.adjust.com/ko/blog/universal-links-vs-deep-links/)
