@@ -6,10 +6,7 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` 네트워크 : 3-Way-Handshake 와 4-way-handshake 란? [👉 보러가기](https://github.com/keenkim1202/KEENs_TIL/blob/main/README.md#%EF%B8%8F-network)
-#### 📌 `New Update` 기타 : 깃헙 회사계정과 개인계정을 한 컴퓨터에서 분리하여 사용하고 싶을 때 (SSH 활용) [👉 보러가기](https://github.com/keenkim1202/KEENs_TIL/blob/main/README.md#%EF%B8%8F-etc)
-
-#### 📌 `New Update` Trouble Shooting : Firebase 관련 debug창 출력 비활성화 하기
+#### 📌 `New Update` iOS : Universal Link 세팅 방법 [👉 보러가기]()
 -----
 
 </br>
@@ -147,7 +144,9 @@
 - 화면 전환
   - [present/dismiss를 push/pop 처럼 애니메이션을 주고 싶을 때 (보다 스무스한 애니메이션으로 구현하는 방법)](iOS/present_dismiss_transition_smooth.md)
   - [presentingViewController, presentedViewController, parent 프로퍼티들은 각각 무엇인가요?](iOS/presentedVC_presentingVC.md)
-
+- 딥링크
+  - [Universal Link 세팅 방법](iOS/universalLink.md)
+  
 </br>
 
 <div align=right> 
