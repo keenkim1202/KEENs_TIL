@@ -3,8 +3,10 @@
 > With universal links, you can always give users the most integrated mobile experience,  
 >  even when your app isn’t installed on their device.
 
-
-
+<div align=center>
+    <img width="700" src="https://user-images.githubusercontent.com/59866819/181439874-3e46729f-70f8-4f88-8496-a4fca5d8e621.png">
+</div>
+	
 - iOS에서만 작동하는 딥링크의 한 종류로 웹에서 앱을 호출하는 기능이 필요할 때 사용한다.
 - 사용자가 유니버설 링크를 사용하면 링크 접근 시, 
   - 앱이 설치되어있는 경우 앱으로 이동
@@ -91,6 +93,11 @@ Apple Developer 사이트(https://developer.apple.com/) > Account > Certifica
 연결할 앱 Xcode Project > Target > General > Identity
 ```
 
+<div align=center>
+    <img width="700" src="https://user-images.githubusercontent.com/59866819/181439885-6b68b0b5-e479-46a7-a941-8a586aff6500.png">
+</div>
+	
+	
 - paths : 앱에서 지원하는 웹 사이트 경로
 
 ----
@@ -103,6 +110,8 @@ Apple Developer 사이트(https://developer.apple.com/) > Account > Certifica
 ```
 Project > Target > Signing&Capabilities> Associated Domains에 Domains 추가
 ```
+
+<img src="https://user-images.githubusercontent.com/59866819/181439644-2eed3378-5fed-4539-b838-64467edf8dcd.png">
 
 - ex) applinks 형식
 ```
