@@ -6,7 +6,8 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` iOS : Universal Link 세팅 방법 [👉 보러가기]()
+#### 📌 `New Update` iOS : Universal Link 세팅 방법 [👉 보러가기](iOS/universalLink.md)
+#### 📌 `New Update` iOS : Universal Link 와 Deep Link 비교 [👉 보러가기](iOS/deeplink_vs_universalLink.md)
 -----
 
 </br>
