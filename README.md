@@ -6,10 +6,8 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` iOS : 웹뷰 관련 메서드에 대하여
-#### 📌 `New Update` trouble shooting : present/dismiss를 push/pop 처럼 보이게 애니메이션 효과를 주고 싶을 때
-#### 📌 `New Update` iOS : present/dismiss를 push/pop 처럼 애니메이션을 주고 싶을 때 (보다 스무스한 애니메이션으로 구현하는 방법)
-#### 📌 `New Update` iOS : presentingViewController, presentedViewController, parent 프로퍼티들은 각각 무엇인가요?
+#### 📌 `New Update` iOS : Universal Link 세팅 방법 [👉 보러가기](iOS/universalLink.md)
+#### 📌 `New Update` iOS : Universal Link 와 Deep Link 비교 [👉 보러가기](iOS/deeplink_vs_universalLink.md)
 -----
 
 </br>
@@ -34,7 +32,6 @@
 </div>
 
 </br>
-</br>
 
   -----
 ## 🔖 INDEX
@@ -55,11 +52,8 @@
 -----
 
 </br>
-</br>
 
 <div align=center>
-  
-
 
 ## 🧞‍♂️ Rx
   
@@ -69,8 +63,14 @@
 
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
+
 <div align=center>
-  
+ 
 ## 🧞‍♂️ Swift
   
 </div>
@@ -101,11 +101,17 @@
 - Library
   - Snapkit / FlexLayout / PinLayout 장단점 비교하기
 - [NSMutableAttributedString 관련 extension 활용하기](https://nareunhagae.tistory.com/68) `Blog`
+
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
 <div align=center>
-  
+ 
 ## 🧞‍♂️ iOS
   
 </div>
@@ -139,12 +145,19 @@
 - 화면 전환
   - [present/dismiss를 push/pop 처럼 애니메이션을 주고 싶을 때 (보다 스무스한 애니메이션으로 구현하는 방법)](iOS/present_dismiss_transition_smooth.md)
   - [presentingViewController, presentedViewController, parent 프로퍼티들은 각각 무엇인가요?](iOS/presentedVC_presentingVC.md)
-
+- 딥링크
+  - [Universal Link 세팅 방법](iOS/universalLink.md)
+  
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
 <div align=center>
-  
+ 
 ## 🧞‍♂️ Algorithm
   
 </div>
@@ -168,8 +181,14 @@
   - 힙 정렬
   - 선택 정렬
   - 삽입 정렬
+
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
 <div align=center>
   
@@ -181,9 +200,14 @@
 
 </br>
 
-<div align=center>
-  
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
+<div align=center>
+ 
 ## 🧞‍♂️ Design Pattern
   
 </div>
@@ -196,9 +220,14 @@
 
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
 <div align=center>
-  
+ 
 ## 🧞‍♂️ Architecture Pattern
   
 </div>
@@ -212,9 +241,14 @@
 
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
 <div align=center>
-  
+ 
 ## 🧞‍♂️ Pragramming Paradigm
   
 </div>
@@ -230,6 +264,11 @@
 
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
 <div align=center>
   
@@ -244,14 +283,20 @@
 - [메모리에 대하여](CS/운영체제/Memory.md)
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
 <div align=center>
-  
+ 
 ## 🧞‍♂️ Network
   
 </div>
 
 - [TCP & UDP](CS/네트워크/TCP&UDP.md)
+- [3-Way-Handshake 와 4-way-handshake 란?](CS/네트워크/3wayHandshake_4wayHandshake.md)
 - [HTTP/HTTPS](CS/네트워크/HTTP와HTTPS.md)
   - [HTTP와 Socket](CS/네트워크/HTTP와Socket.md)
   - [HTTP Method](CS/네트워크/HTTPMethod.md)
@@ -261,9 +306,14 @@
 
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
 <div align=center>
-  
+ 
 ## 🧞‍♂️ Database
   
 </div>
@@ -280,9 +330,14 @@
 
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
 <div align=center>
-  
+ 
 ## 🧞‍♂️ ETC
   
 </div>
@@ -304,12 +359,18 @@
   - UITest
   - Code Coverage
 - [Clean Code 요약 레포로 이동하기](https://github.com/keenkim1202/CleanCode_Summary)
+- [깃헙 회사계정과 개인계정을 한 컴퓨터에서 분리하여 사용하고 싶을 때 (SSH 활용)](https://nareunhagae.tistory.com/manage/posts/) `Blog`
 
 </br>
 
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
 
-<div align=center>
-  
+<div align=center> 
+ 
 ## 🧞‍♂️ Trouble Shooting
   
 </div>
@@ -338,3 +399,13 @@
   - [키보드와 함께 버튼을 올리고 내려주는 방법은?](iOS/keyboardIssue_UIView_Extension.md)
 - View Transition
   - [present/dismiss를 push/pop 처럼 보이게 애니메이션 효과를 주고 싶을 때](https://nareunhagae.tistory.com/70) `Blog`
+- Thrid-Party
+  - [Firebase 관련 debug창 출력 비활성화 하기](https://nareunhagae.tistory.com/manage/posts/) `Blog`
+
+
+<div align=right> 
+ 
+ [🔝 상단으로 가기](https://github.com/keenkim1202/KEENs_TIL#-index) 
+ 
+</div>
+

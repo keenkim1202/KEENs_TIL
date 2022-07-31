@@ -16,15 +16,14 @@ fastlane lets you automate every aspect of your development and release workflow
 
 ## Fastlane 설치
 컴퓨터에 `HomeBrew`가 설치되어있지 않다면 아래의 명령어를 통해 먼저 설치하자.
-```
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 ```
 
 </br>
 
 `HomeBrew`가 설치되어있다면 아래의 명령어를 실행하면 된다.
-```
+```bash
 brew install fastlane
 ```
 (명령어 실행시 권한이 없다는 에러가 뜬다면 앞에 `sudo` 키워드를 붙일 것)
@@ -32,7 +31,7 @@ brew install fastlane
 </br>
 
 컴퓨터에 `gem`이 설치되어있지 않다면 `gem`을 설치한 후,
-```
+```bash
 # rbenv 설치
 brew install rbenv ruby-build
 
@@ -48,14 +47,14 @@ rbenv global 2.4.4
 </br>
 
 fastlane을 업데이트할 떄 사용되는 `bundler` 도 설치해주자.
-```
+```bash
 gem install bundler
 ```
 
 </br>
 
 이후 fastlane을 업데이트 하고자 할 때는 아래의 명령어를 입력하면 된다.
-```
+```bash
 bundle update
 ```
 
@@ -64,7 +63,7 @@ bundle update
 
 ## 기본 설정
 Fastlane을 사용하고자하는 플젝트의 디렉토리로 이동하여 아래의 명령어를 실행하자.
-```
+```bash
 fastlane init
 ```
 - fastlane 초기화를 통해 이 디텍토리에서 fastlane을 설정할 수 있다. (pod init 처럼)
@@ -89,7 +88,7 @@ What would you like to user fastlane for?
 - 애플 서버에 매번 로그인하는 과정을 fastlane이 알아서 앱 암호를 통해 로그인해준다.
 
 위의 과정을 완료하면 아래의 파일이 생겨있을 것이다.
-```
+```bash
 Gemfile
 Gemfile.lock
 fastlane/Appfile
@@ -117,7 +116,7 @@ fastlane/Fastfile
 
 ## 환경변수 설정
 Appfile에 아래와 같은 내용이 들어있을 것
-```
+```ruby
 app_identifier("자신의 앱 identifier") # The bundle identifier of your app
 apple_id("자신의 애플 아이디") # Your Apple email address
 # For more information about the Appfile, see:
@@ -127,19 +126,19 @@ apple_id("자신의 애플 아이디") # Your Apple email address
 - 각자의 애플 아이디로 환경 변수를 설정하여 사용하는 것이 좋다.
     - 아래와 같이 환경변수를 설정해보자.
 
-```
+```ruby
 app_identifier("자신의 앱 identifier") # The bundle identifier of your app
 apple_id(ENV["APPLE_ID"]) # Your Apple email address -> Please Set Env Variable in /fastlane/.env!!
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile
 ```
 - 아래의 명령어를 통해 `fastlane/` 폴더 안에 `.env` 파일을 만들고 에디터를 열어서
-```
+```bash
 vi fastlane/.env
 ```
 
 거기에 아래와 같은 형식으로 자신의 이메일을  작성하고 저장한다.
-```
+```bash
 APPLE_ID="자신의 애플 아이디"
 ```
 - vi를 닫고 저장하는 방법은 `esc`를 누른 후 `:wq` 를 입력하고 엔터 치면된다.
@@ -154,7 +153,7 @@ fastlane/Fastfile 에 Ruby 언어로 작성한다.
 Fastlane 에서 제공하는 명령어들만 사용해도 괜찮다. 
 (추가적인 세팅을 원하다면 알아서 찾아볼 것.)
 예시 파일 내부 코드는 아래와 같다.
-```
+```ruby
   desc "build app and upload to testflight"
   lane :beta do
     get_certificates
@@ -195,7 +194,7 @@ Fastlane 에서 제공하는 명령어들만 사용해도 괜찮다.
 </br>
 
 실패한 경우에 대한 error handler도 추가할 수 있다.
-```
+```ruby
 platform :ios do
 
   ...
@@ -218,7 +217,7 @@ end
 </br>
 
 ## AppStore 심사 제출
-```
+```ruby
   desc "build app and release to App Store."
   lane :release do |options|
     if options[:v]
@@ -256,6 +255,14 @@ end
 
 - 추가
     - `fastlane/metadata/ko` 디렉토리 안의 `release_notes.txt` 파일을 열어 변경 사항 문구를 작성한 후 `release` lane에서 실행하면 `metadata` 업로드 시 해당 정보를 포함해서 올려준다.
+
+## 슬랙용 웹 후크 url 만드는 방법
+- slack 채널에 사용되는 훅 링크는 [여기](https://feat-ooq9217.slack.com/apps/new/A0F7XDUAZ--)에서 찾을 수 있다.
+    - 슬랙 워크스페이스에 로그인
+    - 포스트할 채널 선택
+    - '수신 웹 후크를 통한 앱 추가' 클릭
+    - 생성된 url을 복사하여 위의 `slack_url` 에 넣기
+
 
 ## 확장가능 CI/CD
 
