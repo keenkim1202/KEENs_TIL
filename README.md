@@ -6,10 +6,9 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` iOS : Universal Link 세팅 방법 [👉 보러가기](iOS/universalLink.md)
-#### 📌 `New Update` iOS : Universal Link 와 Deep Link 비교 [👉 보러가기](iOS/deeplink_vs_universalLink.md)
 #### 📌 `New Update` 알고리즘 : 기준에 따라 데이터를 정렬 - 선택정렬 [👉 보러가기](CS/알고리즘/기준에_따라_데이터를_정렬.md)
 
+#### 📌 `New Update` iOS : DispatchGroup에 대하여 [👉 보러가기](iOS/dispatchGroup.md)
 -----
 
 </br>
@@ -129,7 +128,7 @@
     - [GCD: Queue의 종류와 사용 예제 코드](iOS/GCD_EX.md)
   - Async/Await
   - Dispatch WorkItem
-  - Dispatch Group
+  - [Dispatch Group 은 언제쓰고 어떻게 쓸까?](iOS/dispatchGroup.md)
   - Dispatch Semaphore
 - [View Life-Cycle](iOS/viewLifeCycle.md)
   - [loadView()와 viewDidLoad() 의 차이는?](iOS/loadView_vs_viewDidLoad.md)
