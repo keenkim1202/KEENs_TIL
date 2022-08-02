@@ -68,6 +68,7 @@ Dispatch Group 에 들어있는 task가 0이 되었을 때 실행되는 함수�
 ----
 
 ## 사용방법
+### 설명
 - main은 UI를 그리는 작업을 해야하기 때문에 `main.sync`를 제외한 다른 비동기적인 혹은 백그라운드에서 의 작업 `dispatchQueue` 블록에 작성한다.
 - `someGroup.enter()`를 하고 바로 아래의 함수를 싫행 그룹에 추가한다. (3까지 반복)
 - 그렇게 `DispatchQueue.main.async { }` 블록의 끝에 도달한 후 group에 들어온 task를 순서대로 실행한다. (task1, task2, task3 순서)
@@ -75,6 +76,7 @@ Dispatch Group 에 들어있는 task가 0이 되었을 때 실행되는 함수�
 - 그룹 안의 모든 task의 실행이 끝난 후 group은 `notify()`를 통해 main에 모든작업이 끝났음을 알리며, 모든작업이 끝난 후 해주고 싶은 추가적인 작업을 해준다. (아래 코드이 경우는 print문 출력)
 
 
+### 예제 코드
 ```swift
 
 func someWork(number: Int, completion: @escaping (String) -> Void) {
@@ -121,7 +123,7 @@ someGroupTasks()
 
 ```
 
-실행결과
+### 실행결과
 ```
 ---- task1 enter ----
 현재 1 작업을 수행합니다.
@@ -134,6 +136,11 @@ someGroupTasks()
 ---- task3 leave ----
 Group의 모든 작업이 끝났습니다.
 ```
+
+</br>
+
+### 실제 사용 예시를 보고 싶다면? 아래의 블로그 글을 참고하세요!
+- [다수의 반복적인 네트워크 통신 처리를 완료한 후 화면을 갱신해주고 싶을 때](https://nareunhagae.tistory.com/65)
 
 </br>
 
