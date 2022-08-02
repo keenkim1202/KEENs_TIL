@@ -46,7 +46,7 @@ Dispatch Group 에 task를 빼내어(leave) -1 시킨다.
 
 </br>
 
-### [wati()](https://developer.apple.com/documentation/dispatch/dispatchgroup/2016090-wait)
+### [wait()](https://developer.apple.com/documentation/dispatch/dispatchgroup/2016090-wait)
 
 > 이전에 제출된 work가 끝나기를 동기적으로 기다린다.
 
