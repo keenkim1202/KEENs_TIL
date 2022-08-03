@@ -7,8 +7,8 @@
 
 -----
 #### 📌 `New Update` 알고리즘 : 기준에 따라 데이터를 정렬 - 선택정렬 [👉 보러가기](CS/알고리즘/기준에_따라_데이터를_정렬.md)
-
 #### 📌 `New Update` iOS : DispatchGroup에 대하여 [👉 보러가기](iOS/dispatchGroup.md)
+#### 📌 `New Update` 네트워크 : web과의 통신 HTTP의 기초 [👉 보러가기](CS/네트워크/web_http.md) `~ing`
 -----
 
 </br>
@@ -300,6 +300,7 @@
 - [TCP & UDP](CS/네트워크/TCP&UDP.md)
 - [3-Way-Handshake 와 4-way-handshake 란?](CS/네트워크/3wayHandshake_4wayHandshake.md)
 - [HTTP/HTTPS](CS/네트워크/HTTP와HTTPS.md)
+  - [WEB과의 통신 HTTP의 기초](CS/네트워크/web_http.md)
   - [HTTP와 Socket](CS/네트워크/HTTP와Socket.md)
   - [HTTP Method](CS/네트워크/HTTPMethod.md)
 - [OSI 7 Layer](CS/네트워크/OSI_7_Layer.md)
