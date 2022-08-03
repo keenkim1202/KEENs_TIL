@@ -128,7 +128,7 @@
     - [GCD: Queue의 종류와 사용 예제 코드](iOS/GCD_EX.md)
   - Async/Await
   - Dispatch WorkItem
-  - [Dispatch Group 은 언제쓰고 어떻게 쓸까?](iOS/dispatchGroup.md)
+  - [DispatchGroup 에 대하여 : 언제쓰고 어떻게 쓸까?](iOS/dispatchGroup.md)
   - Dispatch Semaphore
 - [View Life-Cycle](iOS/viewLifeCycle.md)
   - [loadView()와 viewDidLoad() 의 차이는?](iOS/loadView_vs_viewDidLoad.md)
