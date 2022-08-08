@@ -6,9 +6,8 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` 알고리즘 : 기준에 따라 데이터를 정렬 - 선택정렬 [👉 보러가기](CS/알고리즘/기준에_따라_데이터를_정렬.md)
-#### 📌 `New Update` iOS : DispatchGroup에 대하여 [👉 보러가기](iOS/dispatchGroup.md)
 #### 📌 `New Update` 네트워크 : web과의 통신 HTTP의 기초 [👉 보러가기](CS/네트워크/web_http.md) `~ing`
+#### 📌 `New Update` iOS : layoutSubviews와 관련된 메서드들에 대하여 [👉 보러가기](iOS/layoutSubviews.md)
 -----
 
 </br>
@@ -132,6 +131,7 @@
   - Dispatch Semaphore
 - [View Life-Cycle](iOS/viewLifeCycle.md)
   - [loadView()와 viewDidLoad() 의 차이는?](iOS/loadView_vs_viewDidLoad.md)
+  - [layoutSubviews와 관련된 메서드들에 대하여](iOS/layoutSubviews.md)
 - [App Life-Cycle](iOS/appLifeCycle.md)
 - [ARC & GC](iOS/ARC_vs_GC.md)
   - [ARC & Retain Cycle 예제](https://nareunhagae.tistory.com/61) `Blog` 
