@@ -1,15 +1,17 @@
 # View Life-Cycle
 
-¾ÛÀº ÇÏ³ª ÀÌ»óÀÇ ºä·Î ±¸¼ºµÇ¾îÀÖÀ¸¸ç, °¢°¢ÀÇ ºä´Â »ý¸íÁÖ±â¸¦ °®´Â´Ù.
+ì•±ì€ í•˜ë‚˜ ì´ìƒì˜ ë·°ë¡œ êµ¬ì„±ë˜ì–´ìžˆìœ¼ë©°, ê°ê°ì˜ ë·°ëŠ” ìƒëª…ì£¼ê¸°ë¥¼ ê°–ëŠ”ë‹¤.
 
-¼øÈ¯ÀûÀ¸·Î ¹ß»ýÇÏ±â ¶§¹®¿¡ È­¸é ÀüÈ¯¿¡ µû¶ó ·ÎÁ÷À» ÀûÀýÇÑ °÷¿¡¼­ ½ÇÇà½ÃÄÑ¾ß ÇÑ´Ù.
+ìˆœí™˜ì ìœ¼ë¡œ ë°œìƒí•˜ê¸° ë•Œë¬¸ì— í™”ë©´ ì „í™˜ì— ë”°ë¼ ë¡œì§ì„ ì ì ˆí•œ ê³³ì—ì„œ ì‹¤í–‰ì‹œì¼œì•¼ í•œë‹¤.
 
-ÃÑ 6°¡Áö°¡ ÀÖ´Âµ¥, ÀÌ 6°¡Áö Àü¿¡ °¡Àå¸ÕÀú ½ÇÇàµÇ´Â
+ì´ 6ê°€ì§€ê°€ ìžˆëŠ”ë°, ì´ 6ê°€ì§€ ì „ì— ê°€ìž¥ë¨¼ì € ì‹¤í–‰ë˜ëŠ”
 
-- `loadView` : ºä¸¦ ¸¸µé°í¸Þ¸ð¸®¿¡ ¿Ã¸°´Ù. ÀÌÈÄ viewDidLoad°¡ È£ÃâµÈ´Ù.
-- `viewDidLoad` : VC°¡ ¸Þ¸ð¸®¿¡ ·ÎµåµÈ ÈÄ È£ÃâµÈ´Ù. µü 1¹ø¸¸ ½ÇÇàµÇ±â¿¡ ¸®¼Ò½º ÃÊ±âÈ­ ÀÛ¾÷À» ÁÖ·Î ÇÑ´Ù.
-- `viewWillAppear` : ºä°¡ »ý¼ºµÇ±â Á÷Àü¿¡ ½ÇÇàµÈ´Ù. ºä°¡ ³ªÅ¸³ª±â Àü¿¡ ½ÇÇàÇØ¾ßÇÏ´Â ÀÛ¾÷À» ÇÑ´Ù.
-- `viewDidAppear` : ºä°¡ »ý¼ºµÈ ÈÄ ½ÇÇàÇÑ´Ù. µ¥ÀÌÅÍ¸¦ ¹Þ¾Æ º¸¿©ÁÖ°Å³ª ¾Ö´Ï¸ÞÀÌ¼Ç ÀÛ¾÷ µîÀ» ÇÒ ¼ö ÀÖ´Ù. (viewWillAppear¿¡ ³Ö¾îÁá´Ù°¡ ¹Ý¿µ¾ÈµÇ´Â °æ¿ìµµ ÀÖÀ½)
-- `viewWillDisappear` : ºä°¡ »ç¶óÁö±â Á÷Àü¿¡ ½ÇÇà
-- `viewDidDisappaear` : ºä°¡ »ç¶óÁø ÈÄ ½ÇÇà
-- `viewDidUnload` : ¸Þ¸ð¸®¿¡¼­ ÇØÁ¦µÉ ‹š ½ÇÇà
+- `loadView` : ë·°ë¥¼ ë§Œë“¤ê³ ë©”ëª¨ë¦¬ì— ì˜¬ë¦°ë‹¤. ì´í›„ viewDidLoadê°€ í˜¸ì¶œëœë‹¤.
+- `viewDidLoad` : VCê°€ ë©”ëª¨ë¦¬ì— ë¡œë“œëœ í›„ í˜¸ì¶œëœë‹¤. ë”± 1ë²ˆë§Œ ì‹¤í–‰ë˜ê¸°ì— ë¦¬ì†ŒìŠ¤ ì´ˆê¸°í™” ìž‘ì—…ì„ ì£¼ë¡œ í•œë‹¤.
+- `viewWillAppear` : ë·°ê°€ ìƒì„±ë˜ê¸° ì§ì „ì— ì‹¤í–‰ëœë‹¤. ë·°ê°€ ë‚˜íƒ€ë‚˜ê¸° ì „ì— ì‹¤í–‰í•´ì•¼í•˜ëŠ” ìž‘ì—…ì„ í•œë‹¤.
+- `viewDidAppear` : ë·°ê°€ ìƒì„±ëœ í›„ ì‹¤í–‰í•œë‹¤. ë°ì´í„°ë¥¼ ë°›ì•„ ë³´ì—¬ì£¼ê±°ë‚˜ ì• ë‹ˆë©”ì´ì…˜ ìž‘ì—… ë“±ì„ í•  ìˆ˜ ìžˆë‹¤. (viewWillAppearì— ë„£ì–´ì¤¬ë‹¤ê°€ ë°˜ì˜ì•ˆë˜ëŠ” ê²½ìš°ë„ ìžˆìŒ)
+- `viewWillDisappear` : ë·°ê°€ ì‚¬ë¼ì§€ê¸° ì§ì „ì— ì‹¤í–‰
+- `viewDidDisappaear` : ë·°ê°€ ì‚¬ë¼ì§„ í›„ ì‹¤í–‰
+- `viewDidUnload` : ë©”ëª¨ë¦¬ì—ì„œ í•´ì œë  ë•Œ ì‹¤í–‰
+
+
