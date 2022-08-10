@@ -7,7 +7,7 @@
 
 -----
 #### 📌 `New Update` Swift : == 과 === 의 차이 [👉 보러가기](Swift/==_vs_===.md)
-#### 📌 `New Update` Swift : 문자열, 문자, 인덱스에 대하여 [👉 보러가기](Swift/about_string.md)
+#### 📌 `New Update` Swift : 문자열(String), 문자(Character), String.Index 타입에 대하여 [👉 보러가기](Swift/about_string.md)
 -----
 
 </br>
