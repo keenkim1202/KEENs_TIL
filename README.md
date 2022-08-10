@@ -6,7 +6,6 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` 네트워크 : web과의 통신 HTTP의 기초 [👉 보러가기](CS/네트워크/web_http.md) `~ing`
 #### 📌 `New Update` iOS : layoutSubviews와 관련된 메서드들에 대하여 [👉 보러가기](iOS/layoutSubviews.md)
 #### 📌 `New Update` Swift : == 과 === 의 차이 [👉 보러가기](Swift/==_vs_===.md)
 -----
@@ -393,7 +392,7 @@
 - AutoLayout
   - [StackView : 내가 원하는 컴포넌트를 크게 하고 싶을 때](https://nareunhagae.tistory.com/37?category=1217062) `Blog`
 - Swift
-  - [문자열을 원하는 길이 만큼씩 자르려면?](https://nareunhagae.tistory.com/9?category=1217062) `Blog`
+  - [문자열을 원하는 길이 만큼씩 자르려면? -> 시간복잡도 O(N^2) 풀이 & O(N) 풀이](https://nareunhagae.tistory.com/9?category=1217062) `Blog`
   - [Extension : 랜덤한 색상을 사용하고 싶을 때](https://nareunhagae.tistory.com/42?category=1217058) `Blog`
 - Network
   - [DispatchGroup : 다수의 반복적인 네트워크 통신 처리를 완료한 후 화면을 갱신해주고 싶을 때](https://nareunhagae.tistory.com/65) `Blog`
