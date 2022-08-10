@@ -1,4 +1,4 @@
-# 문자열(String) 타입에 대하여
+# 문자열(String), 문자(Character), String.Index 타입에 대하여
 
 ## 문자열이란
 -  문자(Character) 값들의 컬렉션이다.
