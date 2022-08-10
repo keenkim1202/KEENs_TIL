@@ -4,7 +4,8 @@
 -  문자(Character) 값들의 컬렉션이다.
 -  Unicode-compliant 하고 빠르다.
 -  `+` 연산자를 통해 두 문자열을 결합할 수 있다.
--  Foundation의 `NSStirng` 클래스와 연결된 타입이기에 Foundation을 import 하면 사용이 가능하다.
+-  Foundation의 `NSStirng` 클래스와 연결된 타입이기에 Foundation을 import 하면 사용이 가능하다. 
+   - (필요시 다음 링크를 참고해보자 : [Bridging Between String and NSString](https://developer.apple.com/documentation/swift/string#2919514))
  
  ```
  * 리터럴이란?
@@ -18,7 +19,7 @@
 ## 문자열은 값타입이다. (구조체나 열거형과 마찬가지로)
 - 새로운 문자열을 만들면 해당 문자열 값은 함수나 메서드에 전달될 때 복사되어 전달된다.
 - 값이 복사되어 전달되기 때문에 해당 문자열이 어디에 전달되거나 원본값을 직접적으로 변경하지 않는 이상 본래의 값을 유지할 수 있다.
-- 각각의 Character에 for - in 문을 사용하여 접근할 수 있다.
+- 각각의 `Character`에 `for - in` 문을 사용하여 접근할 수 있다.
  
 - 스위프트의 Character 타입은 하나의 `Extended Grapheme Cluster`를 나타낸다.
 - `Extended Grapheme Cluster`는 하나 혹은 다수의 `Unicode scalar`들의 `sequence`가 결합되어 사람이 읽을 수 있는 형태의 하나의 `Character` 로 제공한다.
@@ -28,7 +29,8 @@
 : 화면에 보이는 문자의 단위.
 
 * Extended Grapheme Cluster
-: 사람이 읽을 수 있는 하나의 글자 단위. 언어마다 하나의 글자가 여러 개의 unicode scalar를 가질 수 있고, 각 글자마자 메모리에 적재되는 크기가 다를 수 있다.
+: 사람이 읽을 수 있는 하나의 글자 단위. 
+  언어마다 하나의 글자가 여러 개의 unicode scalar를 가질 수 있고, 각 글자마자 메모리에 적재되는 크기가 다를 수 있다.
 ```
 
 </br>
@@ -94,7 +96,8 @@ someString[index] // 'o'
   - `index(after: String.Index)` : index of the character directly 'after' the given index. (주어진 인덱스 바로 전 문자)
   - `index(after: String.Index)` : index of the character directly 'before' the given index. (주어진 인덱스 바로 다음 문자)
   - `index(String.Index, offsetBy: String.IndexDistance)` 
-    - offsetBy value can be positive or negative and starts from the given index. (offsetBy 인자는 양수, 음수 둘다 가능하며 주어진 인덱스로부터 시작하여 얼마나 떨어진 곳의 문자인지를 나타낸다.)
+    - offsetBy value can be positive or negative and starts from the given index. 
+    - (offsetBy 인자는 양수, 음수 둘다 가능하며 주어진 인덱스로부터 시작하여 얼마나 떨어진 곳의 문자인지를 나타낸다.)
 
 ```swift
 let someString: String = "hello, world!"
