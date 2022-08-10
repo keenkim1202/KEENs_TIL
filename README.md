@@ -6,8 +6,8 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` iOS : layoutSubviews와 관련된 메서드들에 대하여 [👉 보러가기](iOS/layoutSubviews.md)
 #### 📌 `New Update` Swift : == 과 === 의 차이 [👉 보러가기](Swift/==_vs_===.md)
+#### 📌 `New Update` Swift : 문자열, 문자, 인덱스에 대하여 [👉 보러가기](Swift/about_string.md)
 -----
 
 </br>
