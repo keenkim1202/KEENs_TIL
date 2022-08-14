@@ -8,6 +8,7 @@
 -----
 #### 📌 `New Update` Swift : == 과 === 의 차이 [👉 보러가기](Swift/==_vs_===.md)
 #### 📌 `New Update` Swift : 문자열(String), 문자(Character), String.Index 타입에 대하여 [👉 보러가기](Swift/about_string.md)
+#### 📌 `New Update` Swift : mutating 키워드에 대하여 [👉 보러가기](Swift/mutating.md)
 -----
 
 </br>
@@ -80,6 +81,7 @@
 - [Collection Type](Swift/Collection_Type.md)
 - [Class & Struct](https://nareunhagae.tistory.com/59)
   - [override & overload 란?](Swift/Override&Overload.md)
+  - [mutating 키워드에 대하여](Swift/mutating.md)
 - 타입과 자료형
   - [== 과 === 의 차이](Swift/==_vs_===.md)
   - [Array 와 subscript를 함께 사용하여 Index Out Of Range 대처하기](Swift/array_subscript.md)
