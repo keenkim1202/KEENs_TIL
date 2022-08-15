@@ -9,6 +9,7 @@
 #### 📌 `New Update` Swift : == 과 === 의 차이 [👉 보러가기](Swift/==_vs_===.md)
 #### 📌 `New Update` Swift : 문자열(String), 문자(Character), String.Index 타입에 대하여 [👉 보러가기](Swift/about_string.md)
 #### 📌 `New Update` Swift : mutating 키워드에 대하여 [👉 보러가기](Swift/mutating.md)
+#### 📌 `New Update`  : 함수형 프로그래밍(Functional Programming) 이란 [👉 보러가기](CS/패러다임/FP.md)
 -----
 
 </br>
@@ -262,9 +263,9 @@
 - OOP: Object Oriented Programming (객체 지향 프로그래밍)
   - 특징 (추상화/캡슐화/상속/다형성)
   - SOLID 원칙
-- FP: Functional Programming (함수형 프로그래밍)
-  - 1급 객체(1급 시민)
-  - 순수 함수
+- [FP: Functional Programming (함수형 프로그래밍)](CS/패러다임/FP.md)
+  - [1급 객체(1급 시민)](CS/패러다임/first_class_citizen.md)
+  - [순수 함수](CS/패러다임/pure_function.md)
 - RP: Reactive Programming (반응형 프로그래밍)
 
 </br>
