@@ -176,7 +176,8 @@
     - `이코테 ex` [미로 찾기](https://github.com/keenkim1202/CodingTest_Algorithm/blob/main/BFS/%EB%AF%B8%EB%A1%9C%EC%B0%BE%EA%B8%B0.swift)
   - DFS (Depth First Search)
     - `이코테 ex` [음료수얼려먹기](https://github.com/keenkim1202/CodingTest_Algorithm/blob/main/DFS/%EC%9D%8C%EB%A3%8C%EC%88%98%EC%96%BC%EB%A0%A4%EB%A8%B9%EA%B8%B0.swift)
-- 이진탐색(Linear Search)
+- [이진탐색(Linear Search)](CS/알고리즘/이진탐색.md)
+  - `이코테 ex` [부품 찾기, 떡볶이 떡 만들기](CS/알고리즘/BinarySearch_Ex.swift)
 - 동적계획법(Dynamic Programming)
 - 그래프
 - [트리의 개념과 관련 용어 톺아보기](CS/알고리즘/트리.md)
