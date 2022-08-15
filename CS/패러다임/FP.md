@@ -57,6 +57,5 @@
 - [Swift Functional Programming - PacktPublishing Github](https://github.com/PacktPublishing/Swift-Functional-Programming)
 - [An Introduction to Functional Programming in Swift - Raywenderich](https://www.raywenderlich.com/9222-an-introduction-to-functional-programming-in-swift)
 
-
 ## 추가할 내용
 - 명령형 -> 함수형으로 바꾸어보는 코드 예시
