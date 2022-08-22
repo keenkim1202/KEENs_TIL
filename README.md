@@ -6,7 +6,6 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` Swift : == 과 === 의 차이 [👉 보러가기](Swift/==_vs_===.md)
 #### 📌 `New Update` Swift : 문자열(String), 문자(Character), String.Index 타입에 대하여 [👉 보러가기](Swift/about_string.md)
 #### 📌 `New Update` Swift : mutating 키워드에 대하여 [👉 보러가기](Swift/mutating.md)
 #### 📌 `New Update`  : 함수형 프로그래밍(Functional Programming) 이란 [👉 보러가기](CS/패러다임/FP.md)
