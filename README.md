@@ -7,8 +7,8 @@
 
 -----
 #### 📌 `New Update` Swift : 문자열(String), 문자(Character), String.Index 타입에 대하여 [👉 보러가기](Swift/about_string.md)
-#### 📌 `New Update` Swift : mutating 키워드에 대하여 [👉 보러가기](Swift/mutating.md)
-#### 📌 `New Update`  : 함수형 프로그래밍(Functional Programming) 이란 [👉 보러가기](CS/패러다임/FP.md)
+#### 📌 `New Update` Paradigm : 함수형 프로그래밍(Functional Programming) 이란 [👉 보러가기](CS/패러다임/FP.md)
+#### 📌 `New Update` iOS : 원하는 방향에만 그림자 넣기 [👉 보러가기](iOS/custom_shadow.swift)
 -----
 
 </br>
@@ -151,7 +151,8 @@
   - [presentingViewController, presentedViewController, parent 프로퍼티들은 각각 무엇인가요?](iOS/presentedVC_presentingVC.md)
 - 딥링크
   - [Universal Link 세팅 방법](iOS/universalLink.md)
-  
+- UI
+  - [원하는 방향에만 그림자 넣기](iOS/custom_shadow.swift)
 </br>
 
 <div align=right> 
