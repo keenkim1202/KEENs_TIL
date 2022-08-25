@@ -1,3 +1,9 @@
+# 뷰에 원하는 방향에만 그림자 넣기
+
+- 뷰를 그리다가 사방이 아니라 일부 방향에만 그림자를 넣어주고 싶었다.
+- 그림자를 넣어줄 방향에 대한 `enum`을 하나 만들고, `case`에 따라 `switch`문을 통해 분기처리를 하여 `offset`값을 조정하여 원하는 방향에만 그림자 효과를 주었다.
+
+```swift
 extension UIView {
     enum ShadowLocation {
         case bottom
@@ -29,3 +35,4 @@ extension UIView {
         self.layer.shadowRadius = radius
     }
 }
+```
