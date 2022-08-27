@@ -83,6 +83,7 @@
   - [mutating 키워드에 대하여](Swift/mutating.md)
 - 타입과 자료형
   - [== 과 === 의 차이](Swift/==_vs_===.md)
+  - [Array, Set, Dictionary](Swift/array_set_dictionary.md) `🚧`
   - [Array 와 subscript를 함께 사용하여 Index Out Of Range 대처하기](Swift/array_subscript.md)
 - [Enumeration](Swift/Enumeration.md)
   - [unknown default](Swift/unknown_default.md)
