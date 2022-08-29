@@ -385,6 +385,7 @@
 
 - TableView
   - [TableViewCell 안의 버튼 액션이 작동하지 않을 때](https://nareunhagae.tistory.com/52) `Blog`
+  - [Expandable, Collapsable TableView 구성하기](https://github.com/keenkim1202/NestedSectionEx)
 - CollectionView
   - [cell 안의 imageView를 원으로 만들었는데 찌그러질 때](https://nareunhagae.tistory.com/33?category=1217062) `Blog`
   - [CollectionView cell 커스텀 시 크기 조절이 잘 안될 때](https://nareunhagae.tistory.com/47?category=1217062) `Blog`
@@ -410,7 +411,7 @@
 - Thrid-Party
   - [Firebase 관련 debug창 출력 비활성화 하기](https://nareunhagae.tistory.com/manage/posts/) `Blog`
 - CustomView
- - [원하는 방향에만 그림자 넣기](iOS/custom_shadow.md)
+  - [원하는 방향에만 그림자 넣기](iOS/custom_shadow.md)
 
 <div align=right> 
  
