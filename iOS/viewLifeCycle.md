@@ -15,3 +15,6 @@
 - `viewDidUnload` : 메모리에서 해제될 때 실행
 
 
+## 참고
+
+[View 레이아웃 그리는 주기](https://github.com/keenkim1202/KEENs_TIL/blob/main/iOS/view_draw_layout_cycle.md)
