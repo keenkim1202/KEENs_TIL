@@ -410,6 +410,7 @@
   - [present/dismiss를 push/pop 처럼 보이게 애니메이션 효과를 주고 싶을 때](https://nareunhagae.tistory.com/70) `Blog`
 - Thrid-Party
   - [Firebase 관련 debug창 출력 비활성화 하기](https://nareunhagae.tistory.com/manage/posts/) `Blog`
+  - [Alamofire에서 자주 사용하는 print 문들 (response data, request url 출력하기)](Swift/alamofire_request_url_print.md)
 - CustomView
   - [원하는 방향에만 그림자 넣기](iOS/custom_shadow.md)
 
