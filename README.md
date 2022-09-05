@@ -6,8 +6,8 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` iOS : 원하는 방향에만 그림자 넣기 [👉 보러가기](iOS/custom_shadow.md)
 #### 📌 `New Update` Swift : hashable & equatable & comparable [👉 보러가기](Swift/hashable_equatable_comparable.md) `🚧`
+#### 📌 `New Update` iOS : 뷰 레이아웃 그리는  [👉 보러가기](https://github.com/keenkim1202/KEENs_TIL/blob/main/iOS/view_draw_layout_cycle.md)
 -----
 
 </br>
