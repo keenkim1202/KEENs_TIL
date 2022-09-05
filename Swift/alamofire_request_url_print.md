@@ -14,7 +14,7 @@ Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.h
     if
         let data = response.data,
         let utf8Text = String(data: data, encoding: .utf8) {
-        print("Reponse Data: \(utf8Text)") // original server data as UTF8 string
+        print("Reponse Data: \(utf8Text)") // encode data to UTF8
     }
     
     switch response.result {
