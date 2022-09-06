@@ -7,7 +7,8 @@
 
 -----
 #### 📌 `New Update` Swift : hashable & equatable & comparable [👉 보러가기](Swift/hashable_equatable_comparable.md) `🚧`
-#### 📌 `New Update` iOS : 뷰 레이아웃 그리는  [👉 보러가기](https://github.com/keenkim1202/KEENs_TIL/blob/main/iOS/view_draw_layout_cycle.md)
+#### 📌 `New Update` iOS : 뷰 레이아웃 그리는 순서 [👉 보러가기](https://github.com/keenkim1202/KEENs_TIL/blob/main/iOS/view_draw_layout_cycle.md)
+#### 📌 `New Update` Swift : Swift 공식문서 번역: Types [👉 보러가기](Swift/docs_translate_types.md)
 -----
 
 </br>
@@ -104,6 +105,9 @@
 - Library
   - Snapkit / FlexLayout / PinLayout 장단점 비교하기
 - [NSMutableAttributedString 관련 extension 활용하기](https://nareunhagae.tistory.com/68) `Blog`
+- 공식문서 번역
+  - [Swift 공식문서 번역: Types](Swift/docs_translate_types.md)
+
 
 </br>
 
