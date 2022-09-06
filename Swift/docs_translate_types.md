@@ -5,6 +5,12 @@
 
 ---
 
+## Index
+- Type Annotation
+- Type Identifier
+
+---
+
 Swift에는 두 종류의 타입이 있다.  
 `named type`은 정의할 때 특정 이름을 지어줄 수 있는 타입이다.  
 `named type`은 `classes, structures, enumerations, protocols`를 포함한다.
@@ -42,3 +48,93 @@ tuple type `(Int, (Int, Int))` 는 두 요소를 포함하고 있다.
 
 
 ---
+
+## Type Annotation
+
+type annotation은 명확하게 변수(`variable`) 혹은 표현식(`expression`)을 지정한다.  
+type annotation은 콜론 (`:`) 으로 시작하며 type으로 끝난다.  
+예시는 아래와 같다.
+
+```swift
+let someTuple: (Double, Double) = (3.14159, 2.71828)
+func someFunction(a: Int) { /* ... */ }
+``` 
+
+첫번째 에시에서 보면, `someTuple` 이라는 표현식은 `(Double, Double)` 튜플 타입임을 가짐을 지정한다.  
+두번째 예시를 보면, `someFunction` 이라는 함수의 파라미터는 `Int` 타입을 가짐을 지정한다.
+
+</br>
+
+type annotation은 타입 앞에 타입의 속성(type attributes)에 대한 리스트도 옵션으로 포함할 수 있다.  
+```
+ex) 
+@escaping, @autoclosure
+```
+---
+
+## Type Identifier
+
+
+---
+
+## Tuple Type
+
+
+---
+
+## Function Type
+
+
+---
+
+## Array Type
+
+
+---
+
+## Dictionary Type
+
+
+---
+
+## Optional Type
+
+
+---
+
+## Implicitly Unwrapped Optional Type
+
+
+---
+
+## Protocol Composition Type
+
+
+---
+
+## Opaque Type
+
+
+---
+
+## Metatype Type
+
+
+---
+
+## Any Type
+
+
+---
+
+## Self Type
+
+
+---
+
+## Type Inheritance Clause
+
+
+---
+
+## Type Inference
