@@ -208,7 +208,7 @@
 </div>
 
 - [Trie](https://nareunhagae.tistory.com/54) `Blog`
-- Persistent Data Structure
+- [Persistent Data Structure](https://github.com/keenkim1202/KEENs_TIL/blob/main/CS/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/persistent.md) `🚧`
 - B-Tree
   - Binary Tree (이진 트리)
 
