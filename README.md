@@ -208,6 +208,9 @@
 </div>
 
 - [Trie](https://nareunhagae.tistory.com/54) `Blog`
+- Persistent Data Structure
+- B-Tree
+  - Binary Tree (이진 트리)
 
 </br>
 
