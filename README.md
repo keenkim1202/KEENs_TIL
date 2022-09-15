@@ -86,6 +86,7 @@
   - [== 과 === 의 차이](Swift/==_vs_===.md)
   - [Array, Set, Dictionary](Swift/array_set_dictionary.md) `🚧`
   - [Array 와 subscript를 함께 사용하여 Index Out Of Range 대처하기](Swift/array_subscript.md)
+  - [String.Index 에 대하여](https://github.com/keenkim1202/KEENs_TIL/blob/main/Swift/about_string.md)
 - [Enumeration](Swift/Enumeration.md)
   - [unknown default](Swift/unknown_default.md)
 - Function
