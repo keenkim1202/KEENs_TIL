@@ -1,5 +1,8 @@
 # Iterator
+- 컬렉션(Collection)에 저장되어 있는 요소(element)들을 순회하는 인터페이스이다.
+- `Sequence` 프로토콜을 준수하는 collection들은 iterator로 만들 수 있다.
 
+## makeIterator()
 > makeiterator() `Instance Method`  
 > : Retuens an iterator over the elements of the collection.
 
@@ -7,8 +10,32 @@
 func makeIterator() -> IndexingIterator<Self>
 ```
 
+- collection을 이 메서드를 통해 iterator로 만들 수 있다.
+
+```swift
+let str: String = "hello"
+var iterator = str.makeIterator()
+```
+
+## next()
+> next() `Instance Method`  
+> : Advances to the next element and returns it, or nil if no next element exists.
 
 
+- next()를 부를 때마다 iterator값은 다음 element를 가리키게 된다.
+- 값이 바뀌므로 mutate될 수 있도록 변수로 선언해주어야 한다. (let으로 선언 불가)
+- next()를 불렀는데 다음 element가 존재하지 않는다면(마지막 element라면) `nil` 을 리턴한다.
+    - 계속 next()를 부르면 계속 nil이 나온다.
+```swift
+iterator.next() // "h"
+iterator.next() // "e"
+iterator.next() // "l"
+iterator.next() // "l"
+iterator.next() // "o"
+iterator.next() // nil
+iterator.next() // nil
+iterator.next() // nil
+```
 
 
 ## 문자열 자르기 문제에 활용
