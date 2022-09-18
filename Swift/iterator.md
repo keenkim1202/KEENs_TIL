@@ -17,6 +17,14 @@ swift에서 iteration이 어떻게 작동하는지 알아보자.
 </br>
 
 ## IteratorProtocol
+```swift
+public protocol IteratorProtocol {
+  /// The type of element traversed by the iterator.
+  associatedtype Element
+  mutating func next() -> Element?
+}
+```
+
 - 매번 for 루프를 사용하 때, 당신은 이미 iterator를 사용하고 있다.
 - 예를 들어 배열에 `for-in`문을 통해 loop를 돈다.
 - `for-in`은 [syntatic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)이다. (사용자가 사용하기 쉽게 한단계 포장한 것을 의미)
@@ -25,7 +33,10 @@ swift에서 iteration이 어떻게 작동하는지 알아보자.
 
 - `makeIterator()` 메서드는 `IteratorProtocol` 과 매우 연관되어있는 `Sequence` 프로토콜 안에 정의 되어있다. 
 
-
+- Iterator는 `IteratorProtocol`을 적용한다. (스위프트에서 이것은 작지만 강력한 요소이다.)
+- `IteratorProtocol`은 `Element` 라는 타입과 `next()` 메서드와 연관이 있다.
+    - `next()` 메서드는 `optional Element` 타입을 리턴한다.
+    - Iterator들은 다수의 element들을 loop할 수 있는 값을 생성한다.
 
 
 
