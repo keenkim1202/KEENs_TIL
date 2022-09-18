@@ -19,7 +19,7 @@ swift에서 iteration이 어떻게 작동하는지 알아보자.
 ## IteratorProtocol
 - 매번 for 루프를 사용하 때, 당신은 이미 iterator를 사용하고 있다.
 - 예를 들어 배열에 `for-in`문을 통해 loop를 돈다.
-- `for-in`은 `syntatic sugar`이다. (사용자가 사용하기 쉽게 한단계 포장한 것을 의미)
+- `for-in`은 [syntatic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)이다. (사용자가 사용하기 쉽게 한단계 포장한 것을 의미)
     - 그 아레에서는 `makeIterator()`를 통해 iterator가 만들어지는 일이 벌어지고 있다.
     - Swift는 while문을 통해 원소들을 훑는다. 마찬가지다.
 
