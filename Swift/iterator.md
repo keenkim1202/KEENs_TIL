@@ -17,6 +17,8 @@ swift에서 iteration이 어떻게 작동하는지 알아보자.
 </br>
 
 ## IteratorProtocol
+> A type that supplies the values of a sequence one at a time.
+
 ```swift
 public protocol IteratorProtocol {
   /// The type of element traversed by the iterator.
