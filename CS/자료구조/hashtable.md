@@ -139,3 +139,108 @@ O(1)
 > 언제 사용하면 좋은가?
 - 탐색이 잦은 경우
 - 캐시를 구현할 때
+
+## Ex
+### HashTable
+```swift
+public struct HashTable<Key: Hashable, Value> {
+  private typealias Element = (key: Key, value: Value)
+  private typealias Bucket = [Element]
+  private var buckets: [Bucket]
+
+  private(set) public var count = 0
+  
+  public var isEmpty: Bool { return count == 0 }
+
+  public init(capacity: Int) {
+    assert(capacity > 0)
+    buckets = Array<Bucket>(repeatElement([], count: capacity))
+  }
+```
+
+### HashTable 객체 만들기
+```swift
+var hashTable = HashTable<String, String>(capacity: 5) // capacity에 원하는 크기를 지정하여 선언
+```
+
+### 주어진 key값을 통해 index 값을 구하는 메서드
+```swift
+  private func index(forKey key: Key) -> Int {
+    return abs(key.hashValue % buckets.count)
+  }
+```
+
+### 사용법 (syntex)
+```swift
+hashTable["a"] = "apple"   // insert
+let x = hashTable["a"]     // lookup
+hashTable["a"] = "airplane"     // update
+hashTable["a"] = nil       // delete
+```
+
+### subscript 함수 만ㄷ르기
+```swift
+  public subscript(key: Key) -> Value? {
+    get {
+      return value(forKey: key)
+    }
+    set {
+      if let value = newValue {
+        updateValue(value, forKey: key)
+      } else {
+        removeValue(forKey: key)
+      }
+    }
+  }
+```
+
+### key값에 따른 value를 구하는 함수
+```swift
+  public func value(forKey key: Key) -> Value? {
+    let index = self.index(forKey: key)
+    for element in buckets[index] {
+      if element.key == key {
+        return element.value
+      }
+    }
+    return nil  // key not in hash table
+  }
+```
+
+### 값 수정
+```swift
+  public mutating func updateValue(_ value: Value, forKey key: Key) -> Value? {
+    let index = self.index(forKey: key)
+    
+    // Do we already have this key in the bucket?
+    for (i, element) in buckets[index].enumerated() {
+      if element.key == key {
+        let oldValue = element.value
+        buckets[index][i].value = value
+        return oldValue
+      }
+    }
+    
+    // This key isn't in the bucket yet; add it to the chain.
+    buckets[index].append((key: key, value: value))
+    count += 1
+    return nil
+  }
+```
+
+### 값 삭제
+```swift
+  public mutating func removeValue(forKey key: Key) -> Value? {
+    let index = self.index(forKey: key)
+
+    // Find the element in the bucket's chain and remove it.
+    for (i, element) in buckets[index].enumerated() {
+      if element.key == key {
+        buckets[index].remove(at: i)
+        count -= 1
+        return element.value
+      }
+    }
+    return nil  // key not in hash table
+  }
+```
