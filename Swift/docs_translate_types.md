@@ -73,7 +73,31 @@ ex)
 ---
 
 ## Type Identifier
+`type identifier`는 named type 또는 이름이 지어진 `type alias` 또는 `compound type`을 의미한다.  
 
+</br>
+
+대부분의 경우 type identifier는 identifier로써 같은 이름을 가진 `named type`을 의미한다.  
+예를 들어 `Int`는 `Int` 라는 named type을 직접적으로 나타내는 type identifier 이고, `Dictionary<String, Int>`는 `Dictionary<String, Int>` 라는 named type을 나타낸다.
+
+</br>
+
+type identifer가 나타내는 타입과 이름이 같지 않은 경우는 두 가지가 있다.  
+첫번째 경우는, type identifer가 named 혹은 compound type의 type alias를 나타내는 경우이다.  
+그 대신에 아래의 예시 처럼 type annotation에 사용된 `Point` 는 `(Int, Int)` 튜플 타입을 나타낸다.
+
+```swift
+typealias Point = (Int, Int)
+let origin: Point = (0, 0)
+```
+
+</br>
+
+두번째 경우는, type identifier가 named type들을 다른 모듈 혹은 중첩된 다른 타입을 나타내기 위해 dot(`.`) syntax 을 사용하는 경우이다.
+예를 들어, 아래 코드의 type identifier는 `ExampleModule`이라는 모듈 안에 정의된 `MyType`이라는 named type을 의미한다.
+```swift
+var someValue: ExampleModule.MyType
+```
 
 ---
 
