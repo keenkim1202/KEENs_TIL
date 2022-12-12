@@ -8,16 +8,16 @@ string.count == 0 // 1
 string.isEmpty // 2
 ```
 
-- count의 시간복잡도는 O(n)  
-- isEmpty의 시간복잡도는 O(1)
+- `count`의 시간복잡도는 O(n)  
+- `isEmpty`의 시간복잡도는 O(1)
 
 </br>
 
 swift에서 문자열을 indexing할 때  
-일반적으로 String.Index로 접근 시 시간복잡도는 O(1) 이 아닌 O(n) 이 된다.  
-(String.Index를 자세히 알고싶다면 about_string.md 참고.)  
+일반적으로 `String.Index`로 접근 시 시간복잡도는 O(1) 이 아닌 O(n) 이 된다.  
+- 자세한 내용은 [String.Index 에 대하여](https://github.com/keenkim1202/KEENs_TIL/blob/main/Swift/about_string.md) 를 참고하세요.
 
-문자열을 index를 통해 접근하고 싶다면 아래와 같은 subscript()를 만들어줄 수 있다.
+문자열을 index를 통해 접근하고 싶다면 아래와 같은 `subscript(i:)`를 만들어줄 수 있다.
 ```swift
 extension Stirng {
     subscript(i: Int) -> Character {
@@ -49,6 +49,7 @@ for index in stride(from: 0, to: stirng.count, by: 2) { // O(n)
 count의 경우 시간복잡도는 O(n) 이다.  
 문자열의 문자 하나하에 대해 `String.Index`에 접근하면서 count해 나가기 때문이다.  
 (참고: swift에서 문자는 눈으로 보기에 1글자여도 메모리상 각기 다른 크기를 차지하기 때문에 일정한 메모리 크기에 따라 index를 나누는 C언어와 달리 index를 통해서 특정 위치의 문자열에 대한 정보를 알 수 없다.)
+- 자세한 내용은 [String.Index 에 대하여](https://github.com/keenkim1202/KEENs_TIL/blob/main/Swift/about_string.md) 를 참고하세요.
 
 ## 2번
 `isEmpty`는 문자열의 첫번째 index와 마지막 index가 같은지 비교하여 한번의 체크로 문자열이 비어있는지 판단하고 true, false로 리턴해준다.  
