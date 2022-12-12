@@ -41,6 +41,7 @@ dictionary[001] // "아무개"
 mutating method들은 COW(Copy On Write)를 고려해야 한다.
 
 > Array
+- [공식 문서 참고](https://github.com/apple/swift/blob/main/stdlib/public/core/Array.swift)
 - `append(_ newElement: Element)`
     - 평균: O(1)
     - 최악: O(n) -> 최악의 상황은 메모리를 재할당 해야할 때이다.
@@ -62,3 +63,15 @@ mutating method들은 COW(Copy On Write)를 고려해야 한다.
 |O(m)|`elementsEqual(_:)`, `==`||
 
 > Set
+- [공식 문서 참고](https://github.com/apple/swift/blob/main/stdlib/public/core/Set.swift)
+|시간복잡도|메서드|추가설명|
+|:--:|:--:|:--:|
+|O(1)|`subscript(_:)`, `count`, `contains(_:)`, `removeFirst()`, `firstIndex(of:)`||
+|O(n)|`contains(where:)`||
+
+> Dictionary
+- [공식 문서 참고](https://github.com/apple/swift/blob/main/stdlib/public/core/Dictionary.swift)
+|시간복잡도|메서드|추가설명|
+|:--:|:--:|:--:|
+|O(1)|||
+|O(n)|||
