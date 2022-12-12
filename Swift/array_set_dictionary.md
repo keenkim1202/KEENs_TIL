@@ -73,5 +73,6 @@ mutating method들은 COW(Copy On Write)를 고려해야 한다.
 - [공식 문서 참고](https://github.com/apple/swift/blob/main/stdlib/public/core/Dictionary.swift)
 |시간복잡도|메서드|추가설명|
 |:--:|:--:|:--:|
-|O(1)|||
-|O(n)|||
+|O(1)|`subscript(_:)`, `count`, `index(forKey:)`, `popFirst()`|index(forKey:)의 경우, NSDictionary로 wrap된 경우 O(n). 공식 문서 참조)|
+|O(n)|`contains(where:)`, `mapValues(_:)`, `remove(at:)`, `removeValue(forKey:)`, `removeAll(keepingCapacity:)`, `rereversed()`|contains(_:) method는 없다. (key로 바로 참조하면 알 수 있기 때문)|
+|O(m+n)|`compactMapValues(_:)`|n = 기존 Dictionary의 크기, m: 결과 Dicrionary의 크기|
