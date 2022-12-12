@@ -36,3 +36,29 @@ dictionary[001] // "아무개"
 
 // key 값은 유일하므로 001에 "홍길동"이라는 값이 있는 상태에서 "아무개"를 할당하면, "홍길동"이 "아무개"로 대치된다.
 ```
+
+## 시간복잡도
+mutating method들은 COW(Copy On Write)를 고려해야 한다.
+
+> Array
+- `append(_ newElement: Element)`
+    - 평균: O(1)
+    - 최악: O(n) -> 최악의 상황은 메모리를 재할당 해야할 때이다.
+- `append(contentsOf:)`
+    - 평균: O(m) -> m = Elements의 갯수
+- `insert(_ newElement: Element, at i: Int)`
+    - 평균: O(n)
+    - i가 마지막 index일 경우 append와 시간 복잡도가 같다.
+- `subscript(_:)`
+    - read는 항상 O(1)
+    - write는 평균 O(1)
+    - NSArray와 bridged된 경우, 다른 array와 storage를 공유하고 있을 경우: O(n) -> COW 때문
+
+|시간복잡도|메서드|추가설명|
+|:--:|:--:|:--:|
+|O(1)|`count`, `randomElement()`, `last`, `isEmpty`, `popLast()`, `removeLast()`, `reseversed()`, `swapAt(_:_:)`||
+|O(n)|`reserveCapacity(_:)`, `remove(at:)`, `removeFirst()`, `removeAll(keepingCapacity:)`, `contains(_:)`, `contains(where:)`, `first(where:)`, `firstIndex(where:)`, `last(where:)`, `lastIndex(where:)`, `firstIndex(of:)`, `lastIndex(of:)`, `min()`, `max()`, `enumerated()`, `reverse()`, `shuffle()`, `shuffled()`, `split()`||
+|O(NlogN)|`sort()`, `sorted()`|merge sort와 insertion sort 기반으로 [tim sort](https://youtu.be/2pjUsuHTqHc)를 사용한다.|
+|O(m)|`elementsEqual(_:)`, `==`||
+
+> Set
