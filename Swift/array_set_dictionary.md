@@ -88,3 +88,4 @@ mutating method들은 COW(Copy On Write)를 고려해야 한다.
 
 그래서 문자열이 비어있는지 비교할 때는
 count보다 isEmpty를 사용하는 것이 좋다.
+- 자세한 내용은 [count == 0 vs isEmpty 무엇을 사용하는게 더 효율적일까?](https://github.com/keenkim1202/KEENs_TIL/blob/main/Swift/compare_countZero_and_isEmpty.md) 를 참고하세요.
