@@ -76,3 +76,15 @@ mutating method들은 COW(Copy On Write)를 고려해야 한다.
 |O(1)|`subscript(_:)`, `count`, `index(forKey:)`, `popFirst()`|index(forKey:)의 경우, NSDictionary로 wrap된 경우 O(n). 공식 문서 참조)|
 |O(n)|`contains(where:)`, `mapValues(_:)`, `remove(at:)`, `removeValue(forKey:)`, `removeAll(keepingCapacity:)`, `rereversed()`|contains(_:) method는 없다. (key로 바로 참조하면 알 수 있기 때문)|
 |O(m+n)|`compactMapValues(_:)`|n = 기존 Dictionary의 크기, m: 결과 Dicrionary의 크기|
+
+## 기타 참고
+문자열의 경우
+- `count`: O(n)
+- `contains(_:)`, `~=`: O(1)
+
+고차함수의 경우
+- `map`, `flatMap`, `compactMap`, `filter`, `reduce`: O(n)
+    - 결국 for문으로 한번 순회하는 것과 같다.
+
+그래서 문자열이 비어있는지 비교할 때는
+count보다 isEmpty를 사용하는 것이 좋다.
