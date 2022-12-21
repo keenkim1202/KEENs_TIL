@@ -168,4 +168,57 @@ print(squareCoords) // [(0,0), (0,1), (0,2) ... (4,2), (4,3), (4,4)]
 > logarithmic time algorithm
 <img width="600" src="https://user-images.githubusercontent.com/59866819/208836902-a69aea50-7706-4d20-b44f-f78922535997.png">
 
+이름에서 알 수 있듯이, 로그 스케일로 증가하는 복잡도를 확인할 수 있다.  
+`O(logn)` 복잡도를 갖는 알고리즘은 적은 양의 데이터에 사용할 때 성능이 안좋다.  
+하지만 데이터가 증가하고 `n`이 무한에 가까워지면 알고리즘의 성능은 점점 좋아진다.
 
+이 예시로 `이진탐색(binary search)` 를 들 수 있다.
+만약 우리는 정렬된 배열을 가지고 있고, 그 안에서 특정 원소를 찾고자 한다고 가정해보자.  
+binary search는 이 방법을 사용하면 굉장히 효율적일 것이다:
+```swift
+extension RandomAccessCollection where Element: Comparable, Index == Int {
+    func binarySearch(for item: Element) -> Index? {
+        guard self.count > 1 else {
+            if let first = self.first, first == item {
+                return self.startIndex
+            }  else {
+                return nil
+            }
+        }
+
+        let middleIndex = (startIndex + endIndex) / 2
+        let middleItem = self[middleIndex]
+
+        if middleItem < item {
+            return self[index(after: middleIndex)...].binarySearch(for: item)
+        } else if middleItem > item {
+            return self[..<middleIndex].binarySearch(for: item)
+        } else {
+            return middleIndex
+        }
+    }
+}
+
+let words = ["Hello", "world", "how", "are", "you"].sorted()
+print(words.binarySearch(for: "world")) // Optional(3)
+```
+
+`binary search`를 적용하는 경우 입력값이 오름차순으로 정렬되었다고 가정한다.  
+특정 원소를 찾기 위해서는 데이터의 중앙 index를 찾고 특정 원소와 비교한다.  
+만약 특정 원소가 현재 중앙에 있는 원소보다 이전의 위치에 있다고(=보다 작다고) 예상되면, 배열을 반으로 자르고, 나눠진 첫번째 배열에 같은 동작을 수행한다. 이 과정이 특정 원소를 찾을 때까지 반복된다.  
+만약 특정 원소가 중앙에 원소보다 이후에 위치해 있다고(=보다 크다고) 예상되면, 나눠진 두번째 배열에서 같은 동작을 수행한다.
+
+검색 알고리즘은 매우 효율적이다.
+왜냐하면 테이터의 사이즈가 커질수록 들여다 봐야하는 횟수의 증가속도가 느리기 때문이다.
+```
+데이터의 크기별 최대 검색 횟수
+1개 -> 1회
+2개 -> 2회
+10개 -> 3회
+50 -> 6회
+100개 -> 7회
+1000개 ->10회
+```
+
+위의 예시를 보면, 데이터의 크기가 `10개 -> 50개`로 증가하는데 최대 검색 횟수는 `2배` 밖에 증가하지 않았다.
+이것은 데이터 세트가 증가함에 따라 `O(log n)` 알고리즘의 성능 저하가 덜 중요해지는(신경쓰지 않아도 되는) 이유를 보여주는 좋은 예이다.
