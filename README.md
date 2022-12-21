@@ -9,6 +9,7 @@
 #### 📌 `New Update` Swift : hashable & equatable & comparable [👉 보러가기](Swift/hashable_equatable_comparable.md) `🚧`
 #### 📌 `New Update` Swift : Swift 공식문서 번역: Types [👉 보러가기](Swift/docs_translate_types.md)
 #### 📌 `New Update` 자료구조: hashtable [👉 보러가기](CS/자료구조/hashtable.md)
+#### 📌 `New Update` Swift: BigO 표기법과 시간복잡도 [👉 보러가기](Swift/big_o_in_swift.md)
 -----
 
 </br>
@@ -423,6 +424,7 @@
   - [Alamofire에서 자주 사용하는 print 문들 (response data, request url 출력하기)](Swift/alamofire_request_url_print.md)
 - CustomView
   - [원하는 방향에만 그림자 넣기](iOS/custom_shadow.md)
+- [Font를 plist가 아닌 DataAssets로 등록하는 방법](https://www.bontouch.com/case/custom-fonts-in-a-swift-package/)
 
 <div align=right> 
  
