@@ -33,6 +33,7 @@ O(1)
 
 ### Swift에서 O(1) 에 해당하는 예시
 ```swift
+// 1-1
 let numberArray = [0, 1, 2, 3, 4, 5]
 numberArray[2]
 ```
@@ -84,6 +85,7 @@ Swift에서 기본적으로 제공하는 함수들 중 다수가 유사한 성�
 아래의 예시 코드를 보자.
 
 ```swift
+// 1-2
 let wordArray = ["Hi", "My", "name", "is", "keen"]
 var numberOfChecked = 0
 
@@ -145,6 +147,7 @@ in which case writing is O(n), where n is the length of the array.
 O(n^2) 의 성능은 bubble sort와 같은 간단한 정렬 알고리즘에서 흔하게 볼 수 있다.  
 쉬운 예제를 들면 아래와 같다:
 ```swift
+// 1-3
 let intergers = (0..<5)
 let squareCoords = integers.flatMap { i in
     return intergers.map { j in
@@ -176,6 +179,7 @@ print(squareCoords) // [(0,0), (0,1), (0,2) ... (4,2), (4,3), (4,4)]
 만약 우리는 정렬된 배열을 가지고 있고, 그 안에서 특정 원소를 찾고자 한다고 가정해보자.  
 binary search는 이 방법을 사용하면 굉장히 효율적일 것이다:
 ```swift
+// 1-4
 extension RandomAccessCollection where Element: Comparable, Index == Int {
     func binarySearch(for item: Element) -> Index? {
         guard self.count > 1 else {
@@ -226,12 +230,138 @@ print(words.binarySearch(for: "world")) // Optional(3)
 ----
 
 ## 모든 알고리즘 비교 그래프
-<img width="600" src="https://user-images.githubusercontent.com/59866819/208846412-09e26802-de92-44d4-80d4-2ed86dfcb785.png">
 
 프로그래밍에서 BigO 표기법은 더 많다. 그 중 대표적인 예시를 보여준 것이다.
 (다른 표기법이 궁금한 사람은 [위키링크](https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions) 를 참고)
 몇몇 흔한 복잡도의 아이디어를 살펴보고 수학적으로 추론해보자.
 
+----
+
+# 코드에서 BigO 를 결정하는 방법
+이제 대략적으로 BigO가 무엇인지, 어떻게 결정되는지 알 것이다.  
+이제 당신의 프로젝트 안의 코드를 보고 복잡도를 알아내는 연습을 해보자.  
+충분한 연습을 거치면 감이 생길 것이다.  
+
+</br>
+
+코드의 성능을 말하는 간단한 방법은 함수 안에 있는 `for` 문의 갯수를 살펴보는 것이다:
+```swift
+// 2-1
+func printAll<T>(from items: [T]) {
+    for item in items {
+        print(item)
+    }
+}
+```
+
+이 코드는 `O(n)` 이다.  
+함수 안에 하나의 `for` 문을 가지고 잇고, 중간에 이탈하는 일(break) 없이 주어진 입력값에 해당하는 모든 원소를 순회한다.  
+이 함수는 선형적으로 성능이 증가함이 명확하다.
+
+</br>
+
+`O(1)` 의 복잡도를 갖는 경우는 다음과 같다:
+```swift
+// 2-2
+func printFirst<T>(_ items: [T]) {
+    print(items.first)
+}
+```
+
+반복문이 없고, 한개의 `print`문만 존재한다.  
+`[T]` 안에 얼마나 많은 원소가 들어있든 상관없이 항상 같은 실행 시간을 가질 것이다.
+
+
+</br>
+
+조금 더 까다로운 예제를 보자:
+```swift
+// 2-3
+func doubleLoop<T>(over items: [T]) {
+    for item in items {
+        print("loop 1: \(item)")
+    }
+
+    for item in items {
+        print("loop 2: \(item)")
+    }
+}
+```
+
+여기에 두 개의 반복문이 있다.   
+그렇기에 위의 `1-3`예제를 바탕으로 당신은 `O(n^2)` 이라고 생각하 수 있다.
+
+하지만 이 경우는 좀 다르다. `1-3`의 경우는 중첩된(nested) 반복문이다.  
+반복문 바깥에서 같은 데이터들에 대해 한번 더 반복문을 실행한다.  
+
+</br>
+
+`2-3`의 경우,  
+각각의 반복문이 따로 떨어져 있다.  
+이것은 배열안의 원소의 갯수의 두 배만큼 실행시간이 소요된다는 의미이다. 제곱이 아니라!  
+
+</br>
+
+따라서 복잡도는 `O(2n)` 이다. 
+
+상수 배수를 갖는 복잡도는 종종 `O(n)`과 같이 축약해서 표현한다.   
+결국은 선형적으로 증가하는 성능을 갖기 때문이다.  
+성능을 나타낼 때 데이터가 몇번 반복되는 지는 상관없고 알 필요 없다.
+
+</br>
+
+[Cracking the Coding Interview](https://www.crackingthecodinginterview.com/) 에 나온 반복문 예제를 한번 살펴보자:
+```swift
+func printPairs(for integers: [Int]) {
+    for (idx, i) in integers.enumerated() {
+        for j in integers[idx...] {
+            print((i, j))
+        }
+    }
+}
+```
+
+위의 코드는 중첩된 반복문을 포함하고 있다, 그래서 딱 봤을 때 O(n^2) 처럼 보인다.
+하지만 자세히 봐보아라.
+
+이 중첩된 반복문은 전체 데이터를 순회하지 않는다.
+대신! 그 일부 원소들을 순회한다.
+
+외부 반복문이 진행될수록 내부 반복문의 순회할 원소의 수는 감소한다.
+입력값이 `[1, 2, 3]` 일때 외부 반복문이 한바퀴 돌 때마다 줄바꿈을 하여 표현해본다면:
+```
+(1, 1) (1, 2) (1, 3)
+(2, 2) (2, 3)
+(3, 3)
+```
+
+</br>
+
+원소를 하나 추가하여 `[1, 2, 3, 4]` 인 경우는:
+```
+(1, 1) (1, 2) (1, 3) (1, 4)
+(2, 2) (2, 3) (2, 4)
+(3, 3) (3, 4)
+(4, 4)
+
+```
+
+</br>
+
+이를 바탕으로 보면, 우리는 외부 반복문은 n번 실행됨을 알 수 있다.
+- 배열 안의 원소 수만큼 선형적으로 이루어지니까.
+
+내부 반복문은 외부 반복문이 실행될 때마다 평균적으로 약 n의 절반을 실행된다.
+- 처음에는 n번, 다음은 n-1, 다음은 n-2 ...
+
+이를 연산해보면 O(n * n / 2) 니까, O(n^2 / 2) 로 볼 수 있다.
+이 또한 상수배를 생략하여 간단히 표현하보면 O(n^2) 이 된다.
+
+</br>
+
+중첩된 반복문을 보고 O(n^2) 이라고 즉각적으로 단정짓기 보다는, 왜 그런 결론이 나는지 추론하고 이해하는 과정이 중요하다.
+
+이와 관련된 좋은 [WWDC 2018 영상](https://developer.apple.com/videos/play/wwdc2018/223/)이 있다. 관심 있다면 참고하라.
 
 
 </br>
