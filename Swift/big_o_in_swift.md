@@ -222,3 +222,23 @@ print(words.binarySearch(for: "world")) // Optional(3)
 
 위의 예시를 보면, 데이터의 크기가 `10개 -> 50개`로 증가하는데 최대 검색 횟수는 `2배` 밖에 증가하지 않았다.
 이것은 데이터 세트가 증가함에 따라 `O(log n)` 알고리즘의 성능 저하가 덜 중요해지는(신경쓰지 않아도 되는) 이유를 보여주는 좋은 예이다.
+
+----
+
+## 모든 알고리즘 비교 그래프
+
+프로그래밍에서 BigO 표기법은 더 많다. 그 중 대표적인 예시를 보여준 것이다.
+(다른 표기법이 궁금한 사람은 [위키링크](https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions) 를 참고)
+몇몇 흔한 복잡도의 아이디어를 살펴보고 수학적으로 추론해보자.
+
+
+
+</br>
+</br>
+</br>
+
+----
+
+> 참고링크
+- [시간복잡도 표기 예 - 정보통신기술용어해설](http://www.ktword.co.kr/test/view/view.php?m_temp1=6146)
+- [introduction to Big O](https://www.donnywals.com/an-introduction-to-big-o-in-swift/)
