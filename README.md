@@ -111,7 +111,8 @@
 - [NSMutableAttributedString 관련 extension 활용하기](https://nareunhagae.tistory.com/68) `Blog`
 - 공식문서 번역
   - [Swift 공식문서 번역: Types](Swift/docs_translate_types.md)
-
+- Actor
+  - @MainActor
 
 </br>
 
@@ -424,7 +425,8 @@
   - [Alamofire에서 자주 사용하는 print 문들 (response data, request url 출력하기)](Swift/alamofire_request_url_print.md)
 - CustomView
   - [원하는 방향에만 그림자 넣기](iOS/custom_shadow.md)
-- [Font를 plist가 아닌 DataAssets로 등록하는 방법](https://www.bontouch.com/case/custom-fonts-in-a-swift-package/)
+- Assets
+  - [Font를 plist가 아닌 DataAssets로 등록하는 방법](https://www.bontouch.com/case/custom-fonts-in-a-swift-package/)
 
 <div align=right> 
  
