@@ -22,6 +22,9 @@ O(1)
 
 ## O(1)
 > constant time algorithm
+
+<img width="600" src="https://user-images.githubusercontent.com/59866819/208836647-e9fb8f42-2c75-47a2-b5e2-796607309e7f.png">
+
 가장 최고의 성능을 낼때 `O(1)`이라고 한다.  collection의 사이즈와 관계없이 항상 실행시간이 같은 경우를 의미한다.  
 (즉, 데이터의 갯수가 1개여도 1억개여도 항상 같은 실행시간이 걸리는 것을 말한다.)  
 `O(1)`을 시각화하면 아래의 그래프와 같다.
@@ -56,6 +59,8 @@ O(1)이라 표기할 때 말하고자 하는 것은 해당 알고리즘의 성�
 
 ## O(n)
 > linear time algorithm
+<img width="600" src="https://user-images.githubusercontent.com/59866819/208836770-3df2871e-c927-459e-b620-42bb3bc3f136.png">
+
 `O(n)`은 collection의 크기가 증가함에 따라 시간복잡도도 증가하는 것을 말한다.  
 그래프로 시각화해보면 선형적인 증가를 보여준다.  
 알고리즘 실행 시간 혹은 성장 정도가 collection의 크기와 비례하여 선형적으로 증가한다.  
@@ -134,3 +139,12 @@ in which case writing is O(n), where n is the length of the array.
 
 ## O(n^2)
 > quadratic time algorithm
+
+<img width="600" src="https://user-images.githubusercontent.com/59866819/208836801-97b6a2f2-3023-4f9f-aefb-1022d917d9ba.png">
+
+
+## O(logn)
+> logarithmic time algorithm
+<img width="600" src="https://user-images.githubusercontent.com/59866819/208836902-a69aea50-7706-4d20-b44f-f78922535997.png">
+
+
