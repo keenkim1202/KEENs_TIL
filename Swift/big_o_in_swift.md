@@ -142,6 +142,27 @@ in which case writing is O(n), where n is the length of the array.
 
 <img width="600" src="https://user-images.githubusercontent.com/59866819/208836801-97b6a2f2-3023-4f9f-aefb-1022d917d9ba.png">
 
+O(n^2) 의 성능은 bubble sort와 같은 간단한 정렬 알고리즘에서 흔하게 볼 수 있다.  
+쉬운 예제를 들면 아래와 같다:
+```swift
+let intergers = (0..<5)
+let squareCoords = integers.flatMap { i in
+    return intergers.map { j in
+        return (i, j)
+    }
+}
+
+print(squareCoords) // [(0,0), (0,1), (0,2) ... (4,2), (4,3), (4,4)]
+```
+
+`squareCoords`를 생성하기 위해서 `flapMap`을 사용하여 interger들을 순회하였다.  
+그 `flapMap` 안에는, 다시 `map`을 사용하여 순회를 하였다.  
+이것은 `return (i, j)` 라인은 `5^2` 즉, `25`번 실행됨을 말한다.
+각각의 원소들을 배열에 추가하고, 생성되는 `squareCoords`는 기하급수적으로 증가한다.  
+6x6 의 사각형은 36번, 7x7은 49, 8x8은 64번 순회할 것이다.  
+이를 보면 `O(n^2)` 은 최선의 성능은 갖는다고 볼 수 없음을 알 수 있다.
+
+----
 
 ## O(logn)
 > logarithmic time algorithm
