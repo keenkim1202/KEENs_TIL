@@ -226,6 +226,7 @@ print(words.binarySearch(for: "world")) // Optional(3)
 ----
 
 ## 모든 알고리즘 비교 그래프
+<img width="600" src="https://user-images.githubusercontent.com/59866819/208846412-09e26802-de92-44d4-80d4-2ed86dfcb785.png">
 
 프로그래밍에서 BigO 표기법은 더 많다. 그 중 대표적인 예시를 보여준 것이다.
 (다른 표기법이 궁금한 사람은 [위키링크](https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions) 를 참고)
