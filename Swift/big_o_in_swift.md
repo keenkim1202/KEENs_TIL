@@ -99,7 +99,7 @@ print(numberOfChecked) // 3
 ```
 
 코드를 보면 내가 원하는 조건과 일치하는 단어를 찾는데 3번이면 된다.
-위에서 말한 두루뭉실한 정의를 바탕으로 보면, 당신은 명확하게 모든 경우에 대해 `O(n)` 은 아니라고 주장할 수도 있다.
+위에서 말한 두루뭉실한 정의를 바탕으로 보면, 당신은 명확하게 모든 경우에 대해 `O(n)` 은 아니라고 주장할 수도 있다.  
 - `map` 처럼 `Array`의 모든 원소를 순회하지 않았기 때문에
 
 ### 그 주장은 맞다! 
@@ -112,7 +112,7 @@ print(numberOfChecked) // 3
 - 만약 보장한다고 해도, 가장 처음 혹은 마지막에 발견할지 모르기에 모든 경우가 동등하지 않기 때문이다.
 
 처음에 Array의 데이터를 읽어오는 경우는 O(1) 이라고 말한 이유는  
-Array가 얼마나 많은 아이템들을 가지고 있던 성능은 항상 같기 떄문이다.  
+Array가 얼마나 많은 아이템들을 가지고 있던 성능은 항상 같기 때문이다.  
 Swift 공식문서를 보면 Array에 원소를 삽입(insert)하는 경우에 대해서 아래와 같이 기술했다.
 ```
 Complexity: Reading an element from an array is O(1). 
@@ -158,7 +158,7 @@ let squareCoords = integers.flatMap { i in
 print(squareCoords) // [(0,0), (0,1), (0,2) ... (4,2), (4,3), (4,4)]
 ```
 
-`squareCoords`를 생성하기 위해서 `flapMap`을 사용하여 interger들을 순회하였다.  
+`squareCoords`를 생성하기 위해서 `flapMap`을 사용하여 integer들을 순회하였다.  
 그 `flapMap` 안에는, 다시 `map`을 사용하여 순회를 하였다.  
 이것은 `return (i, j)` 라인은 `5^2` 즉, `25`번 실행됨을 말한다.
 각각의 원소들을 배열에 추가하고, 생성되는 `squareCoords`는 기하급수적으로 증가한다.  
@@ -172,7 +172,7 @@ print(squareCoords) // [(0,0), (0,1), (0,2) ... (4,2), (4,3), (4,4)]
 <img width="600" src="https://user-images.githubusercontent.com/59866819/208836902-a69aea50-7706-4d20-b44f-f78922535997.png">
 
 이름에서 알 수 있듯이, 로그 스케일로 증가하는 복잡도를 확인할 수 있다.  
-`O(logn)` 복잡도를 갖는 알고리즘은 적은 양의 데이터에 사용할 때 성능이 안좋다.  
+`O(logn)` 복잡도를 갖는 알고리즘은 적은 양의 데이터에 사용할 때 성능이 안 좋다.  
 하지만 데이터가 증가하고 `n`이 무한에 가까워지면 알고리즘의 성능은 점점 좋아진다.
 
 이 예시로 `이진탐색(binary search)` 를 들 수 있다.
@@ -209,6 +209,7 @@ print(words.binarySearch(for: "world")) // Optional(3)
 
 `binary search`를 적용하는 경우 입력값이 오름차순으로 정렬되었다고 가정한다.  
 특정 원소를 찾기 위해서는 데이터의 중앙 index를 찾고 특정 원소와 비교한다.  
+
 만약 특정 원소가 현재 중앙에 있는 원소보다 이전의 위치에 있다고(=보다 작다고) 예상되면, 배열을 반으로 자르고, 나눠진 첫번째 배열에 같은 동작을 수행한다. 이 과정이 특정 원소를 찾을 때까지 반복된다.  
 만약 특정 원소가 중앙에 원소보다 이후에 위치해 있다고(=보다 크다고) 예상되면, 나눠진 두번째 배열에서 같은 동작을 수행한다.
 
@@ -231,8 +232,8 @@ print(words.binarySearch(for: "world")) // Optional(3)
 
 ## 모든 알고리즘 비교 그래프
 
-프로그래밍에서 BigO 표기법은 더 많다. 그 중 대표적인 예시를 보여준 것이다.
-(다른 표기법이 궁금한 사람은 [위키링크](https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions) 를 참고)
+프로그래밍에서 BigO 표기법은 더 많다. 그 중 대표적인 예시를 보여준 것이다.  
+(다른 표기법이 궁금한 사람은 [위키링크](https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions) 를 참고)  
 몇몇 흔한 복잡도의 아이디어를 살펴보고 수학적으로 추론해보자.
 
 ----
