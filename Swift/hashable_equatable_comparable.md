@@ -205,3 +205,32 @@ Equatable 타이브이 인스턴스 사이의 동등성은 등가관계이므로
 ```swift
 protocol Comparable: Equatable
 ```
+`Comparable` 프로토콜은 숫자나 문자열과 같이 고유한 순서를 가진 타입에 사용된다.  
+표준 라이브러리의 많은 타입이 이미 `Comparable` 프로토콜을 준수한다.  
+관계 연산자(relational operators)를 사용하여 인스턴스를 비교하거나 비교 가능한 유형을 위해 설계된 표준 라이브러리 메서드를 사용하려면 사용자 정의 타입에 `Comparable` 을 준수하도록 추가해주어야 한다.  
+
+관계 연산자의 가장 익숙한 사용법은 숫자를 비교하는 것이다. 예를 들면:
+```swift
+let currentTemp = 73
+
+if currentTemp ?= 90 {
+    print("It's a scorcher!")
+} else if currentTemp < 65 {
+    print("Might need a sweater today.")
+} else {
+    print("Seems like picnic weather!")
+}
+
+// Prints "Seems like picnic weather!"
+```
+`Comparable` 타입으로 작업할 때 일부 sequence, collection의 특수한 버전을 사용할 수 있다.  
+예를 들어, 배열의 요소가 `Comparable`을 준수할 경우 인자를 사용하지 않고 `sort()` 메서드를 호출하여 배열의 요소를 오름차순으로 정렬할 수 있다.
+```swift
+var measurements = [1.1, 1.5, 2.9, 1.2, 1.5, 1.3, 1.2]
+measurements.sort()
+print(measurements)
+
+// Prints "[1.1, 1.2, 1.2, 1.3, 1.5, 1.5, 2.9]"
+```
+
+## Comparable 프로토콜을 준수하는 방법
