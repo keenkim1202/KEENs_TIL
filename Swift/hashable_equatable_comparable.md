@@ -205,9 +205,14 @@ Equatable 타이브이 인스턴스 사이의 동등성은 등가관계이므로
 ```swift
 protocol Comparable: Equatable
 ```
+
+</br>
+
 `Comparable` 프로토콜은 숫자나 문자열과 같이 고유한 순서를 가진 타입에 사용된다.  
 표준 라이브러리의 많은 타입이 이미 `Comparable` 프로토콜을 준수한다.  
 관계 연산자(relational operators)를 사용하여 인스턴스를 비교하거나 비교 가능한 유형을 위해 설계된 표준 라이브러리 메서드를 사용하려면 사용자 정의 타입에 `Comparable` 을 준수하도록 추가해주어야 한다.  
+
+</br>
 
 관계 연산자의 가장 익숙한 사용법은 숫자를 비교하는 것이다. 예를 들면:
 ```swift
@@ -223,6 +228,9 @@ if currentTemp ?= 90 {
 
 // Prints "Seems like picnic weather!"
 ```
+
+</br>
+
 `Comparable` 타입으로 작업할 때 일부 sequence, collection의 특수한 버전을 사용할 수 있다.  
 예를 들어, 배열의 요소가 `Comparable`을 준수할 경우 인자를 사용하지 않고 `sort()` 메서드를 호출하여 배열의 요소를 오름차순으로 정렬할 수 있다.
 ```swift
@@ -233,4 +241,117 @@ print(measurements)
 // Prints "[1.1, 1.2, 1.2, 1.3, 1.5, 1.5, 2.9]"
 ```
 
+</br>
+
 ## Comparable 프로토콜을 준수하는 방법
+`Comparable` 을 준수하는 타입은 less-than 연산자(`<`), equal-to 연산자(`==`) 를 적용할 수 있다.  
+이 두 연산은 타입의 값에 엄격한 전체적인 순서를 부여하고, `a`와 `b` 두 값에 대해 다음 중 하나가 `true` 여야 한다.
+- a == b
+- a < b
+- a > b
+
+</br>
+
+또한 아래의 조건이 충족되어야 한다:
+- `a < a` 는 항상 false 다. (= Irrefelxivity)
+- `a < b` 는 `!(b < a)` 를 암시한다. (= Asymmetry)
+- `a < b` 그리고 `b > c` 는 `a < c` 를 암시한다. (= Transitivity)
+
+</br>
+
+사용자 정의 타입에 `Comparable`을 추가하려면 `<` 및 `==` 연산자를 `static` 메서드로 정의해야 한다.  
+`==` 연산자는 `Comparable`이 준수하는 `Equatable` 프로토콜의 요구사항이다.  
+- (Swift의 동등성에 대한 자세한 내용은 위의 `Equatable` 내용을 참고.)  
+
+</br>
+
+나머지 관계 연산자의 기본 구현은 표준 라이브러리에 의해 제공되므로,   
+추가 코드 없이 사용자 타입의 인스턴스와 함께 `!=`, `>`, `<=`, `>=`를 사용할 수 있다.  
+
+</br>
+
+아래의 예를 보자.
+여기의 Date 구조체는 날짜의 year, month, day 정보를 담고 있다:
+```swift
+struct Date {
+    let year: Int
+    let month: Int
+    let day: Int
+}
+```
+
+</br>
+
+`Comparable`을 `Date` 타입에 준수시키려면, 일단 `Comparable`을 준수하도록 선언하고 `<` 연산자 함수를 작성해야 한다:
+```swift
+extension Date: Comparable { // 프로토콜 준수
+    static func < (lhs: Date, rhs: Date) -> Bool { // 연산자 함수 추가
+        if lhs.year != rhs.year {
+            return lhs.year < rhs.year
+        } else if lhs.month != rhs.month {
+            return lhs.month < rhs.month
+        } else {
+            return lhs.day < rhs.day
+        }
+    }
+```
+
+</br>
+
+이 함수는 날짜의 최소 특정 비일치 속성(least specific nonmatching property)를 사용하여 비교 결과를 결정한다.
+- 비교를 할 때, 여러개의 다른 속성이 존재한다면 크고 작음을 나타내는 기준이 모호하다.
+- 최소한의 특정 속성을 활용하여 크고 작음을 비교할 수 있도록 나만의 비교 연산자를 정의하는 것이다.
+    - 여러 속성을 활용해야하는 경우, 속성 간의 우선순위를 정한다.
+
+예를 들어, 두 인스턴스의 `year` 속성은 같아도 `month` 속성이 동일하지 않은 경우 월 값이 작은 날짜는 두 날짜 중 작은 날짜가 된다.
+```swift
+Date(year: 2022, month: 12, day: 20) // a
+Date(year: 2022, month: 11, day: 30) // b
+
+// a와 b를 비교하면 year는 2022로 같고, month는 다르다.
+// a의 month가 더 큰 수 이므로 두 인스턴스를 비교시 a > b 이다.
+```
+
+</br>
+
+다음은 `==` 연산자 함수를 적용하는 것이다.  
+이는 `Equatable` 프로토콜을 준수하기 위한 필수 요구조건이다.
+```swift
+    ...
+
+    static func == (lhs: Date, rhs: Date) -> Bool {
+        return lhs.year == rhs.year && lhs.month == rhs.month
+            && lhs.day == rhs.day
+    }
+}
+```
+
+두 `Date` 인스턴스는 각각의 속성이 같으면 동일하다고 정의하였다.
+
+</br>
+
+이제 `Date`가 `Comparable`을 준수하므로, 이 타입의 인스턴스는 어떠한 관계 연산자로도 비교가 가능하다.
+비교 예시를 하나 들어보겠다:
+```swift
+let myBirthday = Date(year: 1996, month: 12, day: 13) // Dec 13, 1996
+let today = Date(year: 2022, month: 12, day: 28) // Dec 28, 2022
+
+if myBirthday > today {
+    print("당신은 아직 생일이 아닙니다.")
+} else {
+    print("올해 당신의 생일은 지났습니다! 한 살 더 먹은 것을 축하합니다 ^^")
+}
+// Prints "올해 당신의 생일은 지났습니다! 한 살 더 먹은 것을 축하합니다 ^^"
+```
+
+</br>
+
+이 예시에서 사용된 표준 라이브러리에 의해 제공되는 `>` 연산자는 위에서 정의하고 적용한 `<` 연산자가 아니라는 점 참고하자.
+```
+Comparable을 준수하는 타입은 예외로 취급하는 값의 하위 집합,
+즉 Comparable 프로토콜의 목적을 위해 의미 있는 인자의 영역 밖에 있는 값을 포함할 수도 있다.
+
+예를 들어,
+부동 소수 타입 (Floating Point nan)에 대한 특수값인 'not a number' 값은 정규 부동 소수점 값보다 작거나 크지 않다.
+예외 값이 엄격한 전체적인 순서에 포함될 필요는 없다. (즉, 크고 작음을 비교할 수 없다.)
+```
