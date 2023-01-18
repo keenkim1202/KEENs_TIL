@@ -6,10 +6,7 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` Swift : hashable & equatable & comparable [👉 보러가기](Swift/hashable_equatable_comparable.md)
 #### 📌 `New Update` Swift : Swift 공식문서 번역: Types [👉 보러가기](Swift/docs_translate_types.md)
-#### 📌 `New Update` 자료구조: hashtable [👉 보러가기](CS/자료구조/hashtable.md)
-#### 📌 `New Update` Swift: Swift에서의 BigO 표기법과 시간복잡도 [👉 보러가기](Swift/big_o_in_swift.md)
 -----
 
 </br>
@@ -217,7 +214,7 @@
 - [Persistent Data Structure](https://github.com/keenkim1202/KEENs_TIL/blob/main/CS/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/persistent.md) `🚧`
 - B-Tree
   - Binary Tree (이진 트리)
-
+- [hashtable](CS/자료구조/hashtable.md)
 </br>
 
 <div align=right> 
