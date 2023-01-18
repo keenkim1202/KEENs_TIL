@@ -6,7 +6,8 @@
 > 보완할 것이 남은 내용에는 `🚧` 태그가 붙어있습니다.
 
 -----
-#### 📌 `New Update` Swift : Swift 공식문서 번역: Types [👉 보러가기](Swift/docs_translate_types.md)
+#### 📌 `New Update` Swift : Swift 공식문서 번역: Types [👉 보러가기](Swift/docs_translate_types.md) `🚧`
+#### 📌 `New Update` ETC : Algebraic Data Types (ADT)에 대하여 [👉 보러가기](CS/자료구조/algebraic_data_type.md)
 -----
 
 </br>
@@ -215,6 +216,8 @@
 - B-Tree
   - Binary Tree (이진 트리)
 - [hashtable](CS/자료구조/hashtable.md)
+- [Algebraic Data Types (ADT)에 대하여](CS/자료구조/algebraic_data_type.md)
+
 </br>
 
 <div align=right> 
