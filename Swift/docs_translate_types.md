@@ -102,7 +102,22 @@ var someValue: ExampleModule.MyType
 ---
 
 ## Tuple Type
+`Tuple`타입 는 쉼표로 구분된 형식 목록으로 괄호로 묶어 표기한다.  
+함수의 반환 타입으로써의 `Tuple`타입을 사용하여 다수의 값을 하나의 tuple에 담아 반환할 수 있다.  
+또한 tuple의 각각의 원소들을 나타내는 이름을 부여할 수 있다.  
+각가의 원소의 이름은 식별자 다음에 코론(`:`) 뒤에 오도록 구성한다.  
+이 기능들에 대한 예제를 확인하고 싶다면 [다수의 반환값을 갖는 함수들](https://docs.swift.org/swift-book/LanguageGuide/Functions.html#ID164) 를 확인하라.  
 
+`Tuple` 타입의 원소들이 이름을 가진 경우, 이름은 타입의 부분이다.
+```swift
+var someTuple = (top: 10, bottom: 12)  // someTuple is of type (top: Int, bottom: Int)
+someTuple = (top: 4, bottom: 42) // OK: names match
+someTuple = (9, 99)              // OK: names are inferred
+someTuple = (left: 5, right: 5)  // Error: names don't match
+```
+
+모든 `Tuple`타입은 `Void`를 제외한 두개 혹은 그 이상의 타입을 포함할 수 있다.  
+(`Void`는 비어있는 `Tuple`타입의 type alias 이다. `()`)  
 
 ---
 
