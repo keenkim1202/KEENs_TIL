@@ -7,7 +7,6 @@
 
 -----
 #### 📌 `New Update` Swift : Swift 공식문서 번역: Types [👉 보러가기](Swift/docs_translate_types.md) `🚧`
-#### 📌 `New Update` ETC : Algebraic Data Types (ADT)에 대하여 [👉 보러가기](CS/자료구조/algebraic_data_type.md)
 -----
 
 </br>
