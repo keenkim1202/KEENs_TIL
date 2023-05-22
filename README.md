@@ -47,7 +47,7 @@
 - [Database](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-database)
 - [ETC](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-etc)
 - [Trouble Shooting](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-trouble-shooting)
-- [Clipped Links](https://github.com/keenkim1202/KEENs_TIL/Links)
+- [Clipped Links](links)
 - [SwiftUI examples](https://github.com/keenkim1202/SwiftUIEx)
 
 -----
