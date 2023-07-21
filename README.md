@@ -49,7 +49,7 @@
 - [Trouble Shooting](https://github.com/keenkim1202/KEENs_TIL#%EF%B8%8F-trouble-shooting)
 - [Clipped Links](links)
 - [SwiftUI examples](https://github.com/keenkim1202/SwiftUIEx)
-- [UIText example](https://github.com/keenkim1202/UITestEx)
+- [UITest example](https://github.com/keenkim1202/UITestEx)
 
 -----
 
