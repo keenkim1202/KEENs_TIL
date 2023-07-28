@@ -380,6 +380,7 @@
     - [TDD 정리 깃헙](https://github.com/keenkim1202/iOSTest)
     - Quick / Nimble
   - UITest
+    - [UITest, Appium에서 사용되는 accessibilityIdentifier 부여 방법](https://github.com/keenkim1202/KEENs_TIL/blob/2404e3bc3b7fc339ed8980e0f64964b7b21fbd28/iOS/accessibilityIdentifier.md)
   - Code Coverage
 - [Clean Code 요약 레포로 이동하기](https://github.com/keenkim1202/CleanCode_Summary)
 - [깃헙 회사계정과 개인계정을 한 컴퓨터에서 분리하여 사용하고 싶을 때 (SSH 활용)](https://nareunhagae.tistory.com/manage/posts/) `Blog`
