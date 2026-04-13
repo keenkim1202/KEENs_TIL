@@ -64,6 +64,7 @@ mutating method들은 COW(Copy On Write)를 고려해야 한다.
 
 > Set
 - [공식 문서 참고](https://github.com/apple/swift/blob/main/stdlib/public/core/Set.swift)
+
 |시간복잡도|메서드|추가설명|
 |:--:|:--:|:--:|
 |O(1)|`subscript(_:)`, `count`, `contains(_:)`, `removeFirst()`, `firstIndex(of:)`||
@@ -71,6 +72,7 @@ mutating method들은 COW(Copy On Write)를 고려해야 한다.
 
 > Dictionary
 - [공식 문서 참고](https://github.com/apple/swift/blob/main/stdlib/public/core/Dictionary.swift)
+
 |시간복잡도|메서드|추가설명|
 |:--:|:--:|:--:|
 |O(1)|`subscript(_:)`, `count`, `index(forKey:)`, `popFirst()`|index(forKey:)의 경우, NSDictionary로 wrap된 경우 O(n). 공식 문서 참조)|
