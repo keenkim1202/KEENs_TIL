@@ -65,7 +65,7 @@
 - [Optional](Swift/Optional.md)
 - [Map vs compactMap vs flatMap 비교](Swift/map_compactMap_flatMap.md)
 - [Collection Type](Swift/Collection_Type.md)
-- [Class & Struct](https://nareunhagae.tistory.com/59)
+- [Class & Struct](Swift/Class_vs_Struct.md)
   - [override & overload 란?](Swift/Override&Overload.md)
   - [mutating 키워드에 대하여](Swift/mutating.md)
 - 타입과 자료형
@@ -89,7 +89,8 @@
   - Generic
   - Value Semantics
 - [정규 표현식 작성하는 방법](Swift/regEx.md)
-- [Dynamic Dispatch 와 Static Dispatch (성능 최적화)](Swift/dynamicDispatch.md)
+- [Stack & Heap (Swift 관점)](Swift/Stack_Heap.md)
+- [Static Dispatch 와 Dynamic Dispatch (성능 최적화)](Swift/static_dynamic_dispatch.md)
 - Library
   - Snapkit / FlexLayout / PinLayout 장단점 비교하기
 - [NSMutableAttributedString 관련 extension 활용하기](https://nareunhagae.tistory.com/68) `Blog`
