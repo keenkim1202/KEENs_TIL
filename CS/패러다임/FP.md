@@ -1,8 +1,7 @@
 # Funtional Programming (함수형 프로그래밍)
 
 > Swift는   
-> FP이면서 동시에 OOP의 상속, 은닉, 캡슐화, 추상화 등을 제공하며 POP 적인 특징도 가지고 있는 멀티 패러다임 언어이다.   
-> 그러므로 FP에 대해서도 알고 넘어가자.
+> FP이면서 동시에 OOP의 상속, 은닉, 캡슐화, 추상화 등을 제공하며 POP 적인 특징도 가지고 있는 멀티 패러다임 언어이다.
 
 
 ## 함수형 프로그래밍이란?
@@ -20,7 +19,7 @@
 
 - 어떠한 입력에 대해 항상 같은 출력을 만드는 함수를 의미한다.
 - 즉, 외부의 영향을 받거나 주지 않는 것, `side-effect`(부수 효과)가 없는 것을 말한다.
-- 이하 순수 함수에 대한 자세한 내용은 [순수함수에 대하여](pure_function.md)를 참고하자.
+- 이하 순수 함수에 대한 자세한 내용은 [순수 함수 & 일급 객체](pure_function_and_first_class_citizen.md)를 참고하자.
 
 ## side-effect 란?
 - 함수를 통해 함수 외부 값의 상태(`state`)가 변하는 것을 의미한다.
@@ -35,7 +34,7 @@
     - 반환값으로 사용할 수 있어야 한다.
     - 데이터 구조 안에 저장할 수 있어야 한다.
 - 일급객체의 대표적인 예는 클로저(closure) 이다.
-- 자세한 내용은 [1급객체란](first_class_citizen.md)을 참고하자.
+- 자세한 내용은 [순수 함수 & 일급 객체](pure_function_and_first_class_citizen.md)를 참고하자.
 
 ## 함수형으로 디자인 하기 위한 조건
 - 모듈 방식
@@ -50,6 +49,72 @@
     - 데이터 타입의 신중한 선택은 코드를 견고, 안전, 강력하게 작성하도록 도와준다.
 
 
+## Swift 관점에서의 함수형 프로그래밍
+
+iOS 개발자라면 Swift가 제공하는 함수형 도구들을 일상적으로 쓴다.
+
+### 고차 함수 (Higher-Order Function)
+
+함수를 인자로 받거나 함수를 반환하는 함수. Swift 표준 라이브러리의 대표적인 함수형 API다.
+
+- `map` — 각 원소를 변환
+- `filter` — 조건에 맞는 원소만 남김
+- `reduce` — 원소들을 하나의 값으로 누적
+- `compactMap` — 변환 후 `nil`을 제거
+- `flatMap` — 중첩 컬렉션을 평탄화
+
+```swift
+let numbers = [1, 2, 3, 4, 5]
+let result = numbers
+    .filter { $0 % 2 == 1 }   // [1, 3, 5]
+    .map { $0 * $0 }          // [1, 9, 25]
+    .reduce(0, +)             // 35
+```
+
+자세히: [Map vs compactMap vs flatMap 비교](../../Swift/map_compactMap_flatMap.md)
+
+### 일급 함수와 클로저
+
+- Swift에서 함수와 클로저는 1급 객체다. 변수에 담고, 인자로 넘기고, 반환할 수 있다.
+- 이 덕분에 콜백, 의존성 주입, 고차 함수 같은 함수형 패턴이 가능하다.
+
+### 불변성과 값 타입
+
+- `let`으로 불변 바인딩을 만들고, struct/enum 같은 값 타입으로 공유 가변 상태를 피한다.
+- 값 타입은 복사되어 side-effect가 적고 동시성에 안전하므로, FP가 강조하는 "상태를 멀리하기"와 잘 맞는다.
+- 관련: [Class & Struct](../../Swift/Class_vs_Struct.md)
+
+### Optional도 함수형으로 다룬다
+
+- `Optional`은 값이 있을 수도/없을 수도 있는 컨테이너로, `map`/`flatMap`을 통해 박스를 깨지 않고 변환을 이어갈 수 있다.
+
+```swift
+let input: String? = "42"
+let doubled = input.flatMap { Int($0) }.map { $0 * 2 }   // Optional(84)
+```
+
+## 명령형 → 함수형으로 바꿔보기
+
+같은 로직(짝수만 골라 제곱해서 합산)을 두 스타일로 작성한 예시.
+
+```swift
+// 명령형: 외부 변수(state)를 두고 루프로 직접 변경
+var sum = 0
+for n in numbers {
+    if n % 2 == 0 {
+        sum += n * n
+    }
+}
+
+// 함수형: 상태 변경 없이 변환의 연결로 표현
+let sum = numbers
+    .filter { $0 % 2 == 0 }
+    .map { $0 * $0 }
+    .reduce(0, +)
+```
+
+함수형 버전은 가변 상태(`var sum`)가 없어 side-effect가 없고, 각 단계가 무엇을 하는지 선언적으로 드러난다.
+
 ## 참고하면 좋은 링크
 - [Swift와 함수형 프로그래밍의 역사 - realm](https://academy.realm.io/kr/posts/tryswift-rob-napier-swift-legacy-functional-programming/)
 - [Functional Swift](https://www.objc.io/books/functional-swift/)
@@ -57,5 +122,9 @@
 - [Swift Functional Programming - PacktPublishing Github](https://github.com/PacktPublishing/Swift-Functional-Programming)
 - [An Introduction to Functional Programming in Swift - Raywenderich](https://www.raywenderlich.com/9222-an-introduction-to-functional-programming-in-swift)
 
-## 추가할 내용
-- 명령형 -> 함수형으로 바꾸어보는 코드 예시
+## 관련 문서
+- [OOP와 FP 비교](OOP_vs_FP.md)
+- [OOP: 객체 지향 프로그래밍](OOP.md)
+- [POP: 프로토콜 지향 프로그래밍](POP.md)
+- [순수 함수 & 1급 객체](pure_function_and_first_class_citizen.md)
+- [Map vs compactMap vs flatMap 비교](../../Swift/map_compactMap_flatMap.md)

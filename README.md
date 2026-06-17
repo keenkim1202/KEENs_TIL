@@ -85,9 +85,6 @@
   - [Escaping Closure](Swift/EscapingClosure.md) 
 - [타입캐스팅: as, as!, as?](Swift/typeCasting.md)
 - [Components vs Split 비교](https://nareunhagae.tistory.com/8?category=1217059) `Blog`
-- [protocol 지향 언어로써의 Swift 특징](Swift/protocol지향언어.md)
-  - Generic
-  - Value Semantics
 - [정규 표현식 작성하는 방법](Swift/regEx.md)
 - [Stack & Heap (Swift 관점)](Swift/Stack_Heap.md)
 - [Static Dispatch 와 Dynamic Dispatch (성능 최적화)](Swift/static_dynamic_dispatch.md)
@@ -280,12 +277,14 @@
 </div>
 
 - [OOP와 FP 비교](CS/패러다임/OOP_vs_FP.md)
-- OOP: Object Oriented Programming (객체 지향 프로그래밍)
+- [OOP: Object Oriented Programming (객체 지향 프로그래밍)](CS/패러다임/OOP.md)
   - 특징 (추상화/캡슐화/상속/다형성)
   - SOLID 원칙
 - [FP: Functional Programming (함수형 프로그래밍)](CS/패러다임/FP.md)
-  - [1급 객체(1급 시민)](CS/패러다임/first_class_citizen.md)
-  - [순수 함수](CS/패러다임/pure_function.md)
+  - [순수 함수 & 1급 객체](CS/패러다임/pure_function_and_first_class_citizen.md)
+- [POP: Protocol Oriented Programming (프로토콜 지향 프로그래밍)](CS/패러다임/POP.md)
+  - Generic
+  - Value Semantics
 - RP: Reactive Programming (반응형 프로그래밍)
 
 </br>

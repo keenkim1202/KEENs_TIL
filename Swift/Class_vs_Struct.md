@@ -107,7 +107,7 @@ class Person {
 - class만 클래스 상속이 가능하다. struct는 상속이 불가능하므로, 대신 프로토콜 채택과 익스텐션으로 기능을 확장/공유한다.
 - Swift는 프로토콜 지향 언어(POP)를 지향하기 때문에, 상속 대신 프로토콜과 컴포지션을 선호하는 흐름이 자연스럽다.
 
-관련: [protocol 지향 언어로써의 Swift 특징](protocol지향언어.md), [override & overload 란?](Override&Overload.md), [Static Dispatch & Dynamic Dispatch](static_dynamic_dispatch.md)
+관련: [Protocol Oriented Programming (POP)](../CS/패러다임/POP.md), [override & overload 란?](Override&Overload.md), [Static Dispatch & Dynamic Dispatch](static_dynamic_dispatch.md)
 
 ## 언제 무엇을 쓸까 (Apple 가이드라인)
 

@@ -110,4 +110,4 @@ class ViewController {
 - 값 타입은 정적 디스패치라 빠르고, class는 상속 가능성 때문에 기본적으로 동적 디스패치(vTable)를 쓴다.
 - 오버라이딩이 필요 없는 메서드라면 `final`/`private`/`static`을 활용해 정적 디스패치로 전환하면 성능 이점을 얻을 수 있다.
 
-관련: [Class & Struct](Class_vs_Struct.md), [protocol 지향 언어로써의 Swift 특징](protocol지향언어.md), [final](final.md)
+관련: [Class & Struct](Class_vs_Struct.md), [Protocol Oriented Programming (POP)](../CS/패러다임/POP.md), [final](final.md)
