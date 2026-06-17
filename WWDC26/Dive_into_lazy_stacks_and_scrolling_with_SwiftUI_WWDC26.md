@@ -1,5 +1,7 @@
 # Dive into lazy stacks and scrolling with SwiftUI - WWDC26
 
+- 영상 링크 : https://developer.apple.com/videos/play/wwdc2026/321
+
 # Summary
 - 내용: SwiftUI `LazyVStack` / `LazyHStack` 의 내부 동작과, 부드러운 스크롤을 만들기 위한 레이아웃·상태·prefetching·programmatic scrolling 최적화 가이드
 - 핵심 메시지
