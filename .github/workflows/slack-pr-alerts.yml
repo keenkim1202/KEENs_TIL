@@ -1,0 +1,160 @@
+name: slack-pr-alerts
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, closed]
+  pull_request_review:
+    types: [submitted]
+  pull_request_review_comment:
+    types: [created]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    # issue_comment 는 일반 이슈에도 뜨므로 PR 인 것만. 자기 자신이 만든 이벤트는 무시.
+    if: >-
+      (github.event_name != 'issue_comment' || github.event.issue.pull_request != null)
+      && github.event.sender.login != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Slack
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          EVENT_NAME: ${{ github.event_name }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          API=https://slack.com/api
+          AUTH="Authorization: Bearer $SLACK_BOT_TOKEN"
+          JSON="Content-type: application/json; charset=utf-8"
+
+          # 코멘트 본문은 ${{ }} 로 절대 끼워넣지 않는다 (스크립트 인젝션).
+          # 언제나 $GITHUB_EVENT_PATH 를 jq 로 읽는다.
+          EV="$GITHUB_EVENT_PATH"
+
+          # ── PR 식별자: 이벤트 종류마다 위치가 다르다 ────────────────────
+          if [ "$EVENT_NAME" = "issue_comment" ]; then
+            PR_URL=$(jq -r '.issue.html_url'  "$EV")
+            PR_NUM=$(jq -r '.issue.number'    "$EV")
+          else
+            PR_URL=$(jq -r '.pull_request.html_url' "$EV")
+            PR_NUM=$(jq -r '.pull_request.number'   "$EV")
+          fi
+          # 부모 메시지에 "<URL|" 형태로 박히므로 이걸로 찾는다.
+          # URL 만으로 찾으면 pull/1 이 pull/12 에 걸린다.
+          MARKER="<$PR_URL|"
+
+          slack() { # slack <method> <json-payload>
+            curl -sS -X POST -H "$AUTH" -H "$JSON" --data "$2" "$API/$1"
+          }
+
+          # ── 채널 히스토리에서 이 PR 의 부모 메시지 ts 찾기 ──────────────
+          find_ts() {
+            local cursor="" resp ts
+            for _ in 1 2 3 4 5; do
+              resp=$(curl -sS -H "$AUTH" -G "$API/conversations.history" \
+                       --data-urlencode "channel=$SLACK_CHANNEL_ID" \
+                       --data-urlencode "limit=200" \
+                       ${cursor:+--data-urlencode "cursor=$cursor"})
+              if [ "$(jq -r '.ok' <<<"$resp")" != "true" ]; then
+                echo "conversations.history 실패: $(jq -r '.error' <<<"$resp")" >&2
+                return 1
+              fi
+              ts=$(jq -r --arg m "$MARKER" \
+                     'first(.messages[] | select((.text // "") | contains($m)) | .ts) // empty' <<<"$resp")
+              [ -n "$ts" ] && { echo "$ts"; return 0; }
+              cursor=$(jq -r '.response_metadata.next_cursor // ""' <<<"$resp")
+              [ -z "$cursor" ] && break
+            done
+            return 0   # 못 찾음 = 빈 문자열
+          }
+
+          react() { # react <add|remove> <emoji> <ts>
+            local r
+            r=$(slack "reactions.$1" "$(jq -n --arg c "$SLACK_CHANNEL_ID" --arg n "$2" --arg t "$3" \
+                  '{channel:$c, name:$n, timestamp:$t}')")
+            # already_reacted / no_reaction 은 정상 흐름이므로 무시
+            case "$(jq -r '.error // ""' <<<"$r")" in
+              ""|already_reacted|no_reaction) ;;
+              *) echo "reactions.$1 $2: $(jq -r '.error' <<<"$r")" >&2 ;;
+            esac
+          }
+
+          # ── PR 종료: 새 글 없이 부모 메시지의 이모지만 교체 ─────────────
+          if [ "$EVENT_NAME" = "pull_request" ] && \
+             [ "$(jq -r '.action' "$EV")" = "closed" ]; then
+            TS=$(find_ts)
+            if [ -z "$TS" ]; then
+              echo "부모 메시지를 못 찾음 (#$PR_NUM). 리액션 생략." >&2
+              exit 0
+            fi
+            react remove hourglass_flowing_sand "$TS"
+            if [ "$(jq -r '.pull_request.merged' "$EV")" = "true" ]; then
+              react add white_check_mark "$TS"
+            else
+              react add x "$TS"
+            fi
+            exit 0
+          fi
+
+          # ── 메시지 본문 만들기 ──────────────────────────────────────────
+          MSG=$(jq -n --arg event "$EVENT_NAME" --arg repo "$REPO" \
+                      --slurpfile e "$EV" '
+            ($e[0]) as $p
+            | (if $event == "pull_request" then
+                 { icon: "🆕", kind: "PR 생성", t: $p.pull_request.title,
+                   url: $p.pull_request.html_url, who: $p.sender.login,
+                   body: ($p.pull_request.body // ""), num: $p.pull_request.number }
+               elif $event == "pull_request_review" then
+                 { icon: (if $p.review.state == "approved" then "✅"
+                          elif $p.review.state == "changes_requested" then "🛠" else "💬" end),
+                   kind: (if $p.review.state == "approved" then "리뷰 승인"
+                          elif $p.review.state == "changes_requested" then "변경 요청"
+                          else "리뷰 제출" end),
+                   t: $p.pull_request.title, url: $p.review.html_url,
+                   who: $p.review.user.login, body: ($p.review.body // ""),
+                   num: $p.pull_request.number }
+               elif $event == "pull_request_review_comment" then
+                 { icon: "💬", kind: "코드 코멘트", t: $p.pull_request.title,
+                   url: $p.comment.html_url, who: $p.comment.user.login,
+                   body: ("`" + ($p.comment.path // "?") + "`\n" + ($p.comment.body // "")),
+                   num: $p.pull_request.number }
+               else
+                 { icon: "💬", kind: "PR 코멘트", t: $p.issue.title,
+                   url: $p.comment.html_url, who: $p.comment.user.login,
+                   body: ($p.comment.body // ""), num: $p.issue.number }
+               end) as $m
+            | { m: $m, blocks: ([ { type: "section", text: { type: "mrkdwn",
+                  text: "\($m.icon) *\($m.kind)* · `\($repo)`\n<\($m.url)|#\($m.num) \($m.t)>\nby *\($m.who)*" } } ]
+                + (if ($m.body | length) > 0
+                   then [{ type: "section", text: { type: "mrkdwn", text: ($m.body[0:600]) } }]
+                   else [] end)) }
+          ')
+          BLOCKS=$(jq -c '.blocks' <<<"$MSG")
+
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            # 부모 글. fallback text 에 "<URL|" 를 넣어야 나중에 find_ts 가 찾는다.
+            FALLBACK=$(jq -r --arg r "$REPO" '"🆕 PR 생성 · \($r)#\(.m.num) <\(.m.url)|#\(.m.num) \(.m.t)>"' <<<"$MSG")
+            RESP=$(slack chat.postMessage "$(jq -n --arg c "$SLACK_CHANNEL_ID" --arg t "$FALLBACK" \
+                     --argjson b "$BLOCKS" '{channel:$c, text:$t, blocks:$b, unfurl_links:false}')")
+            [ "$(jq -r '.ok' <<<"$RESP")" = "true" ] || { echo "$RESP" >&2; exit 1; }
+            react add hourglass_flowing_sand "$(jq -r '.ts' <<<"$RESP")"
+            exit 0
+          fi
+
+          # ── 코멘트/리뷰: 부모 글 스레드에 답글 ───────────────────────────
+          TS=$(find_ts)
+          FALLBACK=$(jq -r --arg r "$REPO" '"\(.m.icon) \(.m.kind) · \($r)#\(.m.num)"' <<<"$MSG")
+          PAYLOAD=$(jq -n --arg c "$SLACK_CHANNEL_ID" --arg t "$FALLBACK" --arg ts "$TS" \
+                      --argjson b "$BLOCKS" '
+            {channel:$c, text:$t, blocks:$b, unfurl_links:false}
+            + (if $ts == "" then {} else {thread_ts:$ts} end)')
+          RESP=$(slack chat.postMessage "$PAYLOAD")
+          [ "$(jq -r '.ok' <<<"$RESP")" = "true" ] || { echo "$RESP" >&2; exit 1; }
+          [ -n "$TS" ] || echo "부모 글을 못 찾아 최상위로 게시함 (#$PR_NUM)." >&2
