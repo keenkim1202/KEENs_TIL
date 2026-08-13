@@ -94,7 +94,8 @@ jobs:
               echo "부모 메시지를 못 찾음 (#$PR_NUM). 리액션 생략." >&2
               exit 0
             fi
-            react remove hourglass_flowing_sand "$TS"
+            react remove loading "$TS"
+            react remove hourglass_flowing_sand "$TS"   # 구버전 잔재 정리
             if [ "$(jq -r '.pull_request.merged' "$EV")" = "true" ]; then
               react add white_check_mark "$TS"
             else
@@ -144,7 +145,7 @@ jobs:
             RESP=$(slack chat.postMessage "$(jq -n --arg c "$SLACK_CHANNEL_ID" --arg t "$FALLBACK" \
                      --argjson b "$BLOCKS" '{channel:$c, text:$t, blocks:$b, unfurl_links:false}')")
             [ "$(jq -r '.ok' <<<"$RESP")" = "true" ] || { echo "$RESP" >&2; exit 1; }
-            react add hourglass_flowing_sand "$(jq -r '.ts' <<<"$RESP")"
+            react add loading "$(jq -r '.ts' <<<"$RESP")"
             exit 0
           fi
 
