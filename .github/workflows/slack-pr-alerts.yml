@@ -34,7 +34,7 @@ jobs:
           AUTH="Authorization: Bearer $SLACK_BOT_TOKEN"
           JSON="Content-type: application/json; charset=utf-8"
 
-          # 코멘트 본문은 ${{ }} 로 절대 끼워넣지 않는다 (스크립트 인젝션).
+          # 코멘트 본문은 GitHub 표현식 보간으로 절대 끼워넣지 않는다 (스크립트 인젝션).
           # 언제나 $GITHUB_EVENT_PATH 를 jq 로 읽는다.
           EV="$GITHUB_EVENT_PATH"
 
