@@ -107,11 +107,25 @@ jobs:
           # ── 메시지 본문 만들기 ──────────────────────────────────────────
           MSG=$(jq -n --arg event "$EVENT_NAME" --arg repo "$REPO" \
                       --slurpfile e "$EV" '
+            # GitHub 마크다운 → Slack mrkdwn. 봇 코멘트의 배지/HTML 이 그대로 노출되는 걸 막는다.
+            def md2slack:
+                gsub("(?s)<!--.*?-->"; "")
+              | gsub("!\\[(?<a>[^\\]]*)\\]\\([^)]*\\)";
+                  (if (.a | length) > 0
+                   then "[" + (.a | sub("\\s*(Badge|badge)\\s*$"; "")) + "]"
+                   else "" end))
+              | gsub("</?[a-zA-Z][a-zA-Z0-9]*(\\s[^>]*)?>"; "")
+              | gsub("\\[(?<t>[^\\]]*)\\]\\((?<u>[^)\\s]+)\\)"; "<\(.u)|\(.t)>")
+              | gsub("\\*\\*"; "*")
+              | gsub("(?m)^\\s{0,3}#{1,6}\\s+(?<h>.*)$"; "*\(.h)*")
+              | gsub("(?m)^\\s*[-*_]{3,}\\s*$"; "")
+              | gsub("\n{3,}"; "\n\n")
+              | sub("^\\s+"; "") | sub("\\s+$"; "");
             ($e[0]) as $p
             | (if $event == "pull_request" then
                  { icon: "🆕", kind: "PR 생성", t: $p.pull_request.title,
                    url: $p.pull_request.html_url, who: $p.sender.login,
-                   body: ($p.pull_request.body // ""), num: $p.pull_request.number }
+                   body: (($p.pull_request.body // "") | md2slack), num: $p.pull_request.number }
                elif $event == "pull_request_review" then
                  { icon: (if $p.review.state == "approved" then "✅"
                           elif $p.review.state == "changes_requested" then "🛠" else "💬" end),
@@ -119,17 +133,17 @@ jobs:
                           elif $p.review.state == "changes_requested" then "변경 요청"
                           else "리뷰 제출" end),
                    t: $p.pull_request.title, url: $p.review.html_url,
-                   who: $p.review.user.login, body: ($p.review.body // ""),
+                   who: $p.review.user.login, body: (($p.review.body // "") | md2slack),
                    num: $p.pull_request.number }
                elif $event == "pull_request_review_comment" then
                  { icon: "💬", kind: "코드 코멘트", t: $p.pull_request.title,
                    url: $p.comment.html_url, who: $p.comment.user.login,
-                   body: ("`" + ($p.comment.path // "?") + "`\n" + ($p.comment.body // "")),
+                   body: ("`" + ($p.comment.path // "?") + "`\n" + (($p.comment.body // "") | md2slack)),
                    num: $p.pull_request.number }
                else
                  { icon: "💬", kind: "PR 코멘트", t: $p.issue.title,
                    url: $p.comment.html_url, who: $p.comment.user.login,
-                   body: ($p.comment.body // ""), num: $p.issue.number }
+                   body: (($p.comment.body // "") | md2slack), num: $p.issue.number }
                end) as $m
             | { m: $m, blocks: ([ { type: "section", text: { type: "mrkdwn",
                   text: "\($m.icon) *\($m.kind)* · `\($repo)`\n<\($m.url)|#\($m.num) \($m.t)>\nby *\($m.who)*" } } ]
