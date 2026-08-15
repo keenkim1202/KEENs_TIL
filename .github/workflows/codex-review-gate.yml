@@ -1,0 +1,120 @@
+name: codex-review-gate
+
+# 코덱스가 단 리뷰 코멘트 중 resolve 안 된 게 있으면 PR 머지를 막는다.
+#
+# 신호는 잡의 성패가 아니라 **커밋 상태(commit status)** 다. 이유:
+# 코멘트·리뷰 이벤트로 돈 실행은 GITHUB_SHA 가 PR 의 head 가 아니라서
+# 잡이 만드는 체크런이 엉뚱한 커밋에 붙는다. 커밋 상태는 head SHA 에 직접 쏘고
+# (sha, context) 로 덮어써지므로 마지막 결과만 남는다.
+# 그래서 잡은 성패와 무관하게 항상 0 으로 끝난다.
+#
+# 한계: GitHub Actions 에는 pull_request_review_thread 트리거가 없다.
+# "Resolve conversation" 을 눌러도 이 워크플로는 안 돈다. 푸시·코멘트·리뷰가
+# 새로 오거나 아래 수동 실행을 해야 초록으로 바뀐다.
+#   gh workflow run codex-review-gate.yml --repo keenkim1202/<레포> -f pr=<번호>
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+  pull_request_review:
+    types: [submitted, dismissed]
+  pull_request_review_comment:
+    types: [created, edited, deleted]
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: 평가할 PR 번호
+        required: true
+
+permissions:
+  contents: read
+  pull-requests: read
+  statuses: write
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코덱스 미해결 스레드 확인
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          OWNER: ${{ github.repository_owner }}
+          PR_INPUT: ${{ github.event.inputs.pr }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+
+          BOT=chatgpt-codex-connector   # GraphQL 의 author.login 에는 [bot] 이 안 붙는다
+          CONTEXT=codex-review          # 필수 체크로 거는 이름. 바꾸면 브랜치 보호도 같이 고쳐야 한다
+          EV="$GITHUB_EVENT_PATH"
+          NAME="${REPO#*/}"
+
+          PR_NUM=$(jq -r '.pull_request.number // empty' "$EV")
+          [ -n "$PR_NUM" ] || PR_NUM="${PR_INPUT:-}"
+          if [ -z "$PR_NUM" ]; then
+            echo "PR 번호를 못 찾았다. 수동 실행이라면 -f pr=<번호> 를 달아라." >&2
+            exit 1
+          fi
+
+          # head SHA 는 이벤트 페이로드가 아니라 API 에서 받는다.
+          # 수동 실행에는 페이로드가 없고, 페이로드가 있어도 그 사이 푸시가 있었을 수 있다.
+          HEAD_SHA=$(gh api "repos/$REPO/pulls/$PR_NUM" --jq '.head.sha')
+
+          THREADS=$(gh api graphql -f query='
+            query($owner:String!, $name:String!, $num:Int!) {
+              repository(owner:$owner, name:$name) {
+                pullRequest(number:$num) {
+                  reviewThreads(first:100) {
+                    nodes {
+                      isResolved
+                      isOutdated
+                      path
+                      comments(first:1) { nodes { author { login } url } }
+                    }
+                  }
+                }
+              }
+            }' -F owner="$OWNER" -F name="$NAME" -F num="$PR_NUM")
+
+          # 코드가 바뀌어 outdated 가 된 스레드도 resolve 전까지는 미해결로 센다.
+          # 고쳤으면 "Resolve conversation" 을 눌러 닫으라는 뜻이다.
+          OPEN=$(jq -c --arg bot "$BOT" '
+            [ .data.repository.pullRequest.reviewThreads.nodes[]
+              | select(.isResolved == false)
+              | select(.comments.nodes[0].author.login == $bot)
+              | { path: (.path // "?"), url: .comments.nodes[0].url, outdated: .isOutdated } ]
+          ' <<<"$THREADS")
+          N=$(jq 'length' <<<"$OPEN")
+
+          if [ "$N" -eq 0 ]; then
+            STATE=success
+            DESC="코덱스 미해결 코멘트 없음"
+          else
+            STATE=failure
+            DESC="코덱스 미해결 코멘트 ${N}건 — resolve 후 다시 실행"
+          fi
+
+          {
+            echo "## 코덱스 리뷰 게이트"
+            echo
+            echo "PR #$PR_NUM · \`${HEAD_SHA:0:7}\` · **$STATE** — $DESC"
+            if [ "$N" -gt 0 ]; then
+              echo
+              jq -r '.[] | "- `\(.path)`\(if .outdated then " (outdated)" else "" end) — \(.url)"' <<<"$OPEN"
+              echo
+              echo "모두 resolve 한 뒤에는 새 푸시·코멘트가 없으면 이 체크가 저절로 갱신되지 않는다."
+              echo "\`gh workflow run codex-review-gate.yml --repo $REPO -f pr=$PR_NUM\` 로 다시 돌려라."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          echo "$DESC (PR #$PR_NUM, $HEAD_SHA)"
+          [ "$N" -eq 0 ] || jq -r '.[] | "  \(.path) \(.url)"' <<<"$OPEN"
+
+          gh api -X POST "repos/$REPO/statuses/$HEAD_SHA" \
+            -f state="$STATE" \
+            -f context="$CONTEXT" \
+            -f description="$DESC" \
+            -f target_url="$RUN_URL" --silent
+
+          # 잡 자체는 항상 성공으로 끝낸다. 판정은 위 커밋 상태에 있다.
