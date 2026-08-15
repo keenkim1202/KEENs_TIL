@@ -9,13 +9,19 @@ on:
     types: [created]
   issue_comment:
     types: [created]
+  # 놓친 종료를 하루 한 번 훑는다 (아래 reconcile 참고). 09:10 KST.
+  schedule:
+    - cron: "10 0 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
   notify:
     # issue_comment 는 일반 이슈에도 뜨므로 PR 인 것만. 자기 자신이 만든 이벤트는 무시.
+    # schedule / workflow_dispatch 는 sender 가 없어 두 조건 모두 통과한다.
     if: >-
       (github.event_name != 'issue_comment' || github.event.issue.pull_request != null)
       && github.event.sender.login != 'github-actions[bot]'
@@ -27,6 +33,7 @@ jobs:
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
           EVENT_NAME: ${{ github.event_name }}
           REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
 
@@ -37,18 +44,6 @@ jobs:
           # 코멘트 본문은 GitHub 표현식 보간으로 절대 끼워넣지 않는다 (스크립트 인젝션).
           # 언제나 $GITHUB_EVENT_PATH 를 jq 로 읽는다.
           EV="$GITHUB_EVENT_PATH"
-
-          # ── PR 식별자: 이벤트 종류마다 위치가 다르다 ────────────────────
-          if [ "$EVENT_NAME" = "issue_comment" ]; then
-            PR_URL=$(jq -r '.issue.html_url'  "$EV")
-            PR_NUM=$(jq -r '.issue.number'    "$EV")
-          else
-            PR_URL=$(jq -r '.pull_request.html_url' "$EV")
-            PR_NUM=$(jq -r '.pull_request.number'   "$EV")
-          fi
-          # 부모 메시지에 "<URL|" 형태로 박히므로 이걸로 찾는다.
-          # URL 만으로 찾으면 pull/1 이 pull/12 에 걸린다.
-          MARKER="<$PR_URL|"
 
           slack() { # slack <method> <json-payload>
             curl -sS -X POST -H "$AUTH" -H "$JSON" --data "$2" "$API/$1"
@@ -86,21 +81,84 @@ jobs:
             esac
           }
 
+          close_react() { # close_react <ts> <merged: true|false>
+            react remove loading "$1"
+            react remove hourglass_flowing_sand "$1"   # 구버전 잔재 정리
+            if [ "$2" = "true" ]; then
+              react add white_check_mark "$1"
+            else
+              react add x "$1"
+            fi
+          }
+
+          # ── 놓친 종료 보정 ──────────────────────────────────────────────
+          # 스택 PR 의 base 브랜치가 삭제되면 PR 은 닫히지만 GitHub 은
+          # pull_request: closed 실행을 만들지 않는다. 그러면 loading 이 영영 남는다.
+          # 그래서 채널에서 loading 이 붙은 이 레포의 글을 찾아 실제 PR 상태와 맞춘다.
+          reconcile() { # reconcile [방금 처리해서 건너뛸 ts]
+            local skip="${1:-}"
+            local cursor="" resp rows ts num pr state merged
+            local re="https://github\\.com/$REPO/pull/(?<n>[0-9]+)\\|"
+            for _ in 1 2 3; do
+              resp=$(curl -sS -H "$AUTH" -G "$API/conversations.history" \
+                       --data-urlencode "channel=$SLACK_CHANNEL_ID" \
+                       --data-urlencode "limit=200" \
+                       ${cursor:+--data-urlencode "cursor=$cursor"})
+              if [ "$(jq -r '.ok' <<<"$resp")" != "true" ]; then
+                echo "보정: conversations.history 실패: $(jq -r '.error' <<<"$resp")" >&2
+                return 0
+              fi
+              rows=$(jq -r --arg re "$re" '
+                .messages[]
+                | select((.reactions // []) | any(.name == "loading"))
+                | select((.text // "") | test($re))
+                | "\(.ts) \((.text) | capture($re) | .n)"' <<<"$resp")
+              while read -r ts num; do
+                [ -n "${ts:-}" ] || continue
+                # 방금 종료 처리한 글은 히스토리가 아직 옛 리액션을 줄 수 있어 건너뛴다.
+                [ "$ts" = "$skip" ] && continue
+                pr=$(curl -sS -H "Authorization: Bearer $GH_TOKEN" \
+                          -H "Accept: application/vnd.github+json" \
+                          "https://api.github.com/repos/$REPO/pulls/$num")
+                state=$(jq -r '.state // ""' <<<"$pr")
+                [ "$state" = "closed" ] || continue
+                merged=$(jq -r '.merged // false' <<<"$pr")
+                close_react "$ts" "$merged"
+                echo "보정: #$num 은 이미 닫혀 있어 이모지를 교체함 (merged=$merged)."
+              done <<<"$rows"
+              cursor=$(jq -r '.response_metadata.next_cursor // ""' <<<"$resp")
+              [ -z "$cursor" ] && break
+            done
+          }
+
+          # 스케줄/수동 실행은 보정만 하고 끝낸다.
+          case "$EVENT_NAME" in
+            schedule|workflow_dispatch) reconcile; exit 0 ;;
+          esac
+
+          # ── PR 식별자: 이벤트 종류마다 위치가 다르다 ────────────────────
+          if [ "$EVENT_NAME" = "issue_comment" ]; then
+            PR_URL=$(jq -r '.issue.html_url'  "$EV")
+            PR_NUM=$(jq -r '.issue.number'    "$EV")
+          else
+            PR_URL=$(jq -r '.pull_request.html_url' "$EV")
+            PR_NUM=$(jq -r '.pull_request.number'   "$EV")
+          fi
+          # 부모 메시지에 "<URL|" 형태로 박히므로 이걸로 찾는다.
+          # URL 만으로 찾으면 pull/1 이 pull/12 에 걸린다.
+          MARKER="<$PR_URL|"
+
           # ── PR 종료: 새 글 없이 부모 메시지의 이모지만 교체 ─────────────
           if [ "$EVENT_NAME" = "pull_request" ] && \
              [ "$(jq -r '.action' "$EV")" = "closed" ]; then
             TS=$(find_ts)
             if [ -z "$TS" ]; then
               echo "부모 메시지를 못 찾음 (#$PR_NUM). 리액션 생략." >&2
-              exit 0
-            fi
-            react remove loading "$TS"
-            react remove hourglass_flowing_sand "$TS"   # 구버전 잔재 정리
-            if [ "$(jq -r '.pull_request.merged' "$EV")" = "true" ]; then
-              react add white_check_mark "$TS"
             else
-              react add x "$TS"
+              close_react "$TS" "$(jq -r '.pull_request.merged' "$EV")"
             fi
+            # 이 PR 을 base 로 삼던 스택 PR 이 같이 닫혔을 수 있다.
+            reconcile "$TS"
             exit 0
           fi
 
